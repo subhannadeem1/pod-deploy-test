@@ -6,25 +6,24 @@ import { supabase } from "../../../../lib/supabaseClient";
 
 export async function POST(request: Request) {
   try {
-    const body = await request.json();
-    const { query } = body;
-
-    if (!query) {
-      return NextResponse.json(
-        { error: "No query provided." },
-        { status: 400 }
-      );
+    const { query } = await request.json();
+    if (!query || typeof query !== "string") {
+      return NextResponse.json({ error: "Query is required and must be a string" }, { status: 400 });
     }
 
-    // 1. Parse the query for specific episode or podcast mentions
-    const episodeMatch = query.match(/episode (\d+)/i);
-    const specificEpisodeNum = episodeMatch
-      ? Number.parseInt(episodeMatch[1], 10)
-      : null;
-    const podcastMatch = query.match(/(?:podcast|show) ([a-zA-Z0-9-]+)/i);
-    const specificPodcastId = podcastMatch
-      ? podcastMatch[1].toLowerCase()
-      : null;
+    // 1. Parse the query for specific episode or podcast mentions with error handling
+    let specificEpisodeNum: number | null = null;
+    let specificPodcastId: string | null = null;
+    try {
+      const episodeMatch = query.match(/episode (\d+)/i);
+      specificEpisodeNum = episodeMatch ? parseInt(episodeMatch[1], 10) : null;
+
+      const podcastMatch = query.match(/(?:podcast|show) ([a-zA-Z0-9-]+)/i);
+      specificPodcastId = podcastMatch ? podcastMatch[1].toLowerCase() : null;
+    } catch (err) {
+      console.error("Error parsing query:", err);
+      return NextResponse.json({ error: "Invalid query format" }, { status: 400 });
+    }
 
     // 2. Embed the user query
     const queryEmbedding = await embeddings.embedQuery(query);
@@ -67,8 +66,7 @@ export async function POST(request: Request) {
         .map((c) => c.similarity)
         .sort((a, b) => b - a)
         .slice(0, 3);
-      const score =
-        topSimilarities.reduce((sum, s) => sum + s, 0) / topSimilarities.length;
+      const score = topSimilarities.reduce((sum, s) => sum + s, 0) / topSimilarities.length;
       episodeScores[key] = score;
     }
 
@@ -79,68 +77,50 @@ export async function POST(request: Request) {
       .map(([key]) => grouped[key]);
 
     // 7. Generate cleaned snippets for each episode
+    const cleaningLLM = new ChatOpenAI({
+      openAIApiKey: process.env.OPENAI_API_KEY!,
+      modelName: "gpt-3.5-turbo",
+      temperature: 0, // No creativity, just formatting
+      streaming: false,
+    });
+
     const finalResults = [];
+    for (const episodeChunks of sortedEpisodes) {
+      const bestChunk = episodeChunks.sort((a, b) => b.similarity - a.similarity)[0];
+      const lines = bestChunk.transcript ? bestChunk.transcript.split("\n") : [];
+      let snippet = lines.slice(0, 4).join("\n");
 
-    try {
-      const cleaningLLM = new ChatOpenAI({
-        openAIApiKey: process.env.OPENAI_API_KEY!,
-        modelName: "gpt-3.5-turbo",
-        temperature: 0, // No creativity, just formatting
-        streaming: false,
+      const response = await cleaningLLM.call([
+        {
+          role: "system",
+          content:
+            "You are a text formatting assistant. " +
+            "Your job is to fix spacing, punctuation, and line breaks. " +
+            "Do not add new content. Just clean it up.",
+        },
+        {
+          role: "user",
+          content: snippet,
+        },
+      ]);
+
+      snippet = response.text.trim();
+
+      finalResults.push({
+        podcast_id: bestChunk.podcast_id,
+        episode_number: bestChunk.episode_number,
+        episode_title: bestChunk.episode_title,
+        episode_date: bestChunk.episode_date,
+        podcast_image: bestChunk.podcast_image,
+        snippet,
+        link: `/podcast/${bestChunk.podcast_id}/${bestChunk.episode_number}`,
       });
-
-      for (const episodeChunks of sortedEpisodes) {
-        const bestChunk = episodeChunks.sort(
-          (a, b) => b.similarity - a.similarity
-        )[0];
-        const lines = bestChunk.transcript
-          ? bestChunk.transcript.split("\n")
-          : [];
-        let snippet = lines.slice(0, 4).join("\n");
-
-        try {
-          const response = await cleaningLLM.call([
-            {
-              role: "system",
-              content:
-                "You are a text formatting assistant. " +
-                "Your job is to fix spacing, punctuation, and line breaks. " +
-                "Do not add new content. Just clean it up.",
-            },
-            {
-              role: "user",
-              content: snippet,
-            },
-          ]);
-
-          snippet = response.text.trim();
-        } catch (err) {
-          console.error("Error cleaning snippet:", err);
-          // Use the original snippet if cleaning fails
-        }
-
-        finalResults.push({
-          podcast_id: bestChunk.podcast_id,
-          episode_number: bestChunk.episode_number,
-          episode_title: bestChunk.episode_title,
-          episode_date: bestChunk.episode_date,
-          podcast_image: bestChunk.podcast_image,
-          snippet,
-          link: `/podcast/${bestChunk.podcast_id}/${bestChunk.episode_number}`,
-        });
-      }
-    } catch (err) {
-      console.error("Error processing episodes:", err);
-      // Return whatever results we have so far
     }
 
     // 8. Return the results
     return NextResponse.json({ episodes: finalResults });
   } catch (err: any) {
     console.error("Error in query-episodes route:", err);
-    return NextResponse.json(
-      { error: err.message || "An error occurred" },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: err.message }, { status: 500 });
   }
 }

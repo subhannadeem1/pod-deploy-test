@@ -8,25 +8,24 @@ import { TextEncoder } from "util";
 export async function POST(request: Request) {
   try {
     // 1. Parse the request body to extract the query
-    const body = await request.json();
-    const { query } = body;
-
-    if (!query) {
-      return NextResponse.json(
-        { error: "No query provided." },
-        { status: 400 }
-      );
+    const { query } = await request.json();
+    if (!query || typeof query !== "string") {
+      return NextResponse.json({ error: "Query is required and must be a string" }, { status: 400 });
     }
 
-    // 2. Parse the query for specific episode or podcast mentions
-    const episodeMatch = query.match(/episode (\d+)/i);
-    const specificEpisodeNum = episodeMatch
-      ? Number.parseInt(episodeMatch[1], 10)
-      : null;
-    const podcastMatch = query.match(/(?:podcast|show) ([a-zA-Z0-9-]+)/i);
-    const specificPodcastId = podcastMatch
-      ? podcastMatch[1].toLowerCase()
-      : null;
+    // 2. Parse the query for specific episode or podcast mentions with error handling
+    let specificEpisodeNum: number | null = null;
+    let specificPodcastId: string | null = null;
+    try {
+      const episodeMatch = query.match(/episode (\d+)/i);
+      specificEpisodeNum = episodeMatch ? parseInt(episodeMatch[1], 10) : null;
+
+      const podcastMatch = query.match(/(?:podcast|show) ([a-zA-Z0-9-]+)/i);
+      specificPodcastId = podcastMatch ? podcastMatch[1].toLowerCase() : null;
+    } catch (err) {
+      console.error("Error parsing query:", err);
+      return NextResponse.json({ error: "Invalid query format" }, { status: 400 });
+    }
 
     // 3. Generate an embedding for the query
     const queryEmbedding = await embeddings.embedQuery(query);
@@ -35,10 +34,11 @@ export async function POST(request: Request) {
     const { data, error } = await supabase.rpc("match_documents", {
       query_embedding: queryEmbedding,
       match_threshold: 0.5, // Lower threshold for broader retrieval
-      match_count: 20, // Increased count for better coverage
+      match_count: 20,      // Increased count for better coverage
       target_podcast_id: specificPodcastId || null,
       target_episode_number: specificEpisodeNum || null,
     });
+    console.log("Supabase results:", data);
 
     if (error) {
       console.error("Error performing similarity search:", error);
@@ -46,9 +46,7 @@ export async function POST(request: Request) {
     }
 
     if (!data || data.length === 0) {
-      return new Response("No relevant content found.", {
-        headers: { "Content-Type": "text/plain; charset=utf-8" },
-      });
+      return NextResponse.json({ answer: "No relevant content found." });
     }
 
     // 5. Group the returned chunks by podcast_id and episode_number
@@ -68,8 +66,7 @@ export async function POST(request: Request) {
         .map((c) => c.similarity)
         .sort((a, b) => b - a)
         .slice(0, 3);
-      const score =
-        topSimilarities.reduce((sum, s) => sum + s, 0) / topSimilarities.length;
+      const score = topSimilarities.reduce((sum, s) => sum + s, 0) / topSimilarities.length;
       episodeScores[key] = score;
     }
 
@@ -81,6 +78,7 @@ export async function POST(request: Request) {
 
     // 8. Prepare context text for the LLM
     const contextText = bestChunks.map((d) => d.transcript).join("\n");
+    console.log("Grouped context text for LLM:\n", contextText);
 
     // 9. Prepare the LLM prompt
     let prompt;
@@ -104,43 +102,37 @@ Question: ${query}
     const encoder = new TextEncoder();
     const stream = new ReadableStream({
       async start(controller) {
-        try {
-          const streamingLLM = new ChatOpenAI({
-            openAIApiKey: process.env.OPENAI_API_KEY!,
-            modelName: "gpt-4", // or "gpt-3.5-turbo"
-            temperature: 0.9,
-            streaming: true,
-            callbacks: [
-              {
-                handleLLMNewToken(token: string) {
-                  const queue = encoder.encode(token);
-                  controller.enqueue(queue);
-                },
-                handleLLMEnd() {
-                  controller.close();
-                },
-                handleLLMError(err: Error) {
-                  console.error("LLM streaming error:", err);
-                  controller.error(err);
-                },
+        const streamingLLM = new ChatOpenAI({
+          openAIApiKey: process.env.OPENAI_API_KEY!,
+          modelName: "gpt-4", // or "gpt-3.5-turbo"
+          temperature: 0.9,
+          streaming: true,
+          callbacks: [
+            {
+              handleLLMNewToken(token: string) {
+                const queue = encoder.encode(token);
+                controller.enqueue(queue);
               },
-            ],
-          });
+              handleLLMEnd() {
+                controller.close();
+              },
+              handleLLMError(err: Error) {
+                controller.error(err);
+              },
+            },
+          ],
+        });
 
-          await streamingLLM.call([
-            {
-              role: "system",
-              content: prompt,
-            },
-            {
-              role: "user",
-              content: query,
-            },
-          ]);
-        } catch (err) {
-          console.error("Streaming error:", err);
-          controller.error(err);
-        }
+        await streamingLLM.call([
+          {
+            role: "system",
+            content: prompt,
+          },
+          {
+            role: "user",
+            content: query,
+          },
+        ]);
       },
     });
 
@@ -152,9 +144,6 @@ Question: ${query}
     });
   } catch (err: any) {
     console.error("API error:", err);
-    return NextResponse.json(
-      { error: err.message || "An error occurred" },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: err.message }, { status: 500 });
   }
 }
