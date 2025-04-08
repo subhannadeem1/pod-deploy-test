@@ -34,7 +34,7 @@ export async function POST(request: Request) {
     const { data, error } = await supabase.rpc("match_documents", {
       query_embedding: queryEmbedding,
       match_threshold: 0.5, // Lower threshold for broader retrieval
-      match_count: 20,      // Increased count for better coverage
+      match_count: 10,      // Increased count for better coverage
       target_podcast_id: specificPodcastId || null,
       target_episode_number: specificEpisodeNum || null,
     });

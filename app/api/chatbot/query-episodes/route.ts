@@ -29,7 +29,7 @@ export async function POST(request: Request) {
     const queryEmbedding = await embeddings.embedQuery(query);
 
     // 3. Call Supabase RPC with optional filters
-    const matchCount = 20; // Increased for better coverage
+    const matchCount = 10; // Increased for better coverage
     const matchThreshold = 0.5; // Lowered for broader retrieval
 
     const { data, error } = await supabase.rpc("match_documents", {
