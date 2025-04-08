@@ -1,0 +1,1646 @@
+{
+  "1": {
+    "title": "Max Tegmark: Life 3.0",
+    "date": "2018-08-26"
+  },
+  "2": {
+    "title": "Christof Koch: Consciousness",
+    "date": "2018-09-01"
+  },
+  "3": {
+    "title": "Steven Pinker: AI in the Age of Reason",
+    "date": "2018-10-17"
+  },
+  "4": {
+    "title": "Yoshua Bengio: Deep Learning",
+    "date": "2018-10-20"
+  },
+  "5": {
+    "title": "Vladimir Vapnik: Statistical Learning",
+    "date": "2018-11-16"
+  },
+  "6": {
+    "title": "Guido van Rossum: Python",
+    "date": "2018-11-22"
+  },
+  "7": {
+    "title": "Jeff Atwood: Stack Overflow and Coding Horror",
+    "date": "2018-11-29"
+  },
+  "8": {
+    "title": "Eric Schmidt: Google",
+    "date": "2018-12-04"
+  },
+  "9": {
+    "title": "Stuart Russell: Long-Term Future of AI",
+    "date": "2018-12-09"
+  },
+  "10": {
+    "title": "Pieter Abbeel: Deep Reinforcement Learning",
+    "date": "2018-12-16"
+  },
+  "11": {
+    "title": "Juergen Schmidhuber: Godel Machines, Meta-Learning, and LSTMs",
+    "date": "2018-12-23"
+  },
+  "12": {
+    "title": "Tuomas Sandholm: Poker and Game Theory",
+    "date": "2018-12-28"
+  },
+  "13": {
+    "title": "Tomaso Poggio: Brains, Minds, and Machines",
+    "date": "2019-01-19"
+  },
+  "14": {
+    "title": "Kyle Vogt: Cruise Automation",
+    "date": "2019-02-07"
+  },
+  "15": {
+    "title": "Leslie Kaelbling: Reinforcement Learning, Planning, and Robotics",
+    "date": "2019-03-12"
+  },
+  "16": {
+    "title": "Eric Weinstein: Revolutionary Ideas in Science, Math, and Society",
+    "date": "2019-03-20"
+  },
+  "17": {
+    "title": "Greg Brockman: OpenAI and AGI",
+    "date": "2019-04-03"
+  },
+  "18": {
+    "title": "Elon Musk: Tesla Autopilot",
+    "date": "2019-04-12"
+  },
+  "19": {
+    "title": "Ian Goodfellow: Generative Adversarial Networks (GANs)",
+    "date": "2019-04-18"
+  },
+  "20": {
+    "title": "Oriol Vinyals: DeepMind AlphaStar, StarCraft, Language, and Sequences",
+    "date": "2019-04-29"
+  },
+  "21": {
+    "title": "Chris Lattner: Compilers, LLVM, Swift, TPU, and ML Accelerators",
+    "date": "2019-05-13"
+  },
+  "22": {
+    "title": "Rajat Monga: TensorFlow",
+    "date": "2019-06-03"
+  },
+  "23": {
+    "title": "Gavin Miller: Adobe Research",
+    "date": "2019-06-10"
+  },
+  "24": {
+    "title": "Rosalind Picard: Affective Computing, Emotion, Privacy, and Health",
+    "date": "2019-06-17"
+  },
+  "25": {
+    "title": "Jeff Hawkins: Thousand Brains Theory of Intelligence",
+    "date": "2019-07-01"
+  },
+  "26": {
+    "title": "Sean Carroll: The Nature of the Universe, Life, and Intelligence",
+    "date": "2019-07-10"
+  },
+  "27": {
+    "title": "Kai-Fu Lee: AI Superpowers – China and Silicon Valley",
+    "date": "2019-07-15"
+  },
+  "28": {
+    "title": "Chris Urmson: Self-Driving Cars at Aurora, Google, CMU, and DARPA",
+    "date": "2019-07-22"
+  },
+  "29": {
+    "title": "Gustav Soderstrom: Spotify",
+    "date": "2019-07-29"
+  },
+  "30": {
+    "title": "Kevin Scott: Microsoft CTO",
+    "date": "2019-08-01"
+  },
+  "31": {
+    "title": "George Hotz: Comma.ai, OpenPilot, and Autonomous Vehicles",
+    "date": "2019-08-05"
+  },
+  "32": {
+    "title": "Paola Arlotta: Brain Development from Stem Cell to Organoid",
+    "date": "2019-08-12"
+  },
+  "33": {
+    "title": "Keoki Jackson: Lockheed Martin",
+    "date": "2019-08-19"
+  },
+  "34": {
+    "title": "Pamela McCorduck: Machines Who Think and the Early Days of AI",
+    "date": "2019-08-23"
+  },
+  "35": {
+    "title": "Jeremy Howard: fast.ai Deep Learning Courses and Research",
+    "date": "2019-08-27"
+  },
+  "36": {
+    "title": "Yann LeCun: Deep Learning, Convolutional Neural Networks, and Self-Supervised Learning",
+    "date": "2019-08-31"
+  },
+  "37": {
+    "title": "Vijay Kumar: Flying Robots",
+    "date": "2019-09-08"
+  },
+  "38": {
+    "title": "François Chollet: Keras, Deep Learning, and the Progress of AI",
+    "date": "2019-09-14"
+  },
+  "39": {
+    "title": "Colin Angle: iRobot",
+    "date": "2019-09-19"
+  },
+  "40": {
+    "title": "Regina Barzilay: Deep Learning for Cancer Diagnosis and Treatment",
+    "date": "2019-09-23"
+  },
+  "41": {
+    "title": "Leonard Susskind: Quantum Mechanics, String Theory, and Black Holes",
+    "date": "2019-09-26"
+  },
+  "42": {
+    "title": "Peter Norvig: Artificial Intelligence: A Modern Approach",
+    "date": "2019-09-30"
+  },
+  "43": {
+    "title": "Gary Marcus: Toward a Hybrid of Deep Learning and Symbolic AI",
+    "date": "2019-10-03"
+  },
+  "44": {
+    "title": "David Ferrucci: IBM Watson, Jeopardy & Deep Conversations with AI",
+    "date": "2019-10-11"
+  },
+  "45": {
+    "title": "Michio Kaku: Future of Humans, Aliens, Space Travel & Physics",
+    "date": "2019-10-22"
+  },
+  "46": {
+    "title": "Garry Kasparov: Chess, Deep Blue, AI, and Putin",
+    "date": "2019-10-27"
+  },
+  "47": {
+    "title": "Sean Carroll: Quantum Mechanics and the Many-Worlds Interpretation",
+    "date": "2019-11-01"
+  },
+  "48": {
+    "title": "Bjarne Stroustrup: C++",
+    "date": "2019-11-07"
+  },
+  "49": {
+    "title": "Elon Musk: Neuralink, AI, Autopilot, and the Pale Blue Dot",
+    "date": "2019-11-12"
+  },
+  "50": {
+    "title": "Michael Kearns: Algorithmic Fairness, Bias, Privacy, and Ethics in Machine Learning",
+    "date": "2019-11-19"
+  },
+  "51": {
+    "title": "Dava Newman: Space Exploration, Space Suits, and Life on Mars",
+    "date": "2019-11-22"
+  },
+  "52": {
+    "title": "Gilbert Strang: Linear Algebra, Deep Learning, Teaching, and MIT OpenCourseWare",
+    "date": "2019-11-25"
+  },
+  "53": {
+    "title": "Noam Chomsky: Language, Cognition, and Deep Learning",
+    "date": "2019-11-29"
+  },
+  "54": {
+    "title": "Ray Dalio: Principles, the Economic Machine, Artificial Intelligence & the Arc of Life",
+    "date": "2019-12-02"
+  },
+  "55": {
+    "title": "Whitney Cummings: Comedy, Robotics, Neurology, and Love",
+    "date": "2019-12-05"
+  },
+  "56": {
+    "title": "Judea Pearl: Causal Reasoning, Counterfactuals, Bayesian Networks, and the Path to AGI",
+    "date": "2019-12-11"
+  },
+  "57": {
+    "title": "Rohit Prasad: Amazon Alexa and Conversational AI",
+    "date": "2019-12-14"
+  },
+  "58": {
+    "title": "Michael Stevens: Vsauce",
+    "date": "2019-12-17"
+  },
+  "59": {
+    "title": "Sebastian Thrun: Flying Cars, Autonomous Vehicles, and Education",
+    "date": "2019-12-21"
+  },
+  "60": {
+    "title": "Jim Gates: Supersymmetry, String Theory and Proving Einstein Right",
+    "date": "2019-12-25"
+  },
+  "61": {
+    "title": "Melanie Mitchell: Concepts, Analogies, Common Sense & Future of AI",
+    "date": "2019-12-28"
+  },
+  "62": {
+    "title": "Donald Knuth: Algorithms, TeX, Life, and The Art of Computer Programming",
+    "date": "2019-12-30"
+  },
+  "63": {
+    "title": "Stephen Kotkin: Stalin, Putin, and the Nature of Power",
+    "date": "2020-01-03"
+  },
+  "64": {
+    "title": "Grant Sanderson: 3Blue1Brown and the Beauty of Mathematics",
+    "date": "2020-01-07"
+  },
+  "65": {
+    "title": "Daniel Kahneman: Thinking Fast and Slow, Deep Learning, and AI",
+    "date": "2020-01-14"
+  },
+  "66": {
+    "title": "Ayanna Howard: Human-Robot Interaction and Ethics of Safety-Critical Systems",
+    "date": "2020-01-17"
+  },
+  "67": {
+    "title": "Paul Krugman: Economics of Innovation, Automation, Safety Nets & Universal Basic Income",
+    "date": "2020-01-21"
+  },
+  "68": {
+    "title": "Cristos Goodrow: YouTube Algorithm",
+    "date": "2020-01-25"
+  },
+  "69": {
+    "title": "David Chalmers: The Hard Problem of Consciousness",
+    "date": "2020-01-29"
+  },
+  "70": {
+    "title": "Jim Keller: Moore’s Law, Microprocessors, and First Principles",
+    "date": "2020-02-05"
+  },
+  "71": {
+    "title": "Vladimir Vapnik: Predicates, Invariants, and the Essence of Intelligence",
+    "date": "2020-02-14"
+  },
+  "72": {
+    "title": "Scott Aaronson: Quantum Computing",
+    "date": "2020-02-17"
+  },
+  "73": {
+    "title": "Andrew Ng: Deep Learning, Education, and Real-World AI",
+    "date": "2020-02-20"
+  },
+  "74": {
+    "title": "Michael I. Jordan: Machine Learning, Recommender Systems, and the Future of AI",
+    "date": "2020-02-24"
+  },
+  "75": {
+    "title": "Marcus Hutter: Universal Artificial Intelligence, AIXI, and AGI",
+    "date": "2020-02-26"
+  },
+  "76": {
+    "title": "John Hopfield: Physics View of the Mind and Neurobiology",
+    "date": "2020-02-29"
+  },
+  "77": {
+    "title": "Alex Garland: Ex Machina, Devs, Annihilation, and the Poetry of Science",
+    "date": "2020-03-03"
+  },
+  "78": {
+    "title": "Ann Druyan: Cosmos, Carl Sagan, Voyager, and the Beauty of Science",
+    "date": "2020-03-05"
+  },
+  "79": {
+    "title": "Lee Smolin: Quantum Gravity and Einstein’s Unfinished Revolution",
+    "date": "2020-03-07"
+  },
+  "80": {
+    "title": "Vitalik Buterin: Ethereum, Cryptocurrency, and the Future of Money",
+    "date": "2020-03-16"
+  },
+  "81": {
+    "title": "Anca Dragan: Human-Robot Interaction and Reward Engineering",
+    "date": "2020-03-19"
+  },
+  "82": {
+    "title": "Simon Sinek: Leadership, Hard Work, Optimism and the Infinite Game",
+    "date": "2020-03-21"
+  },
+  "83": {
+    "title": "Nick Bostrom: Simulation and Superintelligence",
+    "date": "2020-03-25"
+  },
+  "84": {
+    "title": "William MacAskill: Effective Altruism",
+    "date": "2020-03-29"
+  },
+  "85": {
+    "title": "Roger Penrose: Physics of Consciousness and the Infinite Universe",
+    "date": "2020-03-31"
+  },
+  "86": {
+    "title": "David Silver: AlphaGo, AlphaZero, and Deep Reinforcement Learning",
+    "date": "2020-04-03"
+  },
+  "87": {
+    "title": "Richard Dawkins: Evolution, Intelligence, Simulation, and Memes",
+    "date": "2020-04-09"
+  },
+  "88": {
+    "title": "Eric Weinstein: Geometric Unity and the Call for New Ideas, Leaders & Institutions",
+    "date": "2020-04-13"
+  },
+  "89": {
+    "title": "Stephen Wolfram: Cellular Automata, Computation, and Physics",
+    "date": "2020-04-18"
+  },
+  "90": {
+    "title": "Dmitry Korkin: Computational Biology of Coronavirus",
+    "date": "2020-04-22"
+  },
+  "91": {
+    "title": "Jack Dorsey: Square, Cryptocurrency, and Artificial Intelligence",
+    "date": "2020-04-24"
+  },
+  "92": {
+    "title": "Harry Cliff: Particle Physics and the Large Hadron Collider",
+    "date": "2020-04-29"
+  },
+  "93": {
+    "title": "Daphne Koller: Biomedicine and Machine Learning",
+    "date": "2020-05-05"
+  },
+  "94": {
+    "title": "Ilya Sutskever: Deep Learning",
+    "date": "2020-05-08"
+  },
+  "95": {
+    "title": "Dawn Song: Adversarial Machine Learning and Computer Security",
+    "date": "2020-05-12"
+  },
+  "96": {
+    "title": "Stephen Schwarzman: Going Big in Business, Investing, and AI",
+    "date": "2020-05-15"
+  },
+  "97": {
+    "title": "Sertac Karaman: Robots That Fly and Robots That Drive",
+    "date": "2020-05-19"
+  },
+  "98": {
+    "title": "Kate Darling: Social Robotics",
+    "date": "2020-05-23"
+  },
+  "99": {
+    "title": "Karl Friston: Neuroscience and the Free Energy Principle",
+    "date": "2020-05-28"
+  },
+  "100": {
+    "title": "Alexander Fridman: My Dad, the Plasma Physicist",
+    "date": "2020-06-03"
+  },
+  "101": {
+    "title": "Joscha Bach: Artificial Consciousness and the Nature of Reality",
+    "date": "2020-06-13"
+  },
+  "102": {
+    "title": "Steven Pressfield: The War of Art",
+    "date": "2020-06-20"
+  },
+  "103": {
+    "title": "Ben Goertzel: Artificial General Intelligence",
+    "date": "2020-06-22"
+  },
+  "104": {
+    "title": "David Patterson: Computer Architecture and Data Storage",
+    "date": "2020-06-27"
+  },
+  "105": {
+    "title": "Robert Langer: Edison of Medicine",
+    "date": "2020-06-30"
+  },
+  "106": {
+    "title": "Matt Botvinick: Neuroscience, Psychology, and AI at DeepMind",
+    "date": "2020-07-03"
+  },
+  "107": {
+    "title": "Peter Singer: Suffering in Humans, Animals, and AI",
+    "date": "2020-07-08"
+  },
+  "108": {
+    "title": "Sergey Levine: Robotics and Machine Learning",
+    "date": "2020-07-14"
+  },
+  "109": {
+    "title": "Brian Kernighan: UNIX, C, AWK, AMPL, and Go Programming",
+    "date": "2020-07-18"
+  },
+  "110": {
+    "title": "Jitendra Malik: Computer Vision",
+    "date": "2020-07-21"
+  },
+  "111": {
+    "title": "Richard Karp: Algorithms and Computational Complexity",
+    "date": "2020-07-26"
+  },
+  "112": {
+    "title": "Ian Hutchinson: Nuclear Fusion, Plasma Physics, and Religion",
+    "date": "2020-07-29"
+  },
+  "113": {
+    "title": "Manolis Kellis: Human Genome and Evolutionary Dynamics",
+    "date": "2020-07-31"
+  },
+  "114": {
+    "title": "Russ Tedrake: Underactuated Robotics, Control, Dynamics and Touch",
+    "date": "2020-08-09"
+  },
+  "115": {
+    "title": "Dileep George: Brain-Inspired AI",
+    "date": "2020-08-14"
+  },
+  "116": {
+    "title": "Sara Seager: Search for Planets and Life Outside Our Solar System",
+    "date": "2020-08-16"
+  },
+  "117": {
+    "title": "Sheldon Solomon: Death and Meaning",
+    "date": "2020-08-20"
+  },
+  "118": {
+    "title": "Grant Sanderson: Math, Manim, Neural Networks & Teaching with 3Blue1Brown",
+    "date": "2020-08-23"
+  },
+  "119": {
+    "title": "David Eagleman: Neuroplasticity and the Livewired Brain",
+    "date": "2020-08-26"
+  },
+  "120": {
+    "title": "François Chollet: Measures of Intelligence",
+    "date": "2020-08-30"
+  },
+  "121": {
+    "title": "Eugenia Kuyda: Friendship with an AI Companion",
+    "date": "2020-09-05"
+  },
+  "122": {
+    "title": "David Fravor: UFOs, Aliens, Fighter Jets, and Aerospace Engineering",
+    "date": "2020-09-08"
+  },
+  "123": {
+    "title": "Manolis Kellis: Origin of Life, Humans, Ideas, Suffering, and Happiness",
+    "date": "2020-09-12"
+  },
+  "124": {
+    "title": "Stephen Wolfram: Fundamental Theory of Physics, Life, and the Universe",
+    "date": "2020-09-15"
+  },
+  "125": {
+    "title": "Ryan Hall: Martial Arts and the Philosophy of Violence, Power, and Grace",
+    "date": "2020-09-20"
+  },
+  "126": {
+    "title": "James Gosling: Java, JVM, Emacs, and the Early Days of Computing",
+    "date": "2020-09-24"
+  },
+  "127": {
+    "title": "Joe Rogan: Conversations, Ideas, Love, Freedom & The Joe Rogan Experience",
+    "date": "2020-09-26"
+  },
+  "128": {
+    "title": "Michael Malice: Anarchy, Democracy, Libertarianism, Love, and Trolling",
+    "date": "2020-10-02"
+  },
+  "129": {
+    "title": "Lisa Feldman Barrett: Counterintuitive Ideas About How the Brain Works",
+    "date": "2020-10-04"
+  },
+  "130": {
+    "title": "Scott Aaronson: Computational Complexity and Consciousness",
+    "date": "2020-10-12"
+  },
+  "131": {
+    "title": "Chris Lattner: The Future of Computing and Programming Languages",
+    "date": "2020-10-18"
+  },
+  "132": {
+    "title": "George Hotz: Hacking the Simulation & Learning to Drive with Neural Nets",
+    "date": "2020-10-21"
+  },
+  "133": {
+    "title": "Manolis Kellis: Biology of Disease",
+    "date": "2020-10-25"
+  },
+  "134": {
+    "title": "Eric Weinstein: On the Nature of Good and Evil, Genius and Madness",
+    "date": "2020-10-29"
+  },
+  "135": {
+    "title": "Charles Isbell: Computing, Interactive AI, and Race in America",
+    "date": "2020-11-01"
+  },
+  "136": {
+    "title": "Dan Carlin: Hardcore History",
+    "date": "2020-11-02"
+  },
+  "137": {
+    "title": "Alex Filippenko: Supernovae, Dark Energy, Aliens & the Expanding Universe",
+    "date": "2020-11-07"
+  },
+  "138": {
+    "title": "Yaron Brook: Ayn Rand and the Philosophy of Objectivism",
+    "date": "2020-11-13"
+  },
+  "139": {
+    "title": "Andrew Huberman: Neuroscience of Optimal Performance",
+    "date": "2020-11-16"
+  },
+  "140": {
+    "title": "Lisa Feldman Barrett: Love, Evolution, and the Human Brain",
+    "date": "2020-11-20"
+  },
+  "141": {
+    "title": "Erik Brynjolfsson: Economics of AI, Social Networks, and Technology",
+    "date": "2020-11-25"
+  },
+  "142": {
+    "title": "Manolis Kellis: Meaning of Life, the Universe, and Everything",
+    "date": "2020-11-30"
+  },
+  "143": {
+    "title": "John Clarke: The Art of Fighting and the Pursuit of Excellence",
+    "date": "2020-12-06"
+  },
+  "144": {
+    "title": "Michael Littman: Reinforcement Learning and the Future of AI",
+    "date": "2020-12-12"
+  },
+  "145": {
+    "title": "Matthew Johnson: Psychedelics",
+    "date": "2020-12-14"
+  },
+  "146": {
+    "title": "Michael Mina: Rapid Testing, Viruses, and the Engineering Mindset",
+    "date": "2020-12-18"
+  },
+  "147": {
+    "title": "Dmitri Dolgov: Waymo and the Future of Self-Driving Cars",
+    "date": "2020-12-20"
+  },
+  "148": {
+    "title": "Charles Isbell and Michael Littman: Machine Learning and Education",
+    "date": "2020-12-26"
+  },
+  "149": {
+    "title": "Diana Walsh Pasulka: Aliens, Technology, Religion, and the Nature of Belief",
+    "date": "2020-12-27"
+  },
+  "150": {
+    "title": "Michael Malice: The White Pill, Freedom, Hope, and Happiness Amidst Chaos",
+    "date": "2020-12-31"
+  },
+  "151": {
+    "title": "Dan Kokotov: Speech Recognition with AI and Humans",
+    "date": "2021-01-04"
+  },
+  "152": {
+    "title": "Dan Gable: Olympic Wrestling, Mental Toughness & the Making of Champions",
+    "date": "2021-01-09"
+  },
+  "153": {
+    "title": "Dmitry Korkin: Evolution of Proteins, Viruses, Life, and AI",
+    "date": "2021-01-11"
+  },
+  "154": {
+    "title": "Avi Loeb: Aliens, Black Holes, and the Mystery of the Oumuamua",
+    "date": "2021-01-13"
+  },
+  "155": {
+    "title": "Max Tegmark: AI and Physics",
+    "date": "2021-01-18"
+  },
+  "156": {
+    "title": "Tim Dillon: Comedy, Power, Conspiracy Theories, and Freedom",
+    "date": "2021-01-29"
+  },
+  "157": {
+    "title": "Natalya Bailey: Rocket Engines and Electric Spacecraft Propulsion",
+    "date": "2021-02-01"
+  },
+  "158": {
+    "title": "Zev Weinstein: The Next Generation of Big Ideas and Brave Minds",
+    "date": "2021-02-05"
+  },
+  "159": {
+    "title": "Richard Craib: WallStreetBets, Numerai, and the Future of Stock Trading",
+    "date": "2021-02-07"
+  },
+  "160": {
+    "title": "Brendan Eich: JavaScript, Firefox, Mozilla, and Brave",
+    "date": "2021-02-12"
+  },
+  "161": {
+    "title": "Jason Calacanis: Startups, Angel Investing, Capitalism, and Friendship",
+    "date": "2021-02-15"
+  },
+  "162": {
+    "title": "Jim Keller: The Future of Computing, AI, Life, and Consciousness",
+    "date": "2021-02-18"
+  },
+  "163": {
+    "title": "Eric Weinstein: Difficult Conversations, Freedom of Speech, and Physics",
+    "date": "2021-02-23"
+  },
+  "164": {
+    "title": "Andrew Huberman: Sleep, Dreams, Creativity & the Limits of the Human Mind",
+    "date": "2021-02-28"
+  },
+  "165": {
+    "title": "Josh Barnett: Philosophy of Violence, Power, and the Martial Arts",
+    "date": "2021-03-01"
+  },
+  "166": {
+    "title": "Cal Newport: Deep Work, Focus, Productivity, Email, and Social Media",
+    "date": "2021-03-04"
+  },
+  "167": {
+    "title": "Saagar Enjeti: Politics, History, and Power",
+    "date": "2021-03-13"
+  },
+  "168": {
+    "title": "Silvio Micali: Cryptocurrency, Blockchain, Algorand, Bitcoin, and Ethereum",
+    "date": "2021-03-15"
+  },
+  "169": {
+    "title": "Ryan Hall: Solving Martial Arts from First Principles",
+    "date": "2021-03-20"
+  },
+  "170": {
+    "title": "Ronald Sullivan: The Ideal of Justice in the Face of Controversy and Evil",
+    "date": "2021-03-22"
+  },
+  "171": {
+    "title": "Anthony Pompliano: Bitcoin",
+    "date": "2021-03-25"
+  },
+  "172": {
+    "title": "Ryan Schiller: Librex and the Free Exchange of Ideas on College Campuses",
+    "date": "2021-03-30"
+  },
+  "173": {
+    "title": "Nic Carter: Bitcoin Core Values, Layered Scaling, and Blocksize Debates",
+    "date": "2021-03-31"
+  },
+  "174": {
+    "title": "Tyler Cowen: Economic Growth and the Fight Against Conformity and Mediocrity",
+    "date": "2021-04-10"
+  },
+  "175": {
+    "title": "Yannis Pappas: History and Comedy",
+    "date": "2021-04-12"
+  },
+  "176": {
+    "title": "Robert Breedlove: Philosophy of Bitcoin from First Principles",
+    "date": "2021-04-17"
+  },
+  "177": {
+    "title": "Risto Miikkulainen: Neuroevolution and Evolutionary Computation",
+    "date": "2021-04-19"
+  },
+  "178": {
+    "title": "Michael Malice and Yaron Brook: Ayn Rand, Human Nature, and Anarchy",
+    "date": "2021-04-24"
+  },
+  "179": {
+    "title": "Georges St-Pierre: The Science of Fighting",
+    "date": "2021-04-25"
+  },
+  "180": {
+    "title": "Jeremi Suri: History of American Power",
+    "date": "2021-04-29"
+  },
+  "181": {
+    "title": "Sergey Nazarov: Chainlink, Smart Contracts, and Oracle Networks",
+    "date": "2021-05-01"
+  },
+  "182": {
+    "title": "John Danaher: The Path to Mastery in Jiu Jitsu, Grappling, Judo, and MMA",
+    "date": "2021-05-09"
+  },
+  "183": {
+    "title": "Po-Shen Loh: Mathematics, Math Olympiad, Combinatorics & Contact Tracing",
+    "date": "2021-05-14"
+  },
+  "184": {
+    "title": "Katherine de Kleer: Planets, Moons, and Asteroids in Our Solar System",
+    "date": "2021-05-17"
+  },
+  "185": {
+    "title": "Sam Harris: Consciousness, Free Will, Psychedelics, AI, UFOs, and Meaning",
+    "date": "2021-05-20"
+  },
+  "186": {
+    "title": "Bryan Johnson: Kernel Brain-Computer Interfaces",
+    "date": "2021-05-24"
+  },
+  "187": {
+    "title": "Frank Wilczek: Physics of Quarks, Dark Matter, Complexity, Life & Aliens",
+    "date": "2021-05-29"
+  },
+  "188": {
+    "title": "Vitalik Buterin: Ethereum 2.0",
+    "date": "2021-06-03"
+  },
+  "189": {
+    "title": "David Sinclair: Extending the Human Lifespan Beyond 100 Years",
+    "date": "2021-06-06"
+  },
+  "190": {
+    "title": "Jordan Ellenberg: Mathematics of High-Dimensional Shapes and Geometries",
+    "date": "2021-06-12"
+  },
+  "191": {
+    "title": "Daniel Schmachtenberger: Steering Civilization Away from Self-Destruction",
+    "date": "2021-06-14"
+  },
+  "192": {
+    "title": "Charles Hoskinson: Cardano",
+    "date": "2021-06-16"
+  },
+  "193": {
+    "title": "Rob Reid: The Existential Threat of Engineered Viruses and Lab Leaks",
+    "date": "2021-06-20"
+  },
+  "194": {
+    "title": "Bret Weinstein: Truth, Science, and Censorship in the Time of a Pandemic",
+    "date": "2021-06-25"
+  },
+  "195": {
+    "title": "Clara Sousa-Silva: Searching for Signs of Life on Venus and Other Planets",
+    "date": "2021-06-27"
+  },
+  "196": {
+    "title": "Yeonmi Park: North Korea",
+    "date": "2021-06-30"
+  },
+  "197": {
+    "title": "Jocko Willink: War, Leadership, and Discipline",
+    "date": "2021-07-04"
+  },
+  "198": {
+    "title": "Sara Walker: The Origin of Life on Earth and Alien Worlds",
+    "date": "2021-07-09"
+  },
+  "199": {
+    "title": "Roger Reaves: Smuggling Drugs for Pablo Escobar and the Medellin Cartel",
+    "date": "2021-07-11"
+  },
+  "200": {
+    "title": "Michael Malice: Totalitarianism and Anarchy",
+    "date": "2021-07-15"
+  },
+  "201": {
+    "title": "Konstantin Batygin: Planet 9 and the Edge of Our Solar System",
+    "date": "2021-07-19"
+  },
+  "202": {
+    "title": "Rick Doblin: Psychedelics",
+    "date": "2021-07-20"
+  },
+  "203": {
+    "title": "Anya Fernald: Regenerative Farming and the Art of Cooking Meat",
+    "date": "2021-07-23"
+  },
+  "204": {
+    "title": "Cumrun Vafa: String Theory",
+    "date": "2021-07-25"
+  },
+  "205": {
+    "title": "Zach Bitter: Ultramarathon Running",
+    "date": "2021-07-28"
+  },
+  "206": {
+    "title": "Ishan Misra: Self-Supervised Deep Learning in Computer Vision",
+    "date": "2021-07-31"
+  },
+  "207": {
+    "title": "Chris Duffin: The Mad Scientist of Strength",
+    "date": "2021-08-03"
+  },
+  "208": {
+    "title": "Jeff Hawkins: The Thousand Brains Theory of Intelligence",
+    "date": "2021-08-08"
+  },
+  "209": {
+    "title": "Luís and João Batalha: Fermat’s Library and the Art of Studying Papers",
+    "date": "2021-08-08"
+  },
+  "210": {
+    "title": "Matt Walker: Sleep",
+    "date": "2021-08-11"
+  },
+  "211": {
+    "title": "Brian Muraresku: The Secret History of Psychedelics",
+    "date": "2021-08-14"
+  },
+  "212": {
+    "title": "Joscha Bach: Nature of Reality, Dreams, and Consciousness",
+    "date": "2021-08-21"
+  },
+  "213": {
+    "title": "Barry Barish: Gravitational Waves and the Most Precise Device Ever Built",
+    "date": "2021-08-23"
+  },
+  "214": {
+    "title": "Jed Buchwald: Isaac Newton and the Philosophy of Science",
+    "date": "2021-08-27"
+  },
+  "215": {
+    "title": "Wojciech Zaremba: OpenAI Codex, GPT-3, Robotics, and the Future of AI",
+    "date": "2021-08-29"
+  },
+  "216": {
+    "title": "Vincent Racaniello: Viruses and Vaccines",
+    "date": "2021-09-01"
+  },
+  "217": {
+    "title": "Rodney Brooks: Robotics",
+    "date": "2021-09-03"
+  },
+  "218": {
+    "title": "Jaron Lanier: Virtual Reality, Social Media & the Future of Humans and AI",
+    "date": "2021-09-06"
+  },
+  "219": {
+    "title": "Donald Knuth: Programming, Algorithms, Hard Problems & the Game of Life",
+    "date": "2021-09-09"
+  },
+  "220": {
+    "title": "Niels Jorgensen: New York Firefighters and the Heroes of 9/11",
+    "date": "2021-09-11"
+  },
+  "221": {
+    "title": "Douglas Lenat: Cyc and the Quest to Solve Common Sense Reasoning in AI",
+    "date": "2021-09-15"
+  },
+  "222": {
+    "title": "Jay McClelland: Neural Networks and the Emergence of Cognition",
+    "date": "2021-09-20"
+  },
+  "223": {
+    "title": "Travis Stevens: Judo, Olympics, and Mental Toughness",
+    "date": "2021-09-20"
+  },
+  "224": {
+    "title": "Travis Oliphant: NumPy, SciPy, Anaconda, Python & Scientific Programming",
+    "date": "2021-09-22"
+  },
+  "225": {
+    "title": "Jeffrey Shainline: Neuromorphic Computing and Optoelectronic Intelligence",
+    "date": "2021-09-26"
+  },
+  "226": {
+    "title": "Jo Boaler: How to Learn Math",
+    "date": "2021-09-27"
+  },
+  "227": {
+    "title": "Sean Kelly: Existentialism, Nihilism, and the Search for Meaning",
+    "date": "2021-09-30"
+  },
+  "228": {
+    "title": "RZA: Wu-Tang Clan, Kung Fu, Chess, God, Life, and Death",
+    "date": "2021-10-05"
+  },
+  "229": {
+    "title": "Richard Wrangham: Role of Violence, Sex, and Fire in Human Evolution",
+    "date": "2021-10-10"
+  },
+  "230": {
+    "title": "Kelsi Sheren: War, Artillery, PTSD, and Love",
+    "date": "2021-10-14"
+  },
+  "231": {
+    "title": "Alex Gladstein: Bitcoin, Authoritarianism, and Human Rights",
+    "date": "2021-10-16"
+  },
+  "232": {
+    "title": "Brian Greene: Quantum Gravity, Big Bang, Aliens, Life, Death, and Meaning",
+    "date": "2021-10-20"
+  },
+  "233": {
+    "title": "Carl Hart: Heroin, Cocaine, MDMA, Alcohol & the Role of Drugs in Society",
+    "date": "2021-10-23"
+  },
+  "234": {
+    "title": "Stephen Wolfram: Complexity and the Fabric of Reality",
+    "date": "2021-10-26"
+  },
+  "235": {
+    "title": "Michael Mina: Rapid COVID Testing",
+    "date": "2021-10-29"
+  },
+  "236": {
+    "title": "Jimmy Pedro: Judo and the Forging of Champions",
+    "date": "2021-10-31"
+  },
+  "237": {
+    "title": "Steve Viscelli: Trucking and the Decline of the American Dream",
+    "date": "2021-11-03"
+  },
+  "238": {
+    "title": "Francis Collins: National Institutes of Health (NIH)",
+    "date": "2021-11-05"
+  },
+  "239": {
+    "title": "Niall Ferguson: History of Money, Power, War, and Truth",
+    "date": "2021-11-08"
+  },
+  "240": {
+    "title": "Neal Stephenson: Sci-Fi, Space, Aliens, AI, VR & the Future of Humanity",
+    "date": "2021-11-11"
+  },
+  "241": {
+    "title": "Boris Sofman: Waymo, Cozmo, Self-Driving Cars, and the Future of Robotics",
+    "date": "2021-11-16"
+  },
+  "242": {
+    "title": "Ben Askren: Wrestling and MMA",
+    "date": "2021-11-20"
+  },
+  "243": {
+    "title": "Kevin Systrom: Instagram",
+    "date": "2021-11-23"
+  },
+  "244": {
+    "title": "Robert Crews: Afghanistan, Taliban, Bin Laden, and War in the Middle East",
+    "date": "2021-11-28"
+  },
+  "245": {
+    "title": "Tom Brands: Iowa Wrestling",
+    "date": "2021-11-30"
+  },
+  "246": {
+    "title": "Peter Woit: Theories of Everything and Why String Theory is Not Even Wrong",
+    "date": "2021-12-03"
+  },
+  "247": {
+    "title": "Jamie Metzl: Lab Leak Theory",
+    "date": "2021-12-08"
+  },
+  "248": {
+    "title": "Norman Naimark: Genocide, Stalin, Hitler, Mao, and Absolute Power",
+    "date": "2021-12-18"
+  },
+  "249": {
+    "title": "Albert Bourla: Pfizer CEO",
+    "date": "2021-12-18"
+  },
+  "250": {
+    "title": "Peter Wang: Python and the Source Code of Humans, Computers, and Reality",
+    "date": "2021-12-23"
+  },
+  "251": {
+    "title": "Ray Dalio: Money, Power, and the Collapse of Empires",
+    "date": "2021-12-25"
+  },
+  "252": {
+    "title": "Elon Musk: SpaceX, Mars, Tesla Autopilot, Self-Driving, Robotics, and AI",
+    "date": "2021-12-28"
+  },
+  "253": {
+    "title": "Michael Malice: New Year’s Special",
+    "date": "2021-12-31"
+  },
+  "254": {
+    "title": "Jay Bhattacharya: The Case Against Lockdowns",
+    "date": "2022-01-04"
+  },
+  "255": {
+    "title": "Mark Normand: Comedy!",
+    "date": "2022-01-08"
+  },
+  "256": {
+    "title": "Nationalism Debate: Yaron Brook and Yoram Hazony",
+    "date": "2022-01-15"
+  },
+  "257": {
+    "title": "Brian Keating: Cosmology, Astrophysics, Aliens & Losing the Nobel Prize",
+    "date": "2022-01-18"
+  },
+  "258": {
+    "title": "Yann LeCun: Dark Matter of Intelligence and Self-Supervised Learning",
+    "date": "2022-01-22"
+  },
+  "259": {
+    "title": "Thomas Tull: From Batman Dark Knight Trilogy to AI and the Rolling Stones",
+    "date": "2022-01-26"
+  },
+  "260": {
+    "title": "Georges St-Pierre, John Danaher & Gordon Ryan: The Greatest of All Time",
+    "date": "2022-01-30"
+  },
+  "261": {
+    "title": "Philip Goff: Consciousness, Panpsychism, and the Philosophy of Mind",
+    "date": "2022-02-03"
+  },
+  "262": {
+    "title": "Garry Nolan: UFOs and Aliens",
+    "date": "2022-02-06"
+  },
+  "263": {
+    "title": "John Abramson: Big Pharma",
+    "date": "2022-02-11"
+  },
+  "264": {
+    "title": "Tim Urban: Elon Musk, Neuralink, AI, Aliens, and the Future of Humanity",
+    "date": "2022-02-13"
+  },
+  "265": {
+    "title": "Devon Larratt: Arm Wrestling",
+    "date": "2022-02-16"
+  },
+  "266": {
+    "title": "Nicole Perlroth: Cybersecurity and the Weapons of Cyberwar",
+    "date": "2022-02-20"
+  },
+  "267": {
+    "title": "Mark Zuckerberg: Meta, Facebook, Instagram, and the Metaverse",
+    "date": "2022-02-26"
+  },
+  "268": {
+    "title": "Robert Proctor: Nazi Science and Ideology",
+    "date": "2022-03-05"
+  },
+  "269": {
+    "title": "Lee Cronin: Origin of Life, Aliens, Complexity, and Consciousness",
+    "date": "2022-03-11"
+  },
+  "270": {
+    "title": "David Wolpe: Judaism",
+    "date": "2022-03-16"
+  },
+  "271": {
+    "title": "Ariel Ekblaw: Space Colonization and Self-Assembling Space Megastructures",
+    "date": "2022-03-23"
+  },
+  "272": {
+    "title": "Brett Johnson: US Most Wanted Cybercriminal",
+    "date": "2022-03-27"
+  },
+  "273": {
+    "title": "Chris Blattman: War and Violence",
+    "date": "2022-04-03"
+  },
+  "274": {
+    "title": "Karl Deisseroth: Depression, Schizophrenia, and Psychiatry",
+    "date": "2022-04-07"
+  },
+  "275": {
+    "title": "Rick Rubin: Legendary Music Producer",
+    "date": "2022-04-10"
+  },
+  "276": {
+    "title": "Michael Saylor: Bitcoin, Inflation, and the Future of Money",
+    "date": "2022-04-14"
+  },
+  "277": {
+    "title": "Andrew Huberman: Focus, Stress, Relationships, and Friendship",
+    "date": "2022-04-17"
+  },
+  "278": {
+    "title": "Skye Fitzgerald: Hunger, War, and Human Suffering",
+    "date": "2022-04-20"
+  },
+  "279": {
+    "title": "Alien Debate: Sara Walker and Lee Cronin",
+    "date": "2022-04-24"
+  },
+  "280": {
+    "title": "Cristiano Amon: Qualcomm CEO",
+    "date": "2022-04-27"
+  },
+  "281": {
+    "title": "Grimes: Music, AI, and the Future of Humanity",
+    "date": "2022-04-29"
+  },
+  "282": {
+    "title": "David Buss: Sex, Dating, Relationships, and Sex Differences",
+    "date": "2022-05-04"
+  },
+  "283": {
+    "title": "Chris Mason: Space Travel, Colonization, and Long-Term Survival in Space",
+    "date": "2022-05-08"
+  },
+  "284": {
+    "title": "Saifedean Ammous: Bitcoin, Anarchy, and Austrian Economics",
+    "date": "2022-05-11"
+  },
+  "285": {
+    "title": "Glenn Loury: Race, Racism, Identity Politics, and Cancel Culture",
+    "date": "2022-05-14"
+  },
+  "286": {
+    "title": "Oliver Stone: Vladimir Putin and War in Ukraine",
+    "date": "2022-05-17"
+  },
+  "287": {
+    "title": "Bobby Lee: Comedy, Skyrim, Sex Robots, Love, Fame, and Power",
+    "date": "2022-05-20"
+  },
+  "288": {
+    "title": "Sarma Melngailis: Bad Vegan",
+    "date": "2022-05-23"
+  },
+  "289": {
+    "title": "Stephen Kotkin: Putin, Zelenskyy, and War in Ukraine",
+    "date": "2022-05-25"
+  },
+  "290": {
+    "title": "Dan Reynolds: Imagine Dragons",
+    "date": "2022-05-30"
+  },
+  "291": {
+    "title": "Jonathan Haidt: The Case Against Social Media",
+    "date": "2022-06-04"
+  },
+  "292": {
+    "title": "Robin Hanson: Alien Civilizations, UFOs, and the Future of Humanity",
+    "date": "2022-06-09"
+  },
+  "293": {
+    "title": "Donald Hoffman: Reality is an Illusion – How Evolution Hid the Truth",
+    "date": "2022-06-12"
+  },
+  "294": {
+    "title": "Tony Fadell: iPhone, iPod, and Nest",
+    "date": "2022-06-15"
+  },
+  "295": {
+    "title": "Richard Wolff: Marxism and Communism",
+    "date": "2022-06-17"
+  },
+  "296": {
+    "title": "Douglas Murray: Racism, Marxism, and the War on the West",
+    "date": "2022-06-21"
+  },
+  "297": {
+    "title": "Jonathan Reisman: The Human Body – From Sex & Sperm to Hands & Heart",
+    "date": "2022-06-25"
+  },
+  "298": {
+    "title": "Susan Cain: The Power of Introverts and Loneliness",
+    "date": "2022-06-28"
+  },
+  "299": {
+    "title": "Demis Hassabis: DeepMind",
+    "date": "2022-07-01"
+  },
+  "300": {
+    "title": "Joe Rogan: Comedy, Controversy, Aliens, UFOs, Putin, CIA, and Freedom",
+    "date": "2022-07-04"
+  },
+  "301": {
+    "title": "Jack Barsky: KGB Spy",
+    "date": "2022-07-09"
+  },
+  "302": {
+    "title": "Richard Haier: IQ Tests, Human Intelligence, and Group Differences",
+    "date": "2022-07-14"
+  },
+  "303": {
+    "title": "Steve Keen: Marxism, Capitalism, and Economics",
+    "date": "2022-07-17"
+  },
+  "304": {
+    "title": "Bishop Robert Barron: Christianity and the Catholic Church",
+    "date": "2022-07-20"
+  },
+  "305": {
+    "title": "Martin Rees: Black Holes, Alien Life, Dark Matter, and the Big Bang",
+    "date": "2022-07-23"
+  },
+  "306": {
+    "title": "Oriol Vinyals: Deep Learning and Artificial General Intelligence",
+    "date": "2022-07-26"
+  },
+  "307": {
+    "title": "Brian Armstrong: Coinbase, Cryptocurrency, and Government Regulation",
+    "date": "2022-07-29"
+  },
+  "308": {
+    "title": "Ryan Graves: UFOs, Fighter Jets, and Aliens",
+    "date": "2022-08-01"
+  },
+  "309": {
+    "title": "John Carmack: Doom, Quake, VR, AGI, Programming, Video Games, and Rockets",
+    "date": "2022-08-04"
+  },
+  "310": {
+    "title": "Andrew Bustamante: CIA Spy",
+    "date": "2022-08-08"
+  },
+  "311": {
+    "title": "Magatte Wade: Africa, Capitalism, Communism, and the Future of Humanity",
+    "date": "2022-08-13"
+  },
+  "312": {
+    "title": "Duncan Trussell: Comedy, Sentient Robots, Suffering, Love & Burning Man",
+    "date": "2022-08-16"
+  },
+  "313": {
+    "title": "Jordan Peterson: Life, Death, Power, Fame, and Meaning",
+    "date": "2022-08-19"
+  },
+  "314": {
+    "title": "Liv Boeree: Poker, Game Theory, AI, Simulation, Aliens & Existential Risk",
+    "date": "2022-08-24"
+  },
+  "315": {
+    "title": "Magnus Carlsen: Greatest Chess Player of All Time",
+    "date": "2022-08-27"
+  },
+  "316": {
+    "title": "Noam Chomsky: Putin, Ukraine, China, and Nuclear War",
+    "date": "2022-08-31"
+  },
+  "317": {
+    "title": "John Vervaeke: Meaning Crisis, Atheism, Religion & the Search for Wisdom",
+    "date": "2022-09-04"
+  },
+  "318": {
+    "title": "Nick Lane: Origin of Life, Evolution, Aliens, Biology, and Consciousness",
+    "date": "2022-09-07"
+  },
+  "319": {
+    "title": "Botez Sisters: Chess, Streaming, and Fame",
+    "date": "2022-09-09"
+  },
+  "320": {
+    "title": "Christopher Capozzola: World War I, Ideology, Propaganda, and Politics",
+    "date": "2022-09-14"
+  },
+  "321": {
+    "title": "Ray Kurzweil: Singularity, Superintelligence, and Immortality",
+    "date": "2022-09-17"
+  },
+  "322": {
+    "title": "Rana el Kaliouby: Emotion AI, Social Robots, and Self-Driving Cars",
+    "date": "2022-09-21"
+  },
+  "323": {
+    "title": "Will Sasso: Comedy, MADtv, AI, Friendship, Madness, and Pro Wrestling",
+    "date": "2022-09-24"
+  },
+  "324": {
+    "title": "Daniel Negreanu: Poker",
+    "date": "2022-09-27"
+  },
+  "325": {
+    "title": "Michael Levin: Biology, Life, Aliens, Evolution, Embryogenesis & Xenobots",
+    "date": "2022-10-01"
+  },
+  "326": {
+    "title": "Annaka Harris: Free Will, Consciousness, and the Nature of Reality",
+    "date": "2022-10-05"
+  },
+  "327": {
+    "title": "GothamChess: Hans Niemann, Magnus Carlsen, Cheating Scandal & Chess Bots",
+    "date": "2022-10-07"
+  },
+  "328": {
+    "title": "John Danaher: Submission Grappling, ADCC, Animal Combat, and Knives",
+    "date": "2022-10-10"
+  },
+  "329": {
+    "title": "Kate Darling: Social Robots, Ethics, Privacy and the Future of MIT",
+    "date": "2022-10-15"
+  },
+  "330": {
+    "title": "Hikaru Nakamura: Chess, Magnus, Kasparov, and the Psychology of Greatness",
+    "date": "2022-10-17"
+  },
+  "331": {
+    "title": "Balaji Srinivasan: How to Fix Government, Twitter, Science, and the FDA",
+    "date": "2022-10-20"
+  },
+  "332": {
+    "title": "Kanye ‘Ye’ West Interview",
+    "date": "2022-10-24"
+  },
+  "333": {
+    "title": "Andrej Karpathy: Tesla AI, Self-Driving, Optimus, Aliens, and AGI",
+    "date": "2022-10-29"
+  },
+  "334": {
+    "title": "Abbas Amanat: Iran Protests, Mahsa Amini, History, CIA & Nuclear Weapons",
+    "date": "2022-11-02"
+  },
+  "335": {
+    "title": "Fiona Hill: Vladimir Putin and Donald Trump",
+    "date": "2022-11-04"
+  },
+  "336": {
+    "title": "Ben Shapiro: Politics, Kanye, Trump, Biden, Hitler, Extremism, and War",
+    "date": "2022-11-07"
+  },
+  "337": {
+    "title": "Destiny: Politics, Free Speech, Controversy, Sex, War, and Relationships",
+    "date": "2022-11-11"
+  },
+  "338": {
+    "title": "Chamath Palihapitiya: Money, Success, Startups, Energy, Poker & Happiness",
+    "date": "2022-11-15"
+  },
+  "339": {
+    "title": "Climate Change Debate: Bjørn Lomborg and Andrew Revkin",
+    "date": "2022-11-18"
+  },
+  "340": {
+    "title": "Chris Tarbell: FBI Agent Who Took Down Silk Road",
+    "date": "2022-11-22"
+  },
+  "341": {
+    "title": "Guido van Rossum: Python and the Future of Programming",
+    "date": "2022-11-26"
+  },
+  "342": {
+    "title": "Todd Howard: Skyrim, Elder Scrolls 6, Fallout, and Starfield",
+    "date": "2022-11-29"
+  },
+  "343": {
+    "title": "Roger Gracie: Greatest Jiu Jitsu Competitor of All Time",
+    "date": "2022-12-03"
+  },
+  "344": {
+    "title": "Noam Brown: AI vs Humans in Poker and Games of Strategic Negotiation",
+    "date": "2022-12-06"
+  },
+  "345": {
+    "title": "Coffeezilla: SBF, FTX, Fraud, Scams, Fake Gurus, Money, Fame, and Power",
+    "date": "2022-12-08"
+  },
+  "346": {
+    "title": "Ed Calderon: Mexican Drug Cartels",
+    "date": "2022-12-12"
+  },
+  "347": {
+    "title": "Michael Malice: Christmas Special",
+    "date": "2022-12-15"
+  },
+  "348": {
+    "title": "Nathalie Cabrol: Search for Alien Life",
+    "date": "2022-12-19"
+  },
+  "349": {
+    "title": "Bhaskar Sunkara: The Case for Socialism",
+    "date": "2022-12-22"
+  },
+  "350": {
+    "title": "Betül Kaçar: Origin of Life, Ancient DNA, Panspermia, and Aliens",
+    "date": "2022-12-29"
+  },
+  "351": {
+    "title": "MrBeast: Future of YouTube, Twitter, TikTok, and Instagram",
+    "date": "2023-01-11"
+  },
+  "352": {
+    "title": "Omar Suleiman: Islam",
+    "date": "2023-01-17"
+  },
+  "353": {
+    "title": "Dennis Whyte: Nuclear Fusion and the Future of Energy",
+    "date": "2023-01-21"
+  },
+  "354": {
+    "title": "Jeremi Suri: American Civil War",
+    "date": "2023-01-25"
+  },
+  "355": {
+    "title": "David Kipping: Alien Civilizations and Habitable Worlds",
+    "date": "2023-01-28"
+  },
+  "356": {
+    "title": "Tim Dodd: SpaceX, Starship, Rocket Engines, and Future of Space Travel",
+    "date": "2023-02-02"
+  },
+  "357": {
+    "title": "Pl Conti: Narcissism, Sociopathy, Envy, and the Nature of Good and Evil",
+    "date": "2023-02-07"
+  },
+  "358": {
+    "title": "Aella: Sex Work, OnlyFans, Porn, Escorting, Dating, and Human Sexuality",
+    "date": "2023-02-10"
+  },
+  "359": {
+    "title": "Andrew Strominger: Black Holes, Quantum Gravity, and Theoretical Physics",
+    "date": "2023-02-15"
+  },
+  "360": {
+    "title": "Tim Urban: Tribalism, Marxism, Liberalism, Social Justice, and Politics",
+    "date": "2023-02-20"
+  },
+  "361": {
+    "title": "Aaron Smith-Levin: Scientology",
+    "date": "2023-02-25"
+  },
+  "362": {
+    "title": "Ginni Rometty: IBM CEO on Leadership, Power, and Adversity",
+    "date": "2023-03-02"
+  },
+  "363": {
+    "title": "B-Team Jiu Jitsu: Craig Jones, Nicky Rod, and Nicky Ryan",
+    "date": "2023-03-06"
+  },
+  "364": {
+    "title": "Chris Voss: FBI Hostage Negotiator",
+    "date": "2023-03-10"
+  },
+  "365": {
+    "title": "Sam Harris: Trump, Pandemic, Twitter, Elon, Bret, IDW, Kanye, AI & UFOs",
+    "date": "2023-03-14"
+  },
+  "366": {
+    "title": "Shannon Curry: Johnny Depp & Amber Heard Trial, Marriage, Dating & Love",
+    "date": "2023-03-21"
+  },
+  "367": {
+    "title": "Sam Altman: OpenAI CEO on GPT-4, ChatGPT, and the Future of AI",
+    "date": "2023-03-25"
+  },
+  "368": {
+    "title": "Eliezer Yudkowsky: Dangers of AI and the End of Human Civilization",
+    "date": "2023-03-30"
+  },
+  "369": {
+    "title": "Paul Rosolie: Amazon Jungle, Uncontacted Tribes, Anacondas, and Ayahuasca",
+    "date": "2023-04-04"
+  },
+  "370": {
+    "title": "Edward Frenkel: Reality is a Paradox – Mathematics, Physics, Truth & Love",
+    "date": "2023-04-09"
+  },
+  "371": {
+    "title": "Max Tegmark: The Case for Halting AI Development",
+    "date": "2023-04-13"
+  },
+  "372": {
+    "title": "Simone Giertz: Queen of Sh*tty Robots, Innovative Engineering, and Design",
+    "date": "2023-04-16"
+  },
+  "373": {
+    "title": "Manolis Kellis: Evolution of Human Civilization and Superintelligent AI",
+    "date": "2023-04-21"
+  },
+  "374": {
+    "title": "Robert Playter: Boston Dynamics CEO on Humanoid and Legged Robotics",
+    "date": "2023-04-28"
+  },
+  "375": {
+    "title": "David Pakman: Politics of Trump, Biden, Bernie, AOC, Socialism & Wokeism",
+    "date": "2023-05-06"
+  },
+  "376": {
+    "title": "Stephen Wolfram: ChatGPT and the Nature of Truth, Reality & Computation",
+    "date": "2023-05-09"
+  },
+  "377": {
+    "title": "Harvey Silverglate: Freedom of Speech",
+    "date": "2023-05-16"
+  },
+  "378": {
+    "title": "Anna Frebel: Origin and Evolution of the Universe, Galaxies, and Stars",
+    "date": "2023-05-18"
+  },
+  "379": {
+    "title": "Randall Kennedy: The N-Word - History of Race, Law, Politics, and Power",
+    "date": "2023-05-24"
+  },
+  "380": {
+    "title": "Neil Gershenfeld: Self-Replicating Robots and the Future of Fabrication",
+    "date": "2023-05-28"
+  },
+  "381": {
+    "title": "Chris Lattner: Future of Programming and AI",
+    "date": "2023-06-02"
+  },
+  "382": {
+    "title": "Bert Kreischer: Comedy, Drinking, Rogan, Segura, Churchill & Kim Jong Un",
+    "date": "2023-06-05"
+  },
+  "383": {
+    "title": "Mark Zuckerberg: Future of AI at Meta, Facebook, Instagram, and WhatsApp",
+    "date": "2023-06-08"
+  },
+  "384": {
+    "title": "Matthew McConaughey: Freedom, Truth, Family, Hardship, and Love",
+    "date": "2023-06-13"
+  },
+  "385": {
+    "title": "Jimmy Wales: Wikipedia",
+    "date": "2023-06-18"
+  },
+  "386": {
+    "title": "Marc Andreessen: Future of the Internet, Technology, and AI",
+    "date": "2023-06-21"
+  },
+  "387": {
+    "title": "George Hotz: Tiny Corp, Twitter, AI Safety, Self-Driving, GPT, AGI & God",
+    "date": "2023-06-29"
+  },
+  "388": {
+    "title": "Robert F. Kennedy Jr: CIA, Power, Corruption, War, Freedom, and Meaning",
+    "date": "2023-07-06"
+  },
+  "389": {
+    "title": "Benjamin Netanyahu: Israel, Palestine, Power, Corruption, Hate, and Peace",
+    "date": "2023-07-12"
+  },
+  "390": {
+    "title": "Yuval Noah Harari: Human Nature, Intelligence, Power, and Conspiracies",
+    "date": "2023-07-17"
+  },
+  "391": {
+    "title": "Mohammed El-Kurd: Palestine",
+    "date": "2023-07-24"
+  },
+  "392": {
+    "title": "Joscha Bach: Life, Intelligence, Consciousness, AI & the Future of Humans",
+    "date": "2023-08-01"
+  },
+  "393": {
+    "title": "Andrew Huberman: Relationships, Drama, Betrayal, Sex, and Love",
+    "date": "2023-08-17"
+  },
+  "394": {
+    "title": "Neri Oxman: Biology, Art, and Science of Design & Engineering with Nature",
+    "date": "2023-09-01"
+  },
+  "395": {
+    "title": "Walter Isaacson: Elon Musk, Steve Jobs, Einstein, Da Vinci & Ben Franklin",
+    "date": "2023-09-10"
+  },
+  "396": {
+    "title": "James Sexton: Divorce Lawyer on Marriage, Relationships, Sex, Lies & Love",
+    "date": "2023-09-17"
+  },
+  "397": {
+    "title": "Greg Lukianoff: Cancel Culture, Deplatforming, Censorship & Free Speech",
+    "date": "2023-09-24"
+  },
+  "398": {
+    "title": "Mark Zuckerberg: First Interview in the Metaverse",
+    "date": "2023-09-28"
+  },
+  "399": {
+    "title": "Jared Kushner: Israel, Palestine, Hamas, Gaza, Iran, and the Middle East",
+    "date": "2023-10-11"
+  },
+  "400": {
+    "title": "Elon Musk: War, AI, Aliens, Politics, Physics, Video Games, and Humanity",
+    "date": "2023-11-09"
+  },
+  "401": {
+    "title": "John Mearsheimer: Israel-Palestine, Russia-Ukraine, China, NATO, and WW3",
+    "date": "2023-11-18"
+  },
+  "402": {
+    "title": "Michael Malice: Thanksgiving Pirate Special",
+    "date": "2023-11-25"
+  },
+  "403": {
+    "title": "Lisa Randall: Dark Matter, Theoretical Physics, and Extinction Events",
+    "date": "2019-12-03"
+  },
+  "404": {
+    "title": "Lee Cronin: Controversial Nature Paper on Evolution of Life and Universe",
+    "date": "2023-12-09"
+  },
+  "405": {
+    "title": "Jeff Bezos: Amazon and Blue Origin",
+    "date": "2023-12-14"
+  },
+  "406": {
+    "title": "Teddy Atlas: Mike Tyson, Cus D’Amato, Boxing, Loyalty, Fear & Greatness",
+    "date": "2023-12-24"
+  },
+  "407": {
+    "title": "Guillaume Verdon: Beff Jezos, E/acc Movement, Physics, Computation & AGI",
+    "date": "2023-12-29"
+  },
+  "408": {
+    "title": "Tal Wilkenfeld: Music, Guitar, Bass, Jeff Beck, Prince, and Leonard Cohen",
+    "date": "2024-01-09"
+  },
+  "409": {
+    "title": "Matthew Cox: FBI Most Wanted Con Man – $55 Million in Bank Fraud",
+    "date": "2024-01-17"
+  },
+  "410": {
+    "title": "Ben Shapiro vs Destiny Debate: Politics, Jan 6, Israel, Ukraine & Wokeism",
+    "date": "2024-01-23"
+  },
+  "411": {
+    "title": "Omar Suleiman: Palestine, Gaza, Oct 7, Israel, Resistance, Faith & Islam",
+    "date": "2024-02-01"
+  }
+}

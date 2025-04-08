@@ -1,0 +1,658 @@
+{
+    "1": {
+      "title": "US Response to COVID-19 & Impact on Startups, Venture Capital & Public Markets with David Friedberg",
+      "date": "2020-03-18"
+    },
+    "2": {
+      "title": "Rebooting the economy, understanding corporate debt, steps to avoid a depression & more with David Sacks",
+      "date": "2020-04-10"
+    },
+    "3": {
+      "title": "Modern Cold War between US & China, economic recovery, potential mass migration out of San Francisco, pandemic politicization & more with David Sacks & David Friedberg",
+      "date": "2020-05-21"
+    },
+    "4": {
+      "title": "Politicizing the pandemic, Police reform, Biden’s ideal VP, Twitter vs. Facebook on free speech & more with David Sacks & David Friedberg",
+      "date": "2020-06-19"
+    },
+    "5": {
+      "title": "WHO’s incompetence, kicking off Cold War II, China’s grand plan, 100X’ing America’s efficiency",
+      "date": "2020-07-10"
+    },
+    "6": {
+      "title": "Big Tech antitrust aftermath, potential effects of an M&A clampdown on Silicon Valley & more",
+      "date": "2020-07-31"
+    },
+    "7": {
+      "title": "California’s collapse, how SPACs are opening the markets for growth stocks & more",
+      "date": "2020-09-09"
+    },
+    "8": {
+      "title": "TikTok + Oracle, how privacy loss will impact society, economy & COVID outlooks for 2021 & beyond, California wildfires & more",
+      "date": "2020-09-19"
+    },
+    "9": {
+      "title": "Trump has COVID, First debate reactions, Coinbase letter response & more",
+      "date": "2020-10-02"
+    },
+    "10": {
+      "title": "Twitter & Facebook botch censorship (again), the publisher vs. distributor debate & more",
+      "date": "2020-10-15"
+    },
+    "11": {
+      "title": "Election Night Special featuring Phil Hellmuth, Bill Gurley, Brad Gerstner & more!",
+      "date": "2020-11-04"
+    },
+    "12": {
+      "title": "Biden wins, Pfizer vaccine, markets rip, Trump’s next act, COVID endgame scenarios & more",
+      "date": "2020-11-11"
+    },
+    "13": {
+      "title": "SPACsgiving Special! More promising vaccine news, innovation vs. regulation, reforming higher ed, morality of challenge trials & more",
+      "date": "2020-11-25"
+    },
+    "14": {
+      "title": "Salesforce acquires Slack, DeepMind’s AlphaFold breakthrough, Trust Fund Socialists & more",
+      "date": "2020-12-04"
+    },
+    "15": {
+      "title": "“The Besties” All-In’s inaugural award show covering the best, worst & most memorable of 2020",
+      "date": "2020-12-18"
+    },
+    "16": {
+      "title": "Reflecting on the riots at the US Capitol, plus: Georgia runoff elections, vaccine distribution & more",
+      "date": "2021-01-08"
+    },
+    "17": {
+      "title": "Big Tech bans Trump, ramifications for the First Amendment & the open Internet",
+      "date": "2021-01-11"
+    },
+    "18": {
+      "title": "Inauguration talk, breaking down the $1.9T stimulus, the case for recalling Gavin Newsom & more",
+      "date": "2021-01-22"
+    },
+    "19": {
+      "title": "Breaking down Robinhood’s GameStop decision: Why did it happen and how can it be prevented in the future?",
+      "date": "2021-01-29"
+    },
+    "20": {
+      "title": "Robinhood wrap up, Insiders vs. Outsiders, California’s failing report card & how to fix it",
+      "date": "2021-02-03"
+    },
+    "21": {
+      "title": "Media misalignment, subjects controlling narratives & more with bestie guestie Draymond Green",
+      "date": "2021-02-05"
+    },
+    "22": {
+      "title": "Reflecting on the Robinhood situation with Bestie Guestie Vlad Tenev",
+      "date": "2021-02-12"
+    },
+    "23": {
+      "title": "Radical DAs, breaking down FB/Google vs. Australia, sustained fear post-vaccine & fan questions!",
+      "date": "2021-02-19"
+    },
+    "24": {
+      "title": "Markets trend down, political manipulation via COVID ’Zeroism’, stimulus breakdown, biological Patriot Act",
+      "date": "2021-03-05"
+    },
+    "25": {
+      "title": "Biden’s vaccine mandate,’equity’ in distribution, NFT speculation, impact of inflation & more",
+      "date": "2021-03-12"
+    },
+    "26": {
+      "title": "State of Venture Capital, plus fan questions on longevity, decentralization & quantum computing",
+      "date": "2021-03-19"
+    },
+    "27": {
+      "title": "The Great Inflation Debate, Amazon gets spicy on Twitter, rethinking supply chains & more",
+      "date": "2021-03-26"
+    },
+    "28": {
+      "title": "Public & private markets update, Archegos debacle, US debt issues, wealth tax & more",
+      "date": "2021-04-01"
+    },
+    "29": {
+      "title": "Coinbase goes public, direct listings vs. IPOs, portfolio management, unions & more with Bestie Guestie Brad Gerstner",
+      "date": "2021-04-16"
+    },
+    "30": {
+      "title": "Ramifications of Biden’s proposed capital gains tax hike, federal budget, India’s COVID surge, founder psychology & more",
+      "date": "2021-04-23"
+    },
+    "31": {
+      "title": "Post-vaccination virtue signaling, pandemic lessons, immigration, Caitlyn Jenner for CA Governor, Big Tech earnings & more",
+      "date": "2021-04-30"
+    },
+    "32": {
+      "title": "Behind the scenes of Elon hosting SNL, CDC failures, America’s real-time UBI experiment, post-COVID boom in jeopardy & more",
+      "date": "2021-05-12"
+    },
+    "33": {
+      "title": "Apple’s hypocrisy, America’s math failure, crypto’s regulatory correction, Clubhouse’s future, UFOs & more",
+      "date": "2021-05-22"
+    },
+    "34": {
+      "title": "Wuhan lab leak theory, India’s ’traceability’ law, Coinbase’s fact check, media consolidation & more",
+      "date": "2021-05-30"
+    },
+    "35": {
+      "title": "Biogen’s controversial Alzheimer’s drug approval, the billionaire space race, real estate, Bitcoin & more",
+      "date": "2021-06-12"
+    },
+    "36": {
+      "title": "New FTC Chair, breaking up big tech, government silent spying, Jon Stewart, wildfires & more",
+      "date": "2021-06-17"
+    },
+    "37": {
+      "title": "NYC rejects far-left mayoral candidates, new developments in lab leak theory, Apple’s breakup potential & more",
+      "date": "2021-06-24"
+    },
+    "38": {
+      "title": "Bestie brawl, Robinhood’s $70M fine & S-1, Delta variant, future of the political parties, FTC takes two losses against big tech & more",
+      "date": "2021-07-02"
+    },
+    "39": {
+      "title": "West coast super drought & climate crisis, Nuclear virtue signaling, chaos in SF & more",
+      "date": "2021-07-09"
+    },
+    "40": {
+      "title": "A Bestie gets COVID, Delta breakthrough, Billionaire Space Race & more",
+      "date": "2021-07-15"
+    },
+    "41": {
+      "title": "Vaccine policy, Big Tech, DeepMind’s latest breakthrough, wealth creation, opportunity & more",
+      "date": "2021-07-22"
+    },
+    "42": {
+      "title": "China’s tech crackdown, CRISPR breakthrough, practical climate change solutions & more",
+      "date": "2021-07-29"
+    },
+    "43": {
+      "title": "Innovative venture strategies, Zymergen’s implosion, Square acquires AfterPay, future of fintech & more",
+      "date": "2021-08-06"
+    },
+    "44": {
+      "title": "USA’s Afghanistan embarrassment, China’s new algo laws, future of robots + Italy recap!",
+      "date": "2021-08-27"
+    },
+    "45": {
+      "title": "Theranos & VC fraud risks, China bans video games, Texas SB8, Apple app store, CA fires, Rogan",
+      "date": "2021-09-07"
+    },
+    "46": {
+      "title": "False Ivermectin narratives, regulatory grift, wartime mentality in solving issues & more | LIVE from TPB Symposium!",
+      "date": "2021-09-14"
+    },
+    "47": {
+      "title": "Facebook’s week from hell, Ellen Pao on sexism in Elizabeth Holmes coverage, Newsom’s win, frauds & more",
+      "date": "2021-09-18"
+    },
+    "48": {
+      "title": "The role of decentralization, China/US breakdown & more with Bestie Guestie Balaji Srinivasan",
+      "date": "2021-09-24"
+    },
+    "49": {
+      "title": "Coinbase CEO reflects on controversial blog, state of the markets, 1000 unicorns, tax reform & more",
+      "date": "2021-10-01"
+    },
+    "50": {
+      "title": "Crypto investing deep dive, Facebook’s whistleblower fallout, Chappelle’s new special & more",
+      "date": "2021-10-08"
+    },
+    "51": {
+      "title": "Supply Chain Shortages, Inflation, DeSantis, Ted Sarandos Netflix Memo, Cancel Culture, Fan Q&A",
+      "date": "2021-10-15"
+    },
+    "52": {
+      "title": "Trump’s SPAC, peak venture liquidity, tech as an economic ladder, Dems overplaying their hand",
+      "date": "2021-10-22"
+    },
+    "53": {
+      "title": "Wealth tax, inflation as a capital allocator, big tech earnings, paternity leave & more",
+      "date": "2021-10-30"
+    },
+    "54": {
+      "title": "Spread trading big tech, capital allocation, Zillow’s misfire, Progressives suffer losses",
+      "date": "2021-11-06"
+    },
+    "55": {
+      "title": "Valuing crypto projects, Rivian worth $100B+, inflation: causes and corrections and more",
+      "date": "2021-11-13"
+    },
+    "56": {
+      "title": "Constitution DAO, Rittenhouse trial coverage, private sector efficiency vs the government",
+      "date": "2021-11-19"
+    },
+    "57": {
+      "title": "Understanding Omicron, tech stocks plummet, VC’s great resignation, Jack Dorsey’s departure",
+      "date": "2021-12-03"
+    },
+    "58": {
+      "title": "Nov’s CPI, operating in a downturn, macro outlook, Better.com’s botched layoffs & more",
+      "date": "2021-12-11"
+    },
+    "59": {
+      "title": "Twitter’s content warning algo, equity audits, politicians trading stocks, Fed’s next move, mRNA & more",
+      "date": "2021-12-17"
+    },
+    "60": {
+      "title": "The 2021 Bestie Awards PLUS Jack Dorsey starts the Web3 Wars",
+      "date": "2021-12-23"
+    },
+    "61": {
+      "title": "2022 Predictions! Business, politics, science, tech, crypto, & more",
+      "date": "2021-12-29"
+    },
+    "62": {
+      "title": "Elizabeth Holmes verdict, fraud origins & takeaways, navigating ’The Great Markdown’ & more",
+      "date": "2022-01-08"
+    },
+    "63": {
+      "title": "Insurrection indictments, human rights in the US and abroad, groundbreaking MS study & more",
+      "date": "2022-01-15"
+    },
+    "64": {
+      "title": "Antitrust standards & enforcement, tech repricing, lab leak obfuscation, E63 reactions & more",
+      "date": "2022-01-22"
+    },
+    "65": {
+      "title": "VC markup dynamics, Russia/US tensions over Ukraine, Altos Labs raises $3B, Stripe mafia & more",
+      "date": "2022-01-29"
+    },
+    "66": {
+      "title": "$FB’s major pullback, Rogan/Spotify mess, Xi/Putin meetup and understanding supply chain issues with Bestie Guestie Ryan Petersen (Flexport CEO)",
+      "date": "2022-02-05"
+    },
+    "67": {
+      "title": "Revisiting Rogan, Canadian truckers’ protest, fusion breakthrough, $MSFT’s savvy move & more",
+      "date": "2022-02-12"
+    },
+    "68": {
+      "title": "Trudeau invokes emergency powers, Bitcoin vs. government, Tiger Global’s new strategy & more",
+      "date": "2022-02-19"
+    },
+    "69": {
+      "title": "Elon Musk on Twitter’s bot problem, SpaceX’s grand plan, Tesla stories, Giga Texas & more",
+      "date": "2022-05-16"
+    },
+    "71": {
+      "title": "Russia/Ukraine deep dive: escalation, risk factors, financial fallout, exit ramps and more",
+      "date": "2022-03-05"
+    },
+    "72": {
+      "title": "Impact of sanctions, deglobalization, food shortage risks, macroeconomic outlook and more",
+      "date": "2022-03-18"
+    },
+    "73": {
+      "title": "Late-stage VC markdowns and mistakes, market strategy, Ukraine/Russia update with Brad Gerstner",
+      "date": "2022-03-26"
+    },
+    "74": {
+      "title": "Market update, inverted yield curve, immigration, new SPAC rules, $FB smears TikTok and more",
+      "date": "2022-04-01"
+    },
+    "75": {
+      "title": "Fast shuts down, board culpability, Elon buys 9% of Twitter, deplatforming’s evolution & more",
+      "date": "2022-04-09"
+    },
+    "76": {
+      "title": "Elon vs. Twitter",
+      "date": "2022-04-15"
+    },
+    "77": {
+      "title": "Tech work culture, crypto regulation, stablecoins, $NFLX & more w/ Coinbase CEO Brian Armstrong",
+      "date": "2022-04-23"
+    },
+    "78": {
+      "title": "VC fund metrics that matter, private market update, recession, student loans, Bill Hwang arrest",
+      "date": "2022-04-30"
+    },
+    "79": {
+      "title": "Analyzing the leaked draft overturning Roe v. Wade with Amy Howe and Tom Goldstein",
+      "date": "2022-05-07"
+    },
+    "80": {
+      "title": "Recession deep dive: VC psychology, macro risks, Tiger Global, predictions and more",
+      "date": "2022-05-13"
+    },
+    "81": {
+      "title": "All-In Summit: Bill Gurley & Brad Gerstner on markets, downturns & investment cycles",
+      "date": "2022-05-23"
+    },
+    "82": {
+      "title": "All-In Summit: Claire Cormier Thielke on China + Q&A with Flexport’s Ryan Petersen",
+      "date": "2022-05-23"
+    },
+    "83": {
+      "title": "Market slide continues, and how to address Uvalde",
+      "date": "2022-05-27"
+    },
+    "84": {
+      "title": "Markets update, crypto collapse, Russia/Ukraine endgame, state of the podcast",
+      "date": "2022-06-24"
+    },
+    "85": {
+      "title": "SBF’s crypto bailout, Zendesk sells for ~$10B, buyout targets, US diplomacy, AlphaFold & more",
+      "date": "2022-06-30"
+    },
+    "86": {
+      "title": "Macro outlook: jobs, housing, inflation + Dutch farmers protests & EU climate missteps",
+      "date": "2022-07-08"
+    },
+    "87": {
+      "title": "Emerging markets, Sri Lanka, 9.1% CPI, market sentiment, NASA’s Webb telescope & more",
+      "date": "2022-07-14"
+    },
+    "88": {
+      "title": "First principle politics, China chaos & outlook, state of private/public markets & more",
+      "date": "2022-07-22"
+    },
+    "89": {
+      "title": "GDP growth negative in Q2, $SHOP layoffs, Alzheimer’s fraud, Ginkgo acquires Zymergen & more",
+      "date": "2022-07-28"
+    },
+    "90": {
+      "title": "Twitter subpoenas, market overview, Pelosi’s Taiwan visit & more",
+      "date": "2022-08-04"
+    },
+    "91": {
+      "title": "SoftBank’s $21B+ Vision Fund loss, signals of a bubble, macro picture, Trump raided by FBI",
+      "date": "2022-08-13"
+    },
+    "92": {
+      "title": "Adam Neumann’s second act, a16z’s $350M bet, housing policy, Inflation Reduction Act & more",
+      "date": "2022-08-20"
+    },
+    "93": {
+      "title": "Twitter whistleblower, cloud security vulnerabilities, student debt forgiveness & more",
+      "date": "2022-08-26"
+    },
+    "94": {
+      "title": "NFT volume plummets, California’s overreach, FBI meddling, climate change & national security",
+      "date": "2022-09-01"
+    },
+    "95": {
+      "title": "Winter is Coming, Europe’s energy crisis, Kim Kardashian’s new PE firm & more",
+      "date": "2022-09-10"
+    },
+    "96": {
+      "title": "Adobe acquires Figma for $20B, TPB SPAC, FedEx CEO’s recession warning, macro picture & more",
+      "date": "2022-09-16"
+    },
+    "97": {
+      "title": "SPAC updates, public/private market overview, Putin’s end game & more",
+      "date": "2022-09-23"
+    },
+    "98": {
+      "title": "Big tech starts making cuts, Fed incompetency, global debt, Russia/Ukraine & more",
+      "date": "2022-09-30"
+    },
+    "99": {
+      "title": "Cheating scandals, Twitter updates, rapid AI advancements, Biden’s pardon, Section 230 & more",
+      "date": "2022-10-07"
+    },
+    "100": {
+      "title": "Reflecting on the first 100 shows, fan questions, nuclear threat, markets, Amazon & more",
+      "date": "2022-10-14"
+    },
+    "101": {
+      "title": "Ye acquires Parler, Snap drops 30%, macro outlook, VC metrics, valuing stocks & more",
+      "date": "2022-10-22"
+    },
+    "102": {
+      "title": "Elon closes Twitter deal, $META uncertainty, Zuck’s historic bet, big tech decline & more",
+      "date": "2022-10-29"
+    },
+    "103": {
+      "title": "Tech layoffs surge, big tech freezes hiring, optimizing for profits, election preview & more",
+      "date": "2022-11-05"
+    },
+    "104": {
+      "title": "FTX collapse with Coinbase CEO Brian Armstrong + election results, macro update & more",
+      "date": "2022-11-12"
+    },
+    "105": {
+      "title": "Tech culture wars: Elon vs. SBF, Sabotaging Republicans with Trump",
+      "date": "2022-11-19"
+    },
+    "106": {
+      "title": "SBF’s media strategy, FTX culpability, ChatGPT, SaaS slowdown & more",
+      "date": "2022-12-03"
+    },
+    "107": {
+      "title": "The Twitter Files Parts 1-2: shadow banning, story suppression, interference & more",
+      "date": "2022-12-10"
+    },
+    "108": {
+      "title": "Doxing debate, Nuclear fusion breakthrough, state of the markets & more",
+      "date": "2022-12-16"
+    },
+    "109": {
+      "title": "2022 Bestie Awards Live from Twitter HQ",
+      "date": "2022-12-24"
+    },
+    "110": {
+      "title": "2023 Bestie Predictions!",
+      "date": "2023-01-06"
+    },
+    "111": {
+      "title": "Microsoft to invest $10B in OpenAI, generative AI hype, America’s over-classification problem",
+      "date": "2023-01-13"
+    },
+    "112": {
+      "title": "Is Davos a grift? Plus: globalist mishaps, debt ceilings, TikTok’s endgame & more",
+      "date": "2023-01-20"
+    },
+    "113": {
+      "title": "DOJ tries to break up Google, vaccine questions, Ukraine escalation & more",
+      "date": "2023-01-27"
+    },
+    "114": {
+      "title": "Markets update: whipsaw macro picture, big tech, startup mass extinction event, VC reckoning",
+      "date": "2023-02-03"
+    },
+    "115": {
+      "title": "The AI Search Wars: Google vs. Microsoft, Nordstream report, State of the Union",
+      "date": "2023-02-11"
+    },
+    "116": {
+      "title": "Toxic out-of-control trains, regulators, and AI",
+      "date": "2023-02-17"
+    },
+    "117": {
+      "title": "Did Stripe miss its window? Plus: VC market update, AI comes for SaaS, Trump’s savvy move",
+      "date": "2023-02-24"
+    },
+    "118": {
+      "title": "AI FOMO frenzy, macro update, Fox vs Dominion, US vs China & more with Brad Gerstner",
+      "date": "2023-03-03"
+    },
+    "119": {
+      "title": "Silicon Valley Bank implodes: startup extinction event, contagion risk, culpability, and more",
+      "date": "2023-03-11"
+    },
+    "120": {
+      "title": "Banking crisis and the great VC reset",
+      "date": "2023-03-17"
+    },
+    "121": {
+      "title": "Macro update, Fed hike, CRE debt bubble, Balaji’s Bitcoin bet, TikTok’s endgame & more",
+      "date": "2023-03-24"
+    },
+    "122": {
+      "title": "Is AI the next great computing platform? ChatGPT vs. Google, containing AGI & RESTRICT Act",
+      "date": "2023-03-31"
+    },
+    "123": {
+      "title": "Trump indictment, de-dollarization, should VCs back Chinese AI? RIP Bob Lee",
+      "date": "2023-04-07"
+    },
+    "124": {
+      "title": "AutoGPT’s massive potential and risk, AI regulation, Bob Lee/SF update",
+      "date": "2023-04-14"
+    },
+    "125": {
+      "title": "SpaceX launch, Fox News settlement, ’Zombie-corn’ exodus to AI, late-stage implosion",
+      "date": "2023-04-21"
+    },
+    "126": {
+      "title": "Big Tech blow-out, Powell’s recession warning, lab-grown meat, RFK Jr shakes up race & more",
+      "date": "2023-04-28"
+    },
+    "127": {
+      "title": "Presidential Candidate Robert F. Kennedy Jr. in conversation with the Besties",
+      "date": "2023-05-05"
+    },
+    "128": {
+      "title": "Google enters AI wars, Druck’s warning, Trump crushes CNN & more",
+      "date": "2023-05-12"
+    },
+    "129": {
+      "title": "Sam Altman plays chess with regulators, AI’s ’nuclear’ potential, big pharma bundling & more",
+      "date": "2023-05-19"
+    },
+    "130": {
+      "title": "DeSantis’s Twitter Spaces, debt ceiling, Nvidia rips, state of VC, startup failure & more",
+      "date": "2023-05-26"
+    },
+    "131": {
+      "title": "2024 Fantasy President picks, debt ceiling agreement, Dollar dominance & more",
+      "date": "2023-06-02"
+    },
+    "132": {
+      "title": "SEC goes after crypto giants, Sequoia splits, LIV/PGA, Messi’s deal + LIVE Q&A!",
+      "date": "2023-06-10"
+    },
+    "133": {
+      "title": "Market melt-up, IPO update, AI startups overheat, Reddit revolts & more with Brad Gerstner",
+      "date": "2023-06-16"
+    },
+    "134": {
+      "title": "Ukraine counteroffensive, China tensions, COVID Patient Zero, RFK Jr reaction & more",
+      "date": "2023-06-23"
+    },
+    "135": {
+      "title": "Wagner rebels, SCOTUS ends AA, AI M&A, startups gone bad, spacetime warps & more",
+      "date": "2023-06-30"
+    },
+    "136": {
+      "title": "Hacking the pod, Threads launches, Fed minutes, immigration debate, balloon farce, heart health",
+      "date": "2023-07-09"
+    },
+    "137": {
+      "title": "Inflation cools, market rips, Ripple/MSFT beat regulators, NATO summit, cocktails of youth",
+      "date": "2023-07-14"
+    },
+    "138": {
+      "title": "Presidential Candidate Vivek Ramaswamy in conversation with the Besties",
+      "date": "2023-07-21"
+    },
+    "139": {
+      "title": "Recapping Chamath’s wedding, VC surplus, unions vs Hollywood, room-temp superconductors & more",
+      "date": "2023-07-27"
+    },
+    "140": {
+      "title": "LK-99, Sclerotic establishments, Fitch downgrades US debt, Trump indicted... again",
+      "date": "2023-08-04"
+    },
+    "141": {
+      "title": "State of Series A’s, VC dry powder, IPO window opens + more with Bill Gurley & Brad Gerstner",
+      "date": "2023-08-11"
+    },
+    "142": {
+      "title": "’Rich Men North of Richmond’ hits #1, upward mobility, real estate capital crunch, Trump RICO",
+      "date": "2023-08-18"
+    },
+    "143": {
+      "title": "Nvidia smashes earnings, Arm walks the plank, M&A market, Vivek dominates GOP debate & more",
+      "date": "2023-08-25"
+    },
+    "144": {
+      "title": "Biden targets Elon, BRICS challenges the West, Tiger hit piece & more",
+      "date": "2023-09-01"
+    },
+    "145": {
+      "title": "Presidential Candidate Chris Christie in conversation with the Besties",
+      "date": "2023-09-06"
+    },
+    "146": {
+      "title": "Did the Fed break the VC model? Plus IPOs, M&A, revaluing unicorns & more",
+      "date": "2023-09-22"
+    },
+    "147": {
+      "title": "TED goes woke, Canada’s Nazi blunder, AI adds vision, plus: who owns OpenAI?",
+      "date": "2023-09-29"
+    },
+    "148": {
+      "title": "McCarthy ousted, border chaos, Cruise’s robotaxi ’accident’ & more",
+      "date": "2023-10-06"
+    },
+    "149": {
+      "title": "Hamas terror attacks in Israel: fallout, reaction, next steps",
+      "date": "2023-10-13"
+    },
+    "150": {
+      "title": "Israel/Gaza escalating or not? EU censorship regime, Penn donors revolt, GLP-1 hype cycle",
+      "date": "2023-10-20"
+    },
+    "151": {
+      "title": "WW3 risk, War with Iran?, 4.9% GDP, startup failures growing, new Speaker & more",
+      "date": "2023-10-27"
+    },
+    "152": {
+      "title": "Real estate chaos, WeWork bankruptcy, Biden regulates AI, Ukraine’s ’Cronkite Moment’ & more",
+      "date": "2023-11-03"
+    },
+    "153": {
+      "title": "In conversation with Jared Kushner: Israel-Hamas War, paths forward, macro picture, AI",
+      "date": "2023-11-10"
+    },
+    "154": {
+      "title": "Presidential Candidate Dean Phillips in conversation with the Besties + Xi’s SF visit & more",
+      "date": "2023-11-17"
+    },
+    "155": {
+      "title": "In conversation with Tucker Carlson, plus OpenAI chaos explained",
+      "date": "2023-12-01"
+    },
+    "156": {
+      "title": "Ivy League antisemitism, macro, SaaS recovery, Gemini, Figma deal delay + big Friedberg update",
+      "date": "2023-12-07"
+    },
+    "157": {
+      "title": "Epic legal win, OpenAI licensing deals, FCC targets Elon, Alex Jones reinstated & more",
+      "date": "2023-12-15"
+    },
+    "158": {
+      "title": "Global trade disrupted, Adobe/Figma canceled, realtors sued, Trump blocked",
+      "date": "2023-12-22"
+    },
+    "159": {
+      "title": "The Bestie Awards! Recapping the best and worst of 2023",
+      "date": "2023-12-29"
+    },
+    "160": {
+      "title": "2024 Predictions! Markets, tech, politics, and more",
+      "date": "2024-01-06"
+    },
+    "161": {
+      "title": "US strikes Houthis, market instability, Q1 rate cuts in doubt, Carta’s major mishap, DEI",
+      "date": "2024-01-13"
+    },
+    "162": {
+      "title": "Live from Davos! Milei goes viral, Adam Neumann’s headwinds, streaming’s broken model, microplastics & more",
+      "date": "2024-01-19"
+    },
+    "163": {
+      "title": "Market rips, Media RIFs, Texas defies Biden, Fintech reckoning, ARkStorm 2.0 & more",
+      "date": "2024-01-26"
+    },
+    "164": {
+      "title": "Zuck’s Senate apology, Elon’s comp package voided, crony capitalism, Reddit IPO, drone attack",
+      "date": "2024-02-02"
+    },
+    "165": {
+      "title": "Vision Pro: use or lose? Meta vs Snap, SaaS recovery, AI investing, rolling real estate crisis",
+      "date": "2024-02-09"
+    }
+  }

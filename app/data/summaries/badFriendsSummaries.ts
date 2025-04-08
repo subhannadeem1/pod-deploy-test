@@ -1,0 +1,30 @@
+const bad_friends_251  : string[] = [
+    "Podcast Focus and Context: The episode centers on casual, humorous banter between Bobby Lee, Andrew Santino, and Stavros Halikas. Discussions include pop culture topics such as movies, gaming, and personal anecdotes. Themes of nostalgia and satire are interwoven with improvised comedy skits and brainstorming for fictional film ideas.",
+    "Indiana Jones and Nostalgia: Bobby Lee shares his opinions on the Indiana Jones movie series, preferring \"The Last Crusade\" and expressing nostalgia from rewatching the films while playing a related video game. A discussion unfolds about culturally dated elements in \"Temple of Doom\", including its exaggerated depiction of Indian cuisine.",
+    "Improvised Comedy: Film Brainstorming: The group improvises a plot for a fictional movie involving mythical creatures, humorous family backstories, and a revenge narrative, blending genres like horror, fantasy, and comedy. The brainstorming includes exaggerated, comedic elements like a Bigfoot-vampire hybrid character and an absurd \"Franken-dick\" subplot.",
+    "Personal Anecdotes and Pop Culture Observations: Bobby Lee recounts personal experiences, such as awkward interactions during auditions and childhood misconceptions about movies, adding humor and relatability to the discussion. The hosts dive into Star Wars trivia, blending humor with their takes on the franchise, while debating iconic characters and nostalgic moments from the series.",
+    "Star Wars and Pop Culture Trivia: Star Wars trivia and opinions dominate parts of the discussion, showcasing mixed reactions to the newer films and nostalgic admiration for the originals. Bobby Lee humorously recounts auditioning for a Star Wars role and the group debates character and plot details with comedic exaggeration."
+]
+
+const bad_friends_250  : string[] = [
+    "Holiday Depression and Traditions: Bobby Lee shares his struggle with deep depression during the holiday season, particularly from December 1st to January 5th, while discussing coping mechanisms with Andrew Santino. The group humorously addresses holiday traditions, with Bobby expressing disdain for certain practices and exploring cultural differences, such as how Santa enters homes without chimneys in high-rise buildings.",
+    "Humorous Tangents on Vulnerabilities and Misunderstandings: A lighthearted discussion on vulnerable body parts, such as Achilles' heel, shifts to personal anecdotes about discomfort, including Bobby's exaggerated vulnerability regarding his \"taint\". Misunderstandings about mythology and historical references, like mixing up Troy and Achilles, add comedic banter.",
+    "Zombie and Fantasy Media Commentary: Bobby and Andrew critique zombie media, pointing out a lack of diversity among zombies (e.g., overweight or disabled zombies) and brainstorming humorous inclusivity ideas like \"autistic zombies\" or \"vampires with diabetes\". The duo discusses \"Kingdom\", a Korean zombie series, blending history with fantasy, while humorously proposing alternative plotlines and reimagining the series for broader appeal.",
+    "Cultural and Family Anecdotes: Bobby shares personal stories about his family’s unique approach to Christmas in Korea, contrasting it with Western traditions. He mentions a seven-year-old Christmas tree repurposed for drying squid. Andrew highlights his family’s tradition of singing together, showcasing contrasting holiday experiences between the hosts.",
+    "Consumer Culture Critique: The hosts critique the emphasis on monetary rewards in American competitions, contrasting it with British shows like \"The Great British Baking Show\", where participants compete for pride and community rather than financial gain. They emphasize the wholesome and communal nature of non-monetary competitions, contrasting it with the transactional and profit-driven focus of many American traditions. The critique extends to the commercialization of holidays like Christmas, calling attention to how societal rituals, such as gift-giving and decorations, are driven by consumerism rather than genuine connection or cultural significance."
+]
+
+const bad_friends_249 : string[] = [
+    "Opening Segment and Banter: The podcast begins with humorous chanting among the hosts, followed by playful banter, highlighting their camaraderie and comedic dynamics. Bobby Lee and Andrew Santino joke about their attempts at group harmony and transitions into discussing personal experiences and routines.",
+    "Travel Anecdotes from Australia: The hosts share stories about their Australian tour, including jet lag challenges, wildlife encounters (notably with quokkas), and memorable performances attended by celebrities like Sarah Snook and Dakota Fanning. Bobby humorously narrates his defiance of Andrew’s suggested travel routines, leading to comedic consequences.",
+    "On-Stage Dynamics and Interpersonal Humor: A recurring theme involves playful competition between Bobby and Andrew about show-closing responsibilities, with underlying humor about celebrity friends and audience perceptions. Andrew jokingly claims celebrity guests preferred his performance, while Bobby emphasizes their mutual comedic brilliance.",
+    "Personal Health and Quirks: Carlos discusses health issues humorously, touching on unique habits, bad breath, and irregular medical visits, which the group finds entertaining yet concerning. Conversations shift to lighter moments, including Bobby recounting sauna experiences and amusing social interactions.",
+    "Reflections on Relationships and Personal Growth: The group reflects on their dynamics, noting how shared experiences and tours strengthened their bond. Bobby and Andrew open up about personal struggles, including clinical depression, offering heartfelt insights into how they cope and lean on each other for support during challenging times."
+]
+
+const badFriendsSummaries = new Map<string, string[]>()
+badFriendsSummaries.set("251", bad_friends_251)
+badFriendsSummaries.set("250", bad_friends_250)
+badFriendsSummaries.set("249", bad_friends_249)
+
+export { badFriendsSummaries }
