@@ -7,19 +7,16 @@ import { TextEncoder } from "util";
 
 export async function POST(request: Request) {
   try {
-    // 1. Parse the request body to extract the query
     const { query } = await request.json();
     if (!query || typeof query !== "string") {
       return NextResponse.json({ error: "Query is required and must be a string" }, { status: 400 });
     }
 
-    // 2. Parse the query for specific episode or podcast mentions with error handling
     let specificEpisodeNum: number | null = null;
     let specificPodcastId: string | null = null;
     try {
       const episodeMatch = query.match(/episode (\d+)/i);
       specificEpisodeNum = episodeMatch ? parseInt(episodeMatch[1], 10) : null;
-
       const podcastMatch = query.match(/(?:podcast|show) ([a-zA-Z0-9-]+)/i);
       specificPodcastId = podcastMatch ? podcastMatch[1].toLowerCase() : null;
     } catch (err) {
@@ -27,14 +24,12 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Invalid query format" }, { status: 400 });
     }
 
-    // 3. Generate an embedding for the query
     const queryEmbedding = await embeddings.embedQuery(query);
 
-    // 4. Perform a similarity search in Supabase with optional filters
     const { data, error } = await supabase.rpc("match_documents", {
       query_embedding: queryEmbedding,
-      match_threshold: 0.5, // Lower threshold for broader retrieval
-      match_count: 10,      // Increased count for better coverage
+      match_threshold: 0.5,
+      match_count: 10, // Reduced from 20
       target_podcast_id: specificPodcastId || null,
       target_episode_number: specificEpisodeNum || null,
     });
@@ -49,17 +44,13 @@ export async function POST(request: Request) {
       return NextResponse.json({ answer: "No relevant content found." });
     }
 
-    // 5. Group the returned chunks by podcast_id and episode_number
     const groups: Record<string, any[]> = {};
     data.forEach((row: any) => {
       const key = `${row.podcast_id}-${row.episode_number}`;
-      if (!groups[key]) {
-        groups[key] = [];
-      }
+      if (!groups[key]) groups[key] = [];
       groups[key].push(row);
     });
 
-    // 6. Calculate episode scores (average of top 3 chunk similarities)
     const episodeScores: Record<string, number> = {};
     for (const [key, chunks] of Object.entries(groups)) {
       const topSimilarities = chunks
@@ -70,17 +61,14 @@ export async function POST(request: Request) {
       episodeScores[key] = score;
     }
 
-    // 7. Select the best episode based on the highest score
     const bestEpisodeKey = Object.entries(episodeScores).reduce((a, b) =>
       episodeScores[b[0]] > episodeScores[a[0]] ? b : a
     )[0];
     const bestChunks = groups[bestEpisodeKey];
 
-    // 8. Prepare context text for the LLM
-    const contextText = bestChunks.map((d) => d.transcript).join("\n");
+    const contextText = bestChunks.slice(0, 3).map((d) => d.transcript).join("\n"); // Limit to 3 chunks
     console.log("Grouped context text for LLM:\n", contextText);
 
-    // 9. Prepare the LLM prompt
     let prompt;
     if (specificEpisodeNum && specificPodcastId) {
       prompt = `
@@ -98,13 +86,12 @@ Question: ${query}
 `;
     }
 
-    // 10. Prepare a ReadableStream to stream tokens
     const encoder = new TextEncoder();
     const stream = new ReadableStream({
       async start(controller) {
         const streamingLLM = new ChatOpenAI({
           openAIApiKey: process.env.OPENAI_API_KEY!,
-          modelName: "gpt-4", // or "gpt-3.5-turbo"
+          modelName: "gpt-4",
           temperature: 0.9,
           streaming: true,
           callbacks: [
@@ -124,23 +111,14 @@ Question: ${query}
         });
 
         await streamingLLM.call([
-          {
-            role: "system",
-            content: prompt,
-          },
-          {
-            role: "user",
-            content: query,
-          },
+          { role: "system", content: prompt },
+          { role: "user", content: query },
         ]);
       },
     });
 
-    // 11. Return the stream as a new Response
     return new Response(stream, {
-      headers: {
-        "Content-Type": "text/plain; charset=utf-8",
-      },
+      headers: { "Content-Type": "text/plain; charset=utf-8" },
     });
   } catch (err: any) {
     console.error("API error:", err);
