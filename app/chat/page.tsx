@@ -86,44 +86,32 @@ export default function TestChatbot() {
     setError("");
     setAnswer("");
     setEpisodes([]);
-
+  
     // Use the override query if provided, otherwise use the state query
     const queryToUse = overrideQuery || query;
-
+  
     try {
-      const [answerRes, episodesRes] = await Promise.all([
-        fetch("/api/chatbot/query-answer", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ query: queryToUse }),
-        }),
-        fetch("/api/chatbot/query-episodes", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ query: queryToUse }),
-        }),
-      ]);
-
-      // Check for errors in episodes response
-      if (!episodesRes.ok) {
-        const errData = await episodesRes.json();
-        throw new Error(errData.error || "Error from episodes endpoint");
-      }
-      const episodesData = await episodesRes.json();
-
-      // Handle answer response with streaming
+      // ✅ Step 1: Fetch answer (with streaming)
+      const answerRes = await fetch("/api/chatbot/query-answer", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ query: queryToUse }),
+      });
+  
       if (!answerRes.ok) {
         const errData = await answerRes.json();
         throw new Error(errData.error || "Error from answer endpoint");
       }
+  
       if (!answerRes.body) {
         throw new Error("No readable stream found from answer endpoint");
       }
+  
       const reader = answerRes.body.getReader();
       const decoder = new TextDecoder();
       let done = false;
       let partialAnswer = "";
-
+  
       while (!done) {
         const { value, done: doneReading } = await reader.read();
         done = doneReading;
@@ -132,11 +120,23 @@ export default function TestChatbot() {
           setAnswer(partialAnswer); // Update answer incrementally
         }
       }
-
-      // After streaming is complete, set the episodes
+  
+      // ✅ Step 2: Fetch episodes separately AFTER answer is done
+      const episodesRes = await fetch("/api/chatbot/query-episodes", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ query: queryToUse }),
+      });
+  
+      if (!episodesRes.ok) {
+        const errData = await episodesRes.json();
+        throw new Error(errData.error || "Error from episodes endpoint");
+      }
+  
+      const episodesData = await episodesRes.json();
       setEpisodes(episodesData.episodes || []);
-
-      // Save to history with full answer and episodes
+  
+      // ✅ Step 3: Save to history
       const newHistoryItem: HistoryItem = {
         query: queryToUse,
         episodes: episodesData.episodes || [],
