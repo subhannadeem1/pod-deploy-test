@@ -84,6 +84,7 @@ Question: ${query}
     } else {
       prompt = `
 You are an assistant answering based on the most relevant podcast episode.
+Don't say "in this episode" or refer to a single source. Just answer directly using the context below.
 Context:
 ${contextText}
 Question: ${query}
