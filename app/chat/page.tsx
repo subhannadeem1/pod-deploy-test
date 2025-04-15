@@ -33,6 +33,20 @@ type HistoryItem = {
   date: string;
 };
 
+function EpisodeSkeleton() {
+  return (
+    <div className="animate-pulse flex flex-col sm:flex-row gap-4 bg-[#0d181f] p-4 rounded-lg shadow-md">
+      <div className="flex-shrink-0 sm:w-32 sm:h-32 h-60 bg-gray-700 rounded-md" />
+      <div className="flex-1 space-y-4 py-1">
+        <div className="h-4 bg-gray-700 rounded w-3/4"></div>
+        <div className="h-3 bg-gray-700 rounded w-1/2"></div>
+        <div className="h-3 bg-gray-700 rounded w-full"></div>
+        <div className="h-3 bg-gray-700 rounded w-5/6"></div>
+      </div>
+    </div>
+  );
+}
+
 export default function TestChatbot() {
   //const [query, setQuery] = useState("");
   const searchParams = useSearchParams();
@@ -41,13 +55,16 @@ export default function TestChatbot() {
   const [answer, setAnswer] = useState("");
   const [episodes, setEpisodes] = useState<EpisodeResult[]>([]);
   const [loading, setLoading] = useState(false);
+  const [loadingEpisodes, setLoadingEpisodes] = useState(false);
   const [error, setError] = useState("");
   const [history, setHistory] = useState<HistoryItem[]>([]);
-  const [showSuggestions, setShowSuggestions] = useState(true);
+  const [showSuggestions, setShowSuggestions] = useState(
+    initialQuery === "" ? true : false
+  );
   const suggestedQuestions = [
     "What has Donald Trump said about tariffs?",
     "How does fine-tuning improve AI models?",
-    "tell me summery of episode 457 of lex fridman podcast",
+    "Give me a summary of episode 457 of the Lex Fridman Podcast",
   ];
 
   useEffect(() => {
@@ -93,6 +110,7 @@ export default function TestChatbot() {
     e.preventDefault();
     setShowSuggestions(false); // Hides suggestions after user submits a query
     setLoading(true);
+    setLoadingEpisodes(false); // Ensure episodes loading starts false
     setError("");
     setAnswer("");
     setEpisodes([]);
@@ -101,34 +119,22 @@ export default function TestChatbot() {
     const queryToUse = overrideQuery || query;
 
     try {
-      const [answerRes, episodesRes] = await Promise.all([
-        fetch("/api/chatbot/query-answer", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ query: queryToUse }),
-        }),
-        fetch("/api/chatbot/query-episodes", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ query: queryToUse }),
-        }),
-      ]);
+      // ✅ Step 1: Fetch answer (with streaming)
+      const answerRes = await fetch("/api/chatbot/query-answer", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ query: queryToUse }),
+      });
 
-      // Check for errors in episodes response
-      if (!episodesRes.ok) {
-        const errData = await episodesRes.json();
-        throw new Error(errData.error || "Error from episodes endpoint");
-      }
-      const episodesData = await episodesRes.json();
-
-      // Handle answer response with streaming
       if (!answerRes.ok) {
         const errData = await answerRes.json();
         throw new Error(errData.error || "Error from answer endpoint");
       }
+
       if (!answerRes.body) {
         throw new Error("No readable stream found from answer endpoint");
       }
+
       const reader = answerRes.body.getReader();
       const decoder = new TextDecoder();
       let done = false;
@@ -138,13 +144,34 @@ export default function TestChatbot() {
         const { value, done: doneReading } = await reader.read();
         done = doneReading;
         if (value) {
-          partialAnswer += decoder.decode(value);
+          //partialAnswer += decoder.decode(value);
+          partialAnswer += decoder.decode(value, { stream: true });
           setAnswer(partialAnswer); // Update answer incrementally
         }
       }
+      // Flush any remaining text in the decoder's buffer
+      partialAnswer += decoder.decode();
+      setAnswer(partialAnswer);
 
-      // After streaming is complete, set the episodes
+      // As soon as answer streaming is complete, show the skeleton
+      setLoading(false);
+      setLoadingEpisodes(true);
+
+      // ✅ Step 2: Fetch episodes separately AFTER answer is done
+      const episodesRes = await fetch("/api/chatbot/query-episodes", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ query: queryToUse }),
+      });
+
+      if (!episodesRes.ok) {
+        const errData = await episodesRes.json();
+        throw new Error(errData.error || "Error from episodes endpoint");
+      }
+
+      const episodesData = await episodesRes.json();
       setEpisodes(episodesData.episodes || []);
+      setLoadingEpisodes(false);
 
       // Save to history with full answer and episodes
       const newHistoryItem: HistoryItem = {
@@ -156,6 +183,8 @@ export default function TestChatbot() {
       setHistory([newHistoryItem, ...history]);
     } catch (err: any) {
       setError(err.message || "Something went wrong");
+      setLoading(false);
+      setLoadingEpisodes(false);
     } finally {
       setLoading(false);
     }
@@ -229,10 +258,18 @@ export default function TestChatbot() {
             </div>
 
             <div className="w-full max-w-4xl space-y-8">
-              {/* Error Message */}
               {error && (
-                <div className="text-red-600 mb-4 mt-4">
-                  <p>Error: {error}</p>
+                <div className="flex flex-col items-center justify-center text-center text-red-500 mb-4 mt-60">
+                  {/*<p className="mb-2">Error: {error}</p>*/}
+                  <p className="mb-2">
+                    Something went wrong. Please try again.
+                  </p>
+                  <button
+                    onClick={() => window.location.reload()}
+                    className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition"
+                  >
+                    Retry
+                  </button>
                 </div>
               )}
 
@@ -273,8 +310,21 @@ export default function TestChatbot() {
                 </div>
               )}
 
-              {/* Related Episodes Section - Only shown after answer is complete */}
-              {!loading && episodes.length > 0 && (
+              {/* Related Episodes Section */}
+              {loadingEpisodes && episodes.length === 0 && (
+                <div className="mt-6 px-4 sm:px-0">
+                  <h2 className="text-[24px] font-semibold text-[#97a9b6]">
+                    Related Podcast Episodes
+                  </h2>
+                  <div className="mt-4 grid grid-cols-1 gap-4">
+                    {[...Array(3)].map((_, index) => (
+                      <EpisodeSkeleton key={index} />
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {!loadingEpisodes && episodes.length > 0 && (
                 <div className="mt-6 px-4 sm:px-0">
                   <h2 className="text-[24px] font-semibold text-[#97a9b6]">
                     Related Podcast Episodes
@@ -379,7 +429,7 @@ export default function TestChatbot() {
                   type="submit"
                   className="ml-2 bg-[#0C91E7] hover:bg-[#1B6FA6] text-white p-2 rounded-full transition-colors duration-200"
                   aria-label="Submit query"
-                  disabled={!query.trim() || loading}
+                  disabled={!query.trim() || loading || loadingEpisodes}
                 >
                   <IconArrowRight className="w-5 h-5" />
                 </Button>
