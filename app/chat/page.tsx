@@ -48,7 +48,6 @@ function EpisodeSkeleton() {
 }
 
 export default function TestChatbot() {
-  //const [query, setQuery] = useState("");
   const searchParams = useSearchParams();
   const initialQuery = searchParams?.get("query") || "";
   const [query, setQuery] = useState(initialQuery);
@@ -61,17 +60,17 @@ export default function TestChatbot() {
   const [showSuggestions, setShowSuggestions] = useState(
     initialQuery === "" ? true : false
   );
+
   const suggestedQuestions = [
     "What has Donald Trump said about tariffs?",
     "How does fine-tuning improve AI models?",
     "Give me a summary of episode 457 of the Lex Fridman Podcast",
   ];
 
+  // On mount, if there's an initialQuery, run the submission automatically
   useEffect(() => {
     if (initialQuery) {
-      handleSubmit({
-        preventDefault: () => {},
-      } as FormEvent);
+      handleSubmit({ preventDefault: () => {} } as FormEvent);
     }
   }, [initialQuery]);
 
@@ -88,7 +87,7 @@ export default function TestChatbot() {
     localStorage.setItem("PG_HISTORY", JSON.stringify(history));
   }, [history]);
 
-  // Reload the page once on first load to ensure the latest version
+  // (Optional) Reload the page once to ensure the latest version
   useEffect(() => {
     if (typeof window !== "undefined") {
       if (!sessionStorage.getItem("hasReloaded")) {
@@ -105,17 +104,16 @@ export default function TestChatbot() {
     setShowSuggestions(true);
   };
 
-  // Handle form submission with streaming response and delayed episodes display
+  // Handle form submission (NO streaming)
   const handleSubmit = async (e: FormEvent, overrideQuery?: string) => {
     e.preventDefault();
-    setShowSuggestions(false); // Hides suggestions after user submits a query
+    setShowSuggestions(false);
     setLoading(true);
-    setLoadingEpisodes(false); // Ensure episodes loading starts false
+    setLoadingEpisodes(false);
     setError("");
     setAnswer("");
     setEpisodes([]);
 
-    // Use the override query if provided, otherwise use the state query
     const queryToUse = overrideQuery || query;
 
     try {
@@ -131,33 +129,13 @@ export default function TestChatbot() {
         throw new Error(errData.error || "Error from answer endpoint");
       }
 
-      if (!answerRes.body) {
-        throw new Error("No readable stream found from answer endpoint");
-      }
+      const answerJson = await answerRes.json();
+      setAnswer(answerJson.answer || "");
 
-      const reader = answerRes.body.getReader();
-      const decoder = new TextDecoder();
-      let done = false;
-      let partialAnswer = "";
-
-      while (!done) {
-        const { value, done: doneReading } = await reader.read();
-        done = doneReading;
-        if (value) {
-          //partialAnswer += decoder.decode(value);
-          partialAnswer += decoder.decode(value, { stream: true });
-          setAnswer(partialAnswer); // Update answer incrementally
-        }
-      }
-      // Flush any remaining text in the decoder's buffer
-      partialAnswer += decoder.decode();
-      setAnswer(partialAnswer);
-
-      // As soon as answer streaming is complete, show the skeleton
+      // Step 2: Now fetch episodes
       setLoading(false);
       setLoadingEpisodes(true);
 
-      // ✅ Step 2: Fetch episodes separately AFTER answer is done
       const episodesRes = await fetch("/api/chatbot/query-episodes", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -173,11 +151,11 @@ export default function TestChatbot() {
       setEpisodes(episodesData.episodes || []);
       setLoadingEpisodes(false);
 
-      // Save to history with full answer and episodes
+      // Step 3: Save to history
       const newHistoryItem: HistoryItem = {
         query: queryToUse,
         episodes: episodesData.episodes || [],
-        answer: partialAnswer.trim(),
+        answer: (answerJson.answer || "").trim(),
         date: new Date().toLocaleString(),
       };
       setHistory([newHistoryItem, ...history]);
@@ -185,8 +163,6 @@ export default function TestChatbot() {
       setError(err.message || "Something went wrong");
       setLoading(false);
       setLoadingEpisodes(false);
-    } finally {
-      setLoading(false);
     }
   };
 
@@ -231,9 +207,7 @@ export default function TestChatbot() {
                   // For desktop, toggle sidebar visibility
                   if (window.innerWidth >= 1024) {
                     setSidebarVisible((prev) => !prev);
-                  }
-                  // For mobile, open the sheet
-                  else {
+                  } else {
                     setIsMobileOpen(true);
                   }
                 }}

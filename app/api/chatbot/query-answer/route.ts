@@ -1,36 +1,32 @@
-// app/api/chatbot/query-answer/route.ts
 import { NextResponse } from "next/server";
 import { ChatOpenAI } from "@langchain/openai";
 import { embeddings } from "../../../../lib/openai";
 import { supabase } from "../../../../lib/supabaseClient";
-import { TextEncoder } from "util";
 
 export async function POST(request: Request) {
   try {
-    // 1. Parse the request body to extract the query
     const { query } = await request.json();
     if (!query) {
       return NextResponse.json({ error: "No query provided." }, { status: 400 });
     }
 
-    // 2. Parse the query for specific episode or podcast mentions
+    // 1. Extract any episode or podcast ID from user input
     const episodeMatch = query.match(/episode (\d+)/i);
     const specificEpisodeNum = episodeMatch ? parseInt(episodeMatch[1], 10) : null;
     const podcastMatch = query.match(/(?:podcast|show) ([a-zA-Z0-9-]+)/i);
     const specificPodcastId = podcastMatch ? podcastMatch[1].toLowerCase() : null;
 
-    // 3. Generate an embedding for the query
+    // 2. Generate embeddings
     const queryEmbedding = await embeddings.embedQuery(query);
 
-    // 4. Perform a similarity search in Supabase with optional filters
+    // 3. Call your Supabase RPC
     const { data, error } = await supabase.rpc("match_documents", {
       query_embedding: queryEmbedding,
-      match_threshold: 0.5, // Lower threshold for broader retrieval
-      match_count: 20,      // Increased count for better coverage
+      match_threshold: 0.5,
+      match_count: 20,
       target_podcast_id: specificPodcastId || null,
       target_episode_number: specificEpisodeNum || null,
     });
-    console.log("Supabase results:", data);
 
     if (error) {
       console.error("Error performing similarity search:", error);
@@ -41,38 +37,34 @@ export async function POST(request: Request) {
       return NextResponse.json({ answer: "No relevant content found." });
     }
 
-    // 5. Group the returned chunks by podcast_id and episode_number
+    // 4. Group chunks by episode & calculate which one is best
     const groups: Record<string, any[]> = {};
     data.forEach((row: any) => {
       const key = `${row.podcast_id}-${row.episode_number}`;
-      if (!groups[key]) {
-        groups[key] = [];
-      }
+      groups[key] = groups[key] ?? [];
       groups[key].push(row);
     });
 
-    // 6. Calculate episode scores (average of top 3 chunk similarities)
     const episodeScores: Record<string, number> = {};
     for (const [key, chunks] of Object.entries(groups)) {
       const topSimilarities = chunks
         .map((c) => c.similarity)
         .sort((a, b) => b - a)
         .slice(0, 3);
+
       const score = topSimilarities.reduce((sum, s) => sum + s, 0) / topSimilarities.length;
       episodeScores[key] = score;
     }
 
-    // 7. Select the best episode based on the highest score
-    const bestEpisodeKey = Object.entries(episodeScores).reduce((a, b) =>
-      episodeScores[b[0]] > episodeScores[a[0]] ? b : a
+    // 5. Identify best episode
+    const bestEpisodeKey = Object.entries(episodeScores).reduce((best, current) =>
+      episodeScores[current[0]] > episodeScores[best[0]] ? current : best
     )[0];
     const bestChunks = groups[bestEpisodeKey];
 
-    // 8. Prepare context text for the LLM
+    // 6. Create the prompt from those best chunks
     const contextText = bestChunks.map((d) => d.transcript).join("\n");
-    console.log("Grouped context text for LLM:\n", contextText);
 
-    // 9. Prepare the LLM prompt
     let prompt;
     if (specificEpisodeNum && specificPodcastId) {
       prompt = `
@@ -91,50 +83,25 @@ Question: ${query}
 `;
     }
 
-    // 10. Prepare a ReadableStream to stream tokens
-    const encoder = new TextEncoder();
-    const stream = new ReadableStream({
-      async start(controller) {
-        const streamingLLM = new ChatOpenAI({
-          openAIApiKey: process.env.OPENAI_API_KEY!,
-          modelName: "gpt-4", // or "gpt-3.5-turbo"
-          temperature: 0.9,
-          streaming: true,
-          callbacks: [
-            {
-              handleLLMNewToken(token: string) {
-                const queue = encoder.encode(token);
-                controller.enqueue(queue);
-              },
-              handleLLMEnd() {
-                controller.close();
-              },
-              handleLLMError(err: Error) {
-                controller.error(err);
-              },
-            },
-          ],
-        });
-
-        await streamingLLM.call([
-          {
-            role: "system",
-            content: prompt,
-          },
-          {
-            role: "user",
-            content: query,
-          },
-        ]);
-      },
+    // 7. Synchronous call to GPT (NO STREAMING)
+    const llm = new ChatOpenAI({
+      openAIApiKey: process.env.OPENAI_API_KEY!,
+      modelName: "gpt-3.5-turbo",    // Or "gpt-4"
+      temperature: 0.9,
+      // streaming: false (this is the default)
     });
 
-    // 11. Return the stream as a new Response
-    return new Response(stream, {
-      headers: {
-        "Content-Type": "text/plain; charset=utf-8",
-      },
-    });
+    const llmResponse = await llm.call([
+      { role: "system", content: prompt },
+      { role: "user", content: query },
+    ]);
+
+    // Depending on your LangChain version, the text might be at llmResponse.text or llmResponse.content
+    // Commonly, you'd do:
+    const finalAnswer = llmResponse.text?.trim() || llmResponse.content?.trim() || "";
+
+    // 8. Return the answer as JSON instead of streaming
+    return NextResponse.json({ answer: finalAnswer });
   } catch (err: any) {
     console.error("API error:", err);
     return NextResponse.json({ error: err.message }, { status: 500 });
