@@ -88,6 +88,16 @@ export default function TestChatbot() {
     localStorage.setItem("PG_HISTORY", JSON.stringify(history));
   }, [history]);
 
+  //// Reload the page once on first load to ensure the latest version
+  //useEffect(() => {
+  //  if (typeof window !== "undefined") {
+  //    if (!sessionStorage.getItem("hasReloaded")) {
+  //      sessionStorage.setItem("hasReloaded", "true");
+  //      window.location.reload();
+  //    }
+  //  }
+  //}, []);
+
   const handleNewChat = () => {
     setQuery("");
     setAnswer("");
@@ -129,18 +139,27 @@ export default function TestChatbot() {
       const decoder = new TextDecoder();
       let done = false;
       let partialAnswer = "";
+      let buffer = "";
+
+      const updateInterval = 100; // Update state every 100ms
+      let lastUpdateTime = Date.now();
 
       while (!done) {
         const { value, done: doneReading } = await reader.read();
         done = doneReading;
         if (value) {
-          //partialAnswer += decoder.decode(value);
-          partialAnswer += decoder.decode(value, { stream: true });
-          setAnswer(partialAnswer); // Update answer incrementally
+          buffer += decoder.decode(value, { stream: true });
+          const now = Date.now();
+          if (now - lastUpdateTime >= updateInterval) {
+            partialAnswer += buffer;
+            setAnswer(partialAnswer);
+            buffer = "";
+            lastUpdateTime = now;
+          }
         }
       }
-      // Flush any remaining text in the decoder's buffer
-      partialAnswer += decoder.decode();
+      // Flush any remaining buffer after streaming ends
+      partialAnswer += buffer + decoder.decode();
       setAnswer(partialAnswer);
 
       // As soon as answer streaming is complete, show the skeleton
@@ -163,7 +182,6 @@ export default function TestChatbot() {
       setEpisodes(episodesData.episodes || []);
       setLoadingEpisodes(false);
 
-      // Save to history with full answer and episodes
       const newHistoryItem: HistoryItem = {
         query: queryToUse,
         episodes: episodesData.episodes || [],
@@ -175,8 +193,6 @@ export default function TestChatbot() {
       setError(err.message || "Something went wrong");
       setLoading(false);
       setLoadingEpisodes(false);
-    } finally {
-      setLoading(false);
     }
   };
 
