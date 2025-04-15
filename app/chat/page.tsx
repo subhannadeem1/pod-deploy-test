@@ -33,6 +33,23 @@ type HistoryItem = {
   date: string;
 };
 
+// Helper function for retrying fetch calls
+async function fetchWithRetry(url: string, options: RequestInit, retries = 3): Promise<Response> {
+  for (let i = 0; i < retries; i++) {
+    try {
+      const response = await fetch(url, options);
+      if (response.ok) {
+        return response;
+      }
+      throw new Error("API call failed");
+    } catch (error) {
+      if (i === retries - 1) throw error;
+      await new Promise((resolve) => setTimeout(resolve, 1000)); // Wait 1 second before retrying
+    }
+  }
+  throw new Error("API call failed after retries");
+}
+
 function EpisodeSkeleton() {
   return (
     <div className="animate-pulse flex flex-col sm:flex-row gap-4 bg-[#0d181f] p-4 rounded-lg shadow-md">
@@ -60,17 +77,17 @@ export default function TestChatbot() {
   const [showSuggestions, setShowSuggestions] = useState(
     initialQuery === "" ? true : false
   );
-
   const suggestedQuestions = [
     "What has Donald Trump said about tariffs?",
     "How does fine-tuning improve AI models?",
     "Give me a summary of episode 457 of the Lex Fridman Podcast",
   ];
 
-  // On mount, if there's an initialQuery, run the submission automatically
   useEffect(() => {
     if (initialQuery) {
-      handleSubmit({ preventDefault: () => {} } as FormEvent);
+      handleSubmit({
+        preventDefault: () => {},
+      } as FormEvent);
     }
   }, [initialQuery]);
 
@@ -87,7 +104,7 @@ export default function TestChatbot() {
     localStorage.setItem("PG_HISTORY", JSON.stringify(history));
   }, [history]);
 
-  // (Optional) Reload the page once to ensure the latest version
+  // Reload the page once on first load to ensure the latest version
   useEffect(() => {
     if (typeof window !== "undefined") {
       if (!sessionStorage.getItem("hasReloaded")) {
@@ -104,21 +121,22 @@ export default function TestChatbot() {
     setShowSuggestions(true);
   };
 
-  // Handle form submission (NO streaming)
+  // Handle form submission with streaming response and delayed episodes display
   const handleSubmit = async (e: FormEvent, overrideQuery?: string) => {
     e.preventDefault();
-    setShowSuggestions(false);
+    setShowSuggestions(false); // Hides suggestions after user submits a query
     setLoading(true);
-    setLoadingEpisodes(false);
+    setLoadingEpisodes(false); // Ensure episodes loading starts false
     setError("");
     setAnswer("");
     setEpisodes([]);
 
+    // Use the override query if provided, otherwise use the state query
     const queryToUse = overrideQuery || query;
 
     try {
-      // ✅ Step 1: Fetch answer (with streaming)
-      const answerRes = await fetch("/api/chatbot/query-answer", {
+      // Step 1: Fetch answer with retry
+      const answerRes = await fetchWithRetry("/api/chatbot/query-answer", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ query: queryToUse }),
@@ -129,14 +147,30 @@ export default function TestChatbot() {
         throw new Error(errData.error || "Error from answer endpoint");
       }
 
-      const answerJson = await answerRes.json();
-      setAnswer(answerJson.answer || "");
+      if (!answerRes.body) {
+        throw new Error("No readable stream found from answer endpoint");
+      }
 
-      // Step 2: Now fetch episodes
+      const reader = answerRes.body.getReader();
+      const decoder = new TextDecoder();
+      let done = false;
+      let fullAnswer = ""; // Collect the entire answer here
+
+      while (!done) {
+        const { value, done: doneReading } = await reader.read();
+        done = doneReading;
+        if (value) {
+          fullAnswer += decoder.decode(value, { stream: true });
+        }
+      }
+      fullAnswer += decoder.decode(); // Flush any remaining data
+
+      setAnswer(fullAnswer.trim()); // Set the complete answer
       setLoading(false);
-      setLoadingEpisodes(true);
 
-      const episodesRes = await fetch("/api/chatbot/query-episodes", {
+      // Step 2: Fetch episodes with retry after answer is complete
+      setLoadingEpisodes(true);
+      const episodesRes = await fetchWithRetry("/api/chatbot/query-episodes", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ query: queryToUse }),
@@ -151,11 +185,11 @@ export default function TestChatbot() {
       setEpisodes(episodesData.episodes || []);
       setLoadingEpisodes(false);
 
-      // Step 3: Save to history
+      // Save to history with full answer and episodes
       const newHistoryItem: HistoryItem = {
         query: queryToUse,
         episodes: episodesData.episodes || [],
-        answer: (answerJson.answer || "").trim(),
+        answer: fullAnswer.trim(),
         date: new Date().toLocaleString(),
       };
       setHistory([newHistoryItem, ...history]);
@@ -207,7 +241,9 @@ export default function TestChatbot() {
                   // For desktop, toggle sidebar visibility
                   if (window.innerWidth >= 1024) {
                     setSidebarVisible((prev) => !prev);
-                  } else {
+                  }
+                  // For mobile, open the sheet
+                  else {
                     setIsMobileOpen(true);
                   }
                 }}
