@@ -71,15 +71,15 @@ export default function TestChatbot() {
     localStorage.setItem("PG_HISTORY", JSON.stringify(history));
   }, [history]);
 
-  //// Reload the page once on first load to ensure the latest version
-  //useEffect(() => {
-  //  if (typeof window !== "undefined") {
-  //    if (!sessionStorage.getItem("hasReloaded")) {
-  //      sessionStorage.setItem("hasReloaded", "true");
-  //      window.location.reload();
-  //    }
-  //  }
-  //}, []);
+  // Reload the page once on first load to ensure the latest version
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      if (!sessionStorage.getItem("hasReloaded")) {
+        sessionStorage.setItem("hasReloaded", "true");
+        window.location.reload();
+      }
+    }
+  }, []);
 
   const handleNewChat = () => {
     setQuery("");
