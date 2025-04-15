@@ -1,10 +1,9 @@
+// app/api/chatbot/query-answer/route.ts
 import { NextResponse } from "next/server";
-import OpenAI from "openai";
+import { ChatOpenAI } from "@langchain/openai";
 import { embeddings } from "../../../../lib/openai";
 import { supabase } from "../../../../lib/supabaseClient";
 import { TextEncoder } from "util";
-
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 export async function POST(request: Request) {
   try {
@@ -92,33 +91,46 @@ Question: ${query}
 `;
     }
 
-    // 10. Use OpenAI API for streaming
-    const stream = await openai.chat.completions.create({
-      model: "gpt-3.5-turbo",
-      messages: [
-        { role: "system", content: prompt },
-        { role: "user", content: query },
-      ],
-      stream: true,
-      temperature: 0.9,
-    });
-
-    // 11. Create a ReadableStream to handle the OpenAI stream
-    const readableStream = new ReadableStream({
+    // 10. Prepare a ReadableStream to stream tokens
+    const encoder = new TextEncoder();
+    const stream = new ReadableStream({
       async start(controller) {
-        const encoder = new TextEncoder();
-        for await (const chunk of stream) {
-          const token = chunk.choices[0]?.delta?.content || "";
-          if (token) {
-            controller.enqueue(encoder.encode(token));
-          }
-        }
-        controller.close();
+        const streamingLLM = new ChatOpenAI({
+          openAIApiKey: process.env.OPENAI_API_KEY!,
+          modelName: "gpt-4", // or "gpt-3.5-turbo"
+          temperature: 0.9,
+          streaming: true,
+          callbacks: [
+            {
+              handleLLMNewToken(token: string) {
+                const queue = encoder.encode(token);
+                controller.enqueue(queue);
+              },
+              handleLLMEnd() {
+                controller.close();
+              },
+              handleLLMError(err: Error) {
+                controller.error(err);
+              },
+            },
+          ],
+        });
+
+        await streamingLLM.call([
+          {
+            role: "system",
+            content: prompt,
+          },
+          {
+            role: "user",
+            content: query,
+          },
+        ]);
       },
     });
 
-    // 12. Return the stream as a Response
-    return new Response(readableStream, {
+    // 11. Return the stream as a new Response
+    return new Response(stream, {
       headers: {
         "Content-Type": "text/plain; charset=utf-8",
       },
