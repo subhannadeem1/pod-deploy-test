@@ -114,14 +114,14 @@ export default function TestChatbot() {
   }, [history]);
 
   // Reload the page once on first load to ensure the latest version
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      if (!sessionStorage.getItem("hasReloaded")) {
-        sessionStorage.setItem("hasReloaded", "true");
-        window.location.reload();
-      }
-    }
-  }, []);
+  //useEffect(() => {
+  //  if (typeof window !== "undefined") {
+  //    if (!sessionStorage.getItem("hasReloaded")) {
+  //      sessionStorage.setItem("hasReloaded", "true");
+  //      window.location.reload();
+  //    }
+  //  }
+  //}, []);
 
   const handleNewChat = () => {
     setQuery("");
@@ -149,21 +149,29 @@ export default function TestChatbot() {
     setIsSearchBarVisible(false); // Hide the search bar immediately after submission
 
     try {
-      // Step 1: Fetch answer (one-shot, no stream)
+      /* 1️⃣ ─── STREAM THE ANSWER ─────────────────────────────── */
       const answerRes = await fetchWithRetry("/api/chatbot/query-answer", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ query: queryToUse }),
       });
 
-      if (!answerRes.ok) {
-        const errData = await answerRes.json();
-        throw new Error(errData.error || "Error from answer endpoint");
+      if (!answerRes.ok || !answerRes.body) {
+        const errTxt = await answerRes.text();
+        throw new Error(errTxt || "Error from answer endpoint");
       }
 
-      // read full JSON, no getReader loop
-      const answerData = await answerRes.json();
-      setAnswer(answerData.answer.trim());
+      const reader = answerRes.body.getReader();
+      const decoder = new TextDecoder();
+      let fullAns = ""; // keep local copy
+
+      while (true) {
+        const { value, done } = await reader.read();
+        if (done) break;
+        const chunk = decoder.decode(value);
+        fullAns += chunk;
+        setAnswer((prev) => prev + chunk); // progressive UI update
+      }
       setLoading(false);
 
       // Step 2: Fetch episodes with retry after answer is complete
@@ -187,7 +195,8 @@ export default function TestChatbot() {
       const newHistoryItem: HistoryItem = {
         query: queryToUse,
         episodes: episodesData.episodes || [],
-        answer: answerData.answer.trim(),
+        //answer: answerData.answer.trim(),
+        answer  : fullAns.trim(), 
         date: new Date().toLocaleString(),
       };
       setHistory([newHistoryItem, ...history]);
