@@ -1,5 +1,6 @@
 const dwarkeshMetadata = new Map<string,string>()
 
+dwarkeshMetadata.set("95", "The full transcript of the interview with Ege Erdil & Tamay Besiroglu. Published April 17, 2025.")
 dwarkeshMetadata.set("94", "The full transcript of the interview with Scott Alexander & Daniel Kokotajlo. Published April 3, 2025.")
 dwarkeshMetadata.set("93", "The full transcript of the interview with Sholto Douglas & Trenton Bricken. Published March 25, 2025.")
 dwarkeshMetadata.set("92", "The full transcript of the interview with Joseph Henrich. Published March 12, 2025.")

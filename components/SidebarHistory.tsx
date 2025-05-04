@@ -49,7 +49,7 @@ export default function SidebarHistory({
         </button>
       )}
       <div>
-        <button
+        {/*<button
           onClick={() => {
             handleNewChat();
             // Close mobile sidebar when chat button is clicked
@@ -63,7 +63,7 @@ export default function SidebarHistory({
             </div>
             <h2 className="text-[16px] py-1 font-medium">Chat</h2>
           </div>
-        </button>
+        </button>*/}
 
         <div className="mt-2 flex items-center justify-between text-[#718491] hover:text-white mb-4 p-2 hover:bg-[#141e26] rounded-md">
           <div className="flex gap-2 ">

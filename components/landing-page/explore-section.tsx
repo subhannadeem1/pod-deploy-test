@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion"; // Import Framer Motion
 import Link from "next/link"; // Import Link for routing
 import { topPodcasts, topEpisodes } from "@/app/data/rankings/rankings";
+import { IconDotsVertical } from "@tabler/icons-react";
 
 /** Defines the props for each ranking item (podcast/episode). */
 interface RankingCardProps {
@@ -32,11 +33,11 @@ const RankingCard: FC<RankingCardProps> = ({ rank, name, host, image, alias, epi
     <Link href={href} passHref>
       <motion.div
         className="
-          flex items-center gap-6 p-4 rounded-lg
+          flex items-center md:gap-6 gap-4 md:p-4 p-2 rounded-lg
           min-h-[96px]
-          bg-white/5 backdrop-blur-md ring-1 ring-white/10
-          hover:bg-white/10 transition-colors shadow-lg
-          overflow-hidden cursor-pointer mb-6
+          lg:bg-white/5 lg:backdrop-blur-md lg:ring-1 lg:ring-white/10
+          lg:hover:bg-white/10 transition-colors shadow-lg
+          overflow-hidden cursor-pointer md:mb-6 mb-4
         "
         variants={cardVariants}
         initial="hidden"
@@ -45,8 +46,8 @@ const RankingCard: FC<RankingCardProps> = ({ rank, name, host, image, alias, epi
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
         {/* Rank */}
-        <div className="w-16 text-center flex-shrink-0">
-          <span className="text-3xl md:text-4xl font-bold text-white/60 drop-shadow-md">
+        <div className="md:w-16  text-center flex-shrink-0">
+          <span className="text-2xl md:text-4xl font-bold text-white drop-shadow-md">
             {rank}
           </span>
         </div>
@@ -65,7 +66,7 @@ const RankingCard: FC<RankingCardProps> = ({ rank, name, host, image, alias, epi
           <div className="flex flex-col min-w-0 overflow-hidden">
             <h4
               className="
-                text-base md:text-lg font-semibold text-white/90
+                text-base md:text-lg font-semibold text-white
                 mb-1
                 truncate whitespace-nowrap overflow-ellipsis
               "
@@ -82,6 +83,9 @@ const RankingCard: FC<RankingCardProps> = ({ rank, name, host, image, alias, epi
             </p>
           </div>
         </div>
+        <div className="text-white">
+        <IconDotsVertical stroke={2} />
+          </div>
       </motion.div>
     </Link>
   );
@@ -104,7 +108,7 @@ const ExploreSection: FC = () => {
   const formattedDate = today.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
 
   return (
-    <div className="bg-black mx-auto max-w-[1400px] px-4 md:px-6 lg:px-8 mt-16 mb-20 flex flex-col min-h-screen">
+    <div className=" mx-auto max-w-[1400px] px-4 md:px-6 lg:px-8 mt-16 mb-20 flex flex-col min-h-screen">
       {/* Main Content */}
       <div className="flex-1">
         {/* Heading & Subtitle */}
@@ -135,7 +139,7 @@ const ExploreSection: FC = () => {
         <div className="hidden lg:grid grid-cols-2 gap-12 mt-16">
           {/* Left Column: Top Podcasts */}
           <div>
-            <h3 className="mb-6 text-2xl font-semibold text-white/80 drop-shadow-sm">
+            <h3 className="mb-6 text-3xl font-bold text-white drop-shadow-sm">
               Top Podcasts
             </h3>
             <div className="space-y-6">
@@ -155,7 +159,7 @@ const ExploreSection: FC = () => {
 
           {/* Right Column: Top Episodes */}
           <div>
-            <h3 className="mb-6 text-2xl font-semibold text-white/80 drop-shadow-sm">
+            <h3 className="mb-6 text-3xl font-bold text-white drop-shadow-sm">
               Top Episodes
             </h3>
             <div className="space-y-6">
@@ -179,7 +183,7 @@ const ExploreSection: FC = () => {
         <div className="lg:hidden mt-10 space-y-10">
           {/* Top Podcasts - Mobile */}
           <div>
-            <h3 className="text-xl font-semibold text-white/80 mb-4 drop-shadow-sm">
+            <h3 className="text-2xl font-bold text-white mb-4 drop-shadow-sm">
               Top Podcasts
             </h3>
             <div className="space-y-4">
@@ -199,7 +203,7 @@ const ExploreSection: FC = () => {
 
           {/* Top Episodes - Mobile */}
           <div>
-            <h3 className="text-xl font-semibold text-white/80 mb-4 drop-shadow-sm">
+            <h3 className="text-2xl font-bold text-white mb-4 drop-shadow-sm">
               Top Episodes
             </h3>
             <div className="space-y-4">

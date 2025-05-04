@@ -1,6 +1,6 @@
 // app/chat/layout.tsx
 import { Suspense } from "react"; // Import Suspense
-import { SiteFooter } from "@/components/site-footer";
+//import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { Metadata } from "next";
 
@@ -26,7 +26,7 @@ export default async function ChatLayout({ children }: ChatLayoutProps) {
         </Suspense>
       </main>
 
-      <SiteFooter />
+      {/*<SiteFooter />*/}
     </>
   );
 }

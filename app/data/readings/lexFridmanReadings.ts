@@ -1,3 +1,48 @@
+const lex_fridman_466 = [
+    "466-1a.jpg+The Milk Tea Alliance: Inside Asia's Struggle Against Autocracy and Beijing+Jeffrey Wasserstrom+https://www.amazon.com/Milk-Tea-Alliance-Struggle-Autocracy/dp/B0DJGBVSSL",
+]
+
+const lex_fridman_465 = [
+    "465-1a.jpg+Brass Knuckle Films+Robert Rodriguez+https://republic.com",
+    "465-2a.jpg+Sin City (2005)+Robert Rodriguez+https://www.imdb.com/title/tt0401792",
+    "465-3a.jpg+Desperado (1995)+Robert Rodriguez+https://www.imdb.com/title/tt0112851",
+    "465-4a.jpg+El Mariachi (1992)+Robert Rodriguez+https://www.imdb.com/title/tt0104815",
+    "465-5a.jpg+Alita: Battle Angel (2019)+Robert Rodriguez+https://www.imdb.com/title/tt0437086",
+]
+
+const lex_fridman_464 = [
+    "464-1a.jpg+Part Of The Problem+Dave Smith+https://partoftheproblem.com/home"
+]
+
+const lex_fridman_463  : string[] = [
+    "463-1a.jpg+The War on the West+Douglas Murray+https://www.amazon.com/War-West-Douglas-Murray/dp/0063162024",
+    "463-2a.jpg+The Madness of Crowds+Douglas Murray+https://www.amazon.com/Madness-Crowds-Gender-Race-Identity/dp/1635579945",
+    "463-3a.jpg+On Democracies and Death Cults+Douglas Murray+https://www.amazon.com/Democracies-Death-Cults-Israel-Civilization/dp/0063437139"
+]
+
+const lex_fridman_462  : string[] = [
+    "462-1a.jpg+Abundance+Ezra Klein, Derek Thompson+https://www.amazon.com/Abundance-Progress-Takes-Ezra-Klein/dp/1668023482",
+    "462-2a.jpg+Why We're Polarized+Ezra Klein+https://www.amazon.com/Why-Were-Polarized-Ezra-Klein/dp/147670036",
+    "462-3a.jpg+Hit Makers: How to Succeed in an Age of Distraction+Derek Thompson+https://www.amazon.com/Hit-Makers-How-Succeed-Distraction/dp/1101980338",
+    "462-4a.jpg+On Work: Money, Meaning, Identity+Derek Thompson+https://www.amazon.com/Work-Meaning-Identity-Atlantic-Editions/dp/1638930724",
+    "462-5a.jpg+The Ezra Klein Show+Ezra Klein+https://www.youtube.com/@EzraKleinShow",
+    "462-6a.jpg+Plain English Pod+Derek Thompson+https://open.spotify.com/show/3fQkNGzE1mBF1VrxVTY0oo"
+]
+
+const lex_fridman_461 : string[] = [
+    "461-1a.jpg+ThePrimeagen+Michael Paulson+https://www.youtube.com/c/theprimeagen"
+]
+
+const lex_fridman_460 = [
+    "460-1a.jpg+Narendra Modi+Wikipedia+https://en.wikipedia.org/wiki/Narendra_Modi"
+]
+
+const lex_fridman_459 : string[] = [
+    "459-1a.jpg+SemiAnalysis - Home Page+SemiAnalysis+https://semianalysis.com",
+    "459-2a.jpg+Nathan Lambert - Personal Website+Nathan Lambert+https://www.natolambert.com",
+    "459-3a.jpg+The Allen Institute for AI - Home Page+The Allen Institute for AI+https://allenai.org"
+]
+
 const lex_fridman_458 : string[] = [
     "458-1a.jpg+The Ancient City+Numa Denis Fustel de Coulanges+https://www.amazon.com/Ancient-City-Imperium-Traditionalist-Histories/dp/0648690547",
     "458-2a.jpg+The Diversity Myth : Multiculturalism and Political Intolerance on Campus+David Sacks, Peter Thiel+https://www.amazon.com/Diversity-Myth-Multiculturalism-Political-Intolerance/dp/0945999763",
@@ -80,6 +125,11 @@ const lex_fridman_448 : string[] = [
     "448-6a.jpg+Demons+Fyodor Dostoevsky+https://www.amazon.com/Demons-Fyodor-Dostoevsky/dp/1977788645",
     "448-7a.jpg+A Billion Wicked Thoughts: What the Internet Tells Us About Sexual Relationships+Ogi Ogas, Sai Gaddam+https://www.amazon.com/Billion-Wicked-Thoughts-Internet-Relationships/dp/0452297877",
     "448-8a.jpg+Angela’s Ashes+Frank McCourt+https://www.amazon.com/Angelas-Ashes-Novel-Ties-Study-Guide/dp/0767510402"
+]
+
+const lex_fridman_447 : string[] = [
+    "447-1a.jpg+Cursor - Home Page+Cursor+https://www.cursor.com",
+    "447-2a.jpg+Iterating with Shadow Workspaces+Arvid Lunnemark+https://www.cursor.com/en/blog/shadow-workspace"
 ]
 
 const lex_fridman_446 : string[] = [
@@ -765,6 +815,14 @@ const lex_fridman_1 : string[] = [
 ]
 
 const lexFridmanReadings = new Map<string, string[]|undefined>()
+lexFridmanReadings.set("466", lex_fridman_466)
+lexFridmanReadings.set("465", lex_fridman_465)
+lexFridmanReadings.set("464", lex_fridman_464)
+lexFridmanReadings.set("463", lex_fridman_463)
+lexFridmanReadings.set("462", lex_fridman_462)
+lexFridmanReadings.set("461", lex_fridman_461)
+lexFridmanReadings.set("460", lex_fridman_460)
+lexFridmanReadings.set("459", lex_fridman_459)
 lexFridmanReadings.set("458", lex_fridman_458)
 lexFridmanReadings.set("457", lex_fridman_457)
 lexFridmanReadings.set("456", lex_fridman_456)
@@ -776,6 +834,7 @@ lexFridmanReadings.set("451", lex_fridman_451)
 lexFridmanReadings.set("450", lex_fridman_450)
 lexFridmanReadings.set("449", lex_fridman_449)
 lexFridmanReadings.set("448", lex_fridman_448)
+lexFridmanReadings.set("447", lex_fridman_447)
 lexFridmanReadings.set("446", lex_fridman_446)
 lexFridmanReadings.set("445", lex_fridman_445)
 lexFridmanReadings.set("444", lex_fridman_444)

@@ -1,3 +1,153 @@
+const jre_2311 : string[] = [
+    "https://www.youtube.com/watch?v=Wwp1BFEw3cA",
+    "https://open.spotify.com/episode/5NRetZ8tCO3TV9D95OdFGR?si=c59eS260Rdy_bR_jd1biIg",
+    "https://podcasts.apple.com/us/podcast/2311-jeremie-edouard-harris/id360084272?i=1000704932384"
+]
+
+const jre_2310 : string[] = [
+    "https://www.youtube.com/watch?v=KxGtxPV1xoc",
+    "https://open.spotify.com/episode/5gtxltcuubwatumQOAUqBY?si=A2tEJXj3TAO9B7UlKaXtIQ",
+    "https://podcasts.apple.com/us/podcast/2310-robert-rodriguez/id360084272?i=1000704777553"
+]
+
+const jre_2309 : string[] = [
+    "https://www.youtube.com/watch?v=XLi_Vr8hm9s",
+    "https://open.spotify.com/episode/4JuhEH2GFE8dtVkMX5tBgy?si=gH4UxnUfSlG8v8iOrgWtNw",
+    "https://podcasts.apple.com/us/podcast/2309-joey-diaz/id360084272?i=1000704625033"
+]
+
+const jre_2308 : string[] = [
+    "https://www.youtube.com/watch?v=QBEZhjnZTks",
+    "https://open.spotify.com/episode/6xbU3d2POoWzVPrvhfYgHJ?si=QtpSCdBoTg-fV8irvlPHbg",
+    "https://podcasts.apple.com/us/podcast/2308-jordan-peterson/id360084272?i=1000704488397"
+]
+
+const jre_2307 : string[] = [
+    "https://www.youtube.com/watch?v=K1ry_B1XNUk",
+    "https://open.spotify.com/episode/7cHZwDoNgzxEFOsM10J9Tr?si=d_CyxYKWRzuZXtsQH6Wt1w",
+    "https://podcasts.apple.com/us/podcast/2307-tim-dillon/id360084272?i=1000704124156"
+]
+
+const jre_2306 : string[] = [
+    "https://www.youtube.com/watch?v=lqL-OQukxlY",
+    "https://open.spotify.com/episode/1pK1VcOnBFTD2bLmN0UVH1?si=tdj684oTRYu_RESN5TEy1Q",
+    "https://podcasts.apple.com/us/podcast/2306-deric-poston/id360084272?i=1000703901158"
+]
+
+const jre_2305 : string[] = [
+    "https://www.youtube.com/watch?v=Fz1S-GyYB0U",
+    "https://open.spotify.com/episode/3wPElNKsXUBPuHu5kqPQsP?si=bvUbD_F0QJKmk_Xgpqkadg",
+    "https://podcasts.apple.com/us/podcast/2305-rich-vos/id360084272?i=1000703623918"
+]
+
+const jre_2304 : string[] = [
+    "https://www.youtube.com/watch?v=nhC8lLPpGl4",
+    "https://open.spotify.com/episode/3NHpyipEedklZnpi78c4pN?si=jnltRMUiQU2298CgYvIvZg",
+    "https://podcasts.apple.com/us/podcast/2304-gary-brecka/id360084272?i=1000703184248"
+]
+
+const jre_2303 : string[] = [
+    "https://www.youtube.com/watch?v=Ah6kirkSwTg",
+    "https://open.spotify.com/episode/0U7nssZVG3bzjDEOZDukoj?si=STnZswMRRsKou_-JctU7Rw",
+    "https://podcasts.apple.com/us/podcast/2303-dave-smith-douglas-murray/id360084272?i=1000703049276"
+]
+
+const jre_2302 : string[] = [
+    "https://www.youtube.com/watch?v=nNxzn-vRodY",
+    "https://open.spotify.com/episode/4DflRtaaijrMDmuWekPb2t?si=2DMSiWNNQlWgxpy88bL_2g",
+    "https://podcasts.apple.com/us/podcast/2302-ron-white/id360084272?i=1000702891007"
+]
+
+const jre_2301 : string[] = [
+    "https://www.youtube.com/watch?v=NRVEkc9lxH0",
+    "https://open.spotify.com/episode/6G5zbbunaM9BDYs8y2rM9E?si=Qd6J49lCTOepJSfnyLqS1w",
+    "https://podcasts.apple.com/us/podcast/2301-ben-lamm/id360084272?i=1000702566346"
+]
+
+const jre_2300 : string[] = [
+    "https://www.youtube.com/watch?v=-9shy1j8wjM",
+    "https://open.spotify.com/episode/7LerNdtdqRHk1iEhWVLcvA?si=T_f2pgvMSB6QGRZX3f77fg",
+    "https://podcasts.apple.com/us/podcast/2300-kyle-dunnigan/id360084272?i=1000702327170"
+]
+
+const jre_2299 : string[] = [
+    "https://www.youtube.com/watch?v=EmNE6yNxruc",
+    "https://open.spotify.com/episode/6u2CHj6ddI21nAU8RRTvnM?si=RkQoOPDATzCrevZY-sWvog",
+    "https://podcasts.apple.com/us/podcast/2299-dave-smith/id360084272?i=1000702081708"
+]
+
+const jre_2298 : string[] = [
+    "https://www.youtube.com/watch?v=bJbKgC_bMpI",
+    "https://open.spotify.com/episode/30RHwMwEDuKm2sFh5GfeRv?si=h5KQJEs4RlKvtBChvGebuw",
+    "https://podcasts.apple.com/us/podcast/2298-kurt-metzger/id360084272?i=1000701930298"
+]
+
+const jre_2297 : string[] = [
+    "https://www.youtube.com/watch?v=bMsJHjtS5Do",
+    "https://open.spotify.com/episode/5hSnCuPPWsDzq2z8pBWYzD?si=x9JmIlQOTdewIG61-NJMvg",
+    "https://podcasts.apple.com/us/podcast/2297-francis-foster-konstantin-kisin/id360084272?i=1000701367464"
+]
+
+const jre_2296 : string[] = [
+    "https://www.youtube.com/watch?v=TFLLmFpomLM",
+    "https://open.spotify.com/episode/2W8poytgmMnMSPaNAgKa8H?si=91Y2QVU3QRyCZveQlRaQZA",
+    "https://podcasts.apple.com/us/podcast/2296-big-jay-oakerson/id360084272?i=1000701265790"
+]
+
+const jre_2295 : string[] = [
+    "https://www.youtube.com/watch?v=ZQHIDX1lC3k",
+    "https://open.spotify.com/episode/3LD7bOQh82kpcVeZh8U2lG?si=5nTtY1IySmmNCsikj0Kn8w",
+    "https://podcasts.apple.com/us/podcast/2295-scott-payne/id360084272?i=1000701125225"
+]
+
+const jre_2294 : string[] = [
+    "https://www.youtube.com/watch?v=207W1A_bJqI",
+    "https://open.spotify.com/episode/4NVTUPc11mGRqurXcftfpJ?si=8bmz5ZRWSbyTaVZcNJKTpA",
+    "https://podcasts.apple.com/us/podcast/2294-dr-suzanne-humphries/id360084272?i=1000700944848"
+]
+
+const jre_2293 : string[] = [
+    "https://www.youtube.com/watch?v=MjhXtJB_ZbU",
+    "https://open.spotify.com/episode/4OyY0gsacwZG0zf5GW9TJL?si=pgbWiv5LTG-t5iwzkLjueQ",
+    "https://podcasts.apple.com/us/podcast/2293-chris-williamson/id360084272?i=1000700295792"
+]
+
+const jre_2292 : string[] = [
+    "https://www.youtube.com/watch?v=xsqbdBiidWE",
+    "https://open.spotify.com/episode/3OLVIpvBKjCtYPwEHyyXKI?si=0hgPl4HYRbmEggGkYEtKvQ",
+    "https://podcasts.apple.com/us/podcast/2292-josh-waitzkin/id360084272?i=1000699988175"
+]
+
+const jre_2291 : string[] = [
+    "https://www.youtube.com/watch?v=FjaGb87pjMc",
+    "https://open.spotify.com/episode/7cUPuxBcB06GcDduJAUTGV?si=oBJFiJQNRjaMOdC0e2Z-7Q",
+    "https://podcasts.apple.com/us/podcast/2291-bert-kreischer/id360084272?i=1000699690357"
+]
+
+const jre_2290 : string[] = [
+    "https://www.youtube.com/watch?v=d4m1MOSI5n8",
+    "https://open.spotify.com/episode/7kH9pynR66oJbof2WrJece?si=1t2XU0geTASpi1XoLLppoQ",
+    "https://podcasts.apple.com/us/podcast/2290-michael-kosta/id360084272?i=1000699203908"
+]
+
+const jre_2289 : string[] = [
+    "https://www.youtube.com/watch?v=DE9oFxGoMvE",
+    "https://open.spotify.com/episode/4mHt2PMKdOS6TFoGADOIY5?si=yWKysJT6Rnq6UzYXtylf4g",
+    "https://podcasts.apple.com/us/podcast/2289-darryl-cooper/id360084272?i=1000699065980"
+]
+
+const jre_2288 : string[] = [
+    "https://www.youtube.com/watch?v=vZEcVY2iZsk",
+    "https://open.spotify.com/episode/0hHesYI37v379Gw02IdUnG?si=rtgRnkiKSRmvieoXOoq1kA",
+    "https://podcasts.apple.com/us/podcast/2288-jacques-vallée/id360084272?i=1000698918198"
+]
+
+const jre_2287 : string[] = [
+    "https://www.youtube.com/watch?v=Mx8813RLUtc",
+    "https://open.spotify.com/episode/4RqFTCIAToHDuJkZScwT2z?si=pDWNgWukRc-2nUS0yPe3Kw",
+    "https://podcasts.apple.com/us/podcast/2287-josh-dubin-j-d-tomlinson/id360084272?i=1000698766157"
+]
+
 const jre_2286 : string[] = [
   "https://www.youtube.com/watch?v=NZBjSE6HQ0I",
   "https://open.spotify.com/episode/3V4wXbJ9a1rbEr71UXm32c?si=2qcOiGp8SZu3RoDF8dKg-w",
@@ -13715,6 +13865,31 @@ const jre_1 : string[] = [
 ]
 
 const jreSourceLinks = new Map<string, string[]>()
+jreSourceLinks.set("2311", jre_2311)
+jreSourceLinks.set("2310", jre_2310)
+jreSourceLinks.set("2309", jre_2309)
+jreSourceLinks.set("2308", jre_2308)
+jreSourceLinks.set("2307", jre_2307)
+jreSourceLinks.set("2306", jre_2306)
+jreSourceLinks.set("2305", jre_2305)
+jreSourceLinks.set("2304", jre_2304)
+jreSourceLinks.set("2303", jre_2303)
+jreSourceLinks.set("2302", jre_2302)
+jreSourceLinks.set("2301", jre_2301)
+jreSourceLinks.set("2300", jre_2300)
+jreSourceLinks.set("2299", jre_2299)
+jreSourceLinks.set("2298", jre_2298)
+jreSourceLinks.set("2297", jre_2297)
+jreSourceLinks.set("2296", jre_2296)
+jreSourceLinks.set("2295", jre_2295)
+jreSourceLinks.set("2294", jre_2294)
+jreSourceLinks.set("2293", jre_2293)
+jreSourceLinks.set("2292", jre_2292)
+jreSourceLinks.set("2291", jre_2291)
+jreSourceLinks.set("2290", jre_2290)
+jreSourceLinks.set("2289", jre_2289)
+jreSourceLinks.set("2288", jre_2288)
+jreSourceLinks.set("2287", jre_2287)
 jreSourceLinks.set("2286", jre_2286)
 jreSourceLinks.set("2285", jre_2285)
 jreSourceLinks.set("2284", jre_2284)

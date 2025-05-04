@@ -44,9 +44,9 @@ const TranscriptListenButtonsComponent = (props: any) => {
 
   return (
     <>
-      <div className="flex flex-wrap pl-1 items-center">
+      <div className="flex flex-wrap items-center">
         {/* Source Links */}
-        <div className="flex flex-wrap gap-2">
+        <div className="flex gap-2">
           {fetchSourceLinks(slug)
             ?.get(episode)
             ?.map((source, idx) => (
@@ -55,7 +55,7 @@ const TranscriptListenButtonsComponent = (props: any) => {
                   <a href={source} target="_blank">
                     <img
                       className="
-                        h-8 md:h-10 
+                        h-12 md:h-10 
                         aspect-[3] md:aspect-[4] 
                         transition-transform duration-200 ease-in-out 
                         hover:scale-105 hover:opacity-90
@@ -77,9 +77,9 @@ const TranscriptListenButtonsComponent = (props: any) => {
             href={`/files/${slug}-${episode}.pdf`}
             target="_blank"
             rel="noreferrer"
-            className="relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-md px-4 py-2 text-center shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 text-sm"
+            className="relative bg-[#0A1016] mb-6 md:mb-0 backdrop-blur-lg border border-[#17212A] rounded-md px-4 py-2 text-center shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 text-sm"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-green-500 via-teal-500 to-blue-500 opacity-20 blur-sm"></div>
+            <div className="absolute "></div>
             <div className="relative z-10 text-white font-medium flex items-center justify-center gap-1">
               {/* Document Icon */}
               <svg
@@ -95,13 +95,12 @@ const TranscriptListenButtonsComponent = (props: any) => {
           </Link>
 
           {/* AI Chat Button */}
-          <Link
+          {/*<Link
             href={`/podcast/${encodeURIComponent(slug)}/${encodeURIComponent(episode)}/chat`}
             className="relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-md px-4 py-2 text-center shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 text-sm"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 opacity-20 blur-sm"></div>
             <div className="relative z-10 text-white font-medium flex items-center justify-center gap-1">
-              {/* Chat Bubble Icon */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -112,7 +111,7 @@ const TranscriptListenButtonsComponent = (props: any) => {
               </svg>
               AI Chat
             </div>
-          </Link>
+          </Link>*/}
         </div>
       </div>
     </>

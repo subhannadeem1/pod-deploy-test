@@ -1,3 +1,15 @@
+const dwarkesh_96 : string [] = [
+    "96-1a.jpg+The Fate of Rome: Climate, Disease, and the End of an Empire+Kyle Harper+https://www.amazon.com/Fate-Rome-Climate-Disease-Empire/dp/0691192065",
+    "96-2a.jpg+Plagues Upon the Earth: Disease and the Course of Human History+Kyle Harper+https://www.amazon.com/Plagues-upon-Earth-Princeton-Economic/dp/0691230595",
+    "96-3a.jpg+Slavery in the Late Roman World, AD 275–425+Kyle Harper+https://www.amazon.com/Slavery-Late-Roman-World-275-425/dp/1107640814",
+    "96-4a.jpg+The Last Animal+Kyle Harper+https://www.kyleharper.net/uncategorized/the-last-animal"
+]
+
+const dwarkesh_95 : string [] = [
+    "95-1a.jpg+Epoch AI - Homepage+Epoch AI+https://epoch.ai",
+    "95-2a.jpg+Mechanize Inc. - Homepage+ Mechanize Inc.+https://www.mechanize.work"
+]
+
 const dwarkesh_94 : string[] = [
     "94-1a.jpg+AI 2027+Daniel Kokotajlo, Scott Alexander, Thomas Larsen, Eli Lifland, Romeo Dean+https://ai-2027.com",
     "94-2a.jpg+Slate Star Codex+Scott Alexander+https://slatestarcodex.com",
@@ -208,6 +220,8 @@ const dwarkesh_55 : string[] = [
 ]
 
 const dwarkeshReadings = new Map<string, string[]>()
+dwarkeshReadings.set("96", dwarkesh_96)
+dwarkeshReadings.set("95", dwarkesh_95)
 dwarkeshReadings.set("94", dwarkesh_94)
 dwarkeshReadings.set("93", dwarkesh_93)
 dwarkeshReadings.set("92", dwarkesh_92)

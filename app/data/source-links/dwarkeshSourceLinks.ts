@@ -1,5 +1,17 @@
+const dwarkesh_96 : string[] = [
+    "https://www.youtube.com/watch?v=QFzgSmN8Ng8",
+    "https://open.spotify.com/episode/5LhE123eOtQoOm0IPusEiT?si=WZOtNN7YRz61D3IMbOBC-Q",
+    "https://podcasts.apple.com/us/podcast/why-rome-actually-fell-plagues-slavery-ice-age-kyle-harper/id1516093381?i=1000704767817"
+]
+
+const dwarkesh_95 : string[] = [
+    "https://www.youtube.com/watch?v=WLBsUarvWTw",
+    "https://open.spotify.com/episode/68eeIiy3mT6PRlrTej9dtq?si=iHepYZ9vRsukDXiPCEuoEA",
+    "https://podcasts.apple.com/us/podcast/agi-is-still-30-years-away-ege-erdil-tamay-besiroglu/id1516093381?i=1000703894255"
+]
+
 const dwarkesh_94 : string[] = [
-    "https://www.youtube.com/watch?v=htOvH12T7mU&list=PLd7-bHaQwnthaNDpZ32TtYONGVk95-fhF",
+    "https://www.youtube.com/watch?v=htOvH12T7mU",
     "https://open.spotify.com/episode/2rCc9w5uvDxftS0qd8ShIE?si=PWbnBw3ISxG28nFhLbaGvw",
     "https://podcasts.apple.com/us/podcast/2027-intelligence-explosion-month-by-month-model-scott/id1516093381?i=1000702065414"
 ]
@@ -23,13 +35,13 @@ const dwarkesh_91 : string[] = [
 ]
 
 const dwarkesh_90 : string[] = [
-    "https://www.youtube.com/watch?v=4GLSzuYXh6w&list=PLd7-bHaQwnthaNDpZ32TtYONGVk95-fhF",
+    "https://www.youtube.com/watch?v=4GLSzuYXh6w",
     "https://open.spotify.com/episode/2Ru9vFJOuYKSHnxABBgAm3?si=0ElZAVJ_TGKK-E0gkBWmKQ",
     "https://podcasts.apple.com/us/podcast/satya-nadella-microsofts-agi-plan-quantum-breakthrough/id1516093381?i=1000694050135"
 ]
 
 const dwarkesh_89 : string[] = [
-    "https://www.youtube.com/watch?v=v0gjI__RyCY&list=PLd7-bHaQwnthaNDpZ32TtYONGVk95-fhF",
+    "https://www.youtube.com/watch?v=v0gjI__RyCY",
     "https://open.spotify.com/episode/4atx1POpKIL8WGvdVfdnbb?si=-6FoQYWnR6iM1tv-ubbmEQ",
     "https://podcasts.apple.com/us/podcast/jeff-dean-noam-shazeer-25-years-at-google-from-pagerank/id1516093381?i=1000691556147"
 ]
@@ -562,6 +574,8 @@ const dwarkesh_1 : string[] = [
 ]
 
 const dwarkeshSourceLinks = new Map<string, string[]>()
+dwarkeshSourceLinks.set("96", dwarkesh_96)
+dwarkeshSourceLinks.set("95", dwarkesh_95)
 dwarkeshSourceLinks.set("94", dwarkesh_94)
 dwarkeshSourceLinks.set("93", dwarkesh_93)
 dwarkeshSourceLinks.set("92", dwarkesh_92)

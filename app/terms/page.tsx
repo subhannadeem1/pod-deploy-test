@@ -8,31 +8,31 @@ export default function Page() {
   return (
     <main className={`bg-black  mt-24 mb-10 mx-auto ${Barlow.className}`}>
       <section className={`flex flex-row container mx-auto  ${animation_one}`}>
-        <div className="bg-gradient-to-r from-[#efe9df]  to-white w-60 hidden sm:block sm:rounded-l-lg"></div>
+        <div className="bg-gradient-to-r hidden sm:block sm:rounded-l-lg"></div>
 
-        <div className="bg-white w-full  pt-4 rounded md:rounded-r-lg   text-black !important">
+        <div className="bg-white w-full  lg:p-10 p-4 rounded md:rounded-r-lg   text-black !important">
           {/* About Us */}
-          <p className="px-2 mx-2 my-2 pt-3 text-lg">
+          <p className=" my-2 pt-3 text-lg">
             <strong>Terms of Use</strong>
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             Please read these terms and conditions carefully before using our
             website.
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             The Pod Transcripts provides its website, located at
             https://thepodtranscripts.com to you, an individual user (“you”) for
             your individual usage, subject to compliance with the terms and
             conditions set forth herein.
           </p>
 
-          <p className="px-2 mx-2 my-2 pt-2 text-xs">
+          <p className=" my-2 pt-2 text-xs">
             <strong>1. Agreement</strong>
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             By using the Site, you agree to be bound by our Terms of Use (the
             “TOU”). If you do not agree to the terms and conditions contained in
             the TOU and The Pod Transcripts’s privacy policy, please do not
@@ -40,56 +40,56 @@ export default function Page() {
             herein.
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             You affirm that you are over the age of 18, as the Site is not
             intended for children under 18. If it comes to The Pod Transcripts’s
             attention through reliable means that a registered user is a child
             under 18 years of age, we will cancel that user’s account.
           </p>
 
-          <p className="px-2 mx-2 my-2 pt-2 text-xs">
+          <p className=" my-2 pt-2 text-xs">
             <strong>2. Changes to the TOU</strong>
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             We reserve the right at any time to:
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             Change the terms and conditions of the TOU;
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             Change the Site, including eliminating or discontinuing any content
             or feature of the Site; or
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             Impose fees, charges or other conditions for use of the Site or
             parts thereof (with reasonable notice).
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             Device means any device that can access the Service such as a
             computer, a cellphone or a digital tablet.
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             Service refers to the Website.
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             The Pod Transcripts may modify the Site at any time without prior
             notice, and you accept those modifications if you continue to use
             the Site. You should check the Site frequently to see recent
             changes.
           </p>
 
-          <p className="px-2 mx-2 my-2 pt-2 text-xs">
+          <p className=" my-2 pt-2 text-xs">
             <strong>3. Important Disclaimer</strong>
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             You understand that no content published on the Site constitutes a
             recommendation that any particular security, portfolio of
             securities, transaction or investment strategy is suitable for any
@@ -100,7 +100,7 @@ export default function Page() {
             person.
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             From time to time, reference may be made on our Site to prior
             articles and opinions we have published. These references may be
             selective, may reference only a portion of an article or opinion,
@@ -109,7 +109,7 @@ export default function Page() {
             should not be relied upon.
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             All content on the Site is presented only as of the date published
             or indicated, and may be superseded by subsequent market events or
             for other reasons. In addition, you are responsible for setting the
@@ -117,13 +117,13 @@ export default function Page() {
             recent data.
           </p>
 
-          <p className="px-2 mx-2 my-2 pt-2 text-xs">
+          <p className=" my-2 pt-2 text-xs">
             <strong>
               4. No Investment Recommendations or Professional Advice
             </strong>
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             The Site is not intended to provide tax, legal, insurance or
             investment advice, and nothing on the Site should be construed as an
             offer to sell, a solicitation of an offer to buy, or a
@@ -133,11 +133,11 @@ export default function Page() {
             on your investment objectives and personal and financial situation.
           </p>
 
-          <p className="px-2 mx-2 my-2 pt-2 text-xs">
+          <p className=" my-2 pt-2 text-xs">
             <strong>5. Copyright, Linking Policy and Trademarks</strong>
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             The Site and the content contained herein, as well as all
             copyrights, including without limitation, the text, documents,
             articles, products, software, graphics, photos, sounds, videos,
@@ -154,11 +154,11 @@ export default function Page() {
             the Site.
           </p>
 
-          <p className="px-2 mx-2 my-2 pt-2 text-xs">
+          <p className=" my-2 pt-2 text-xs">
             <strong>6. Reproduction Policy</strong>
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             All transcripts on this site are the copyright of The Pod
             Transcripts. However, we view them as an important resource for
             students, learners, bloggers and journalists, and are excited to
@@ -173,7 +173,7 @@ export default function Page() {
             </strong>
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             The Site contains links to other Internet websites or links to
             Content created by third parties which is published on the Site. We
             neither control nor endorse such other websites or Content, nor have
@@ -193,11 +193,11 @@ export default function Page() {
             Site.
           </p>
 
-          <p className="px-2 mx-2 my-2 pt-2 text-xs">
+          <p className=" my-2 pt-2 text-xs">
             <strong>7. Overview of Posting Content; Monitoring Content</strong>
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             The Site permits the submission of Content by users of the Site,
             including without limitation comments, articles, links, private
             messages sent to other registered users through the Site’s messaging
@@ -209,63 +209,63 @@ export default function Page() {
             discretion, does or may violate the TOU of the Site by you.
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             The Pod Transcripts reserves the right to remove content that
             violates one of the following principles, as determined, at our
             discretion:
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             No incitement to hatred. Material that promotes hatred toward groups
             based on race or ethnic origin, religion, disability, gender, age,
             veteran status, or sexual orientation/gender identity will be
             removed.
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">No pornography or pedophilia</p>
+          <p className=" my-2 text-xs">No pornography or pedophilia</p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             No direct or veiled threats against any person or group of people.
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             No publishing of other people’s private and confidential
             information, such as credit card numbers, Social Security Numbers,
             and driver’s and other license numbers.
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             No impersonation of others in a manner that is intended to or does
             mislead or confuse others.
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             No use for unlawful purposes or for promotion of dangerous and
             illegal activities. Your account may be terminated and you may be
             reported to the appropriate authorities.
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             No spamming, link-spamming or transmitting malware and viruses.
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">No personal attacks.</p>
+          <p className=" my-2 text-xs">No personal attacks.</p>
 
-          <p className="px-2 mx-2 my-2 text-xs">No profanity or vulgarity.</p>
+          <p className=" my-2 text-xs">No profanity or vulgarity.</p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             No business solicitations or advertising.
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             No inappropriate, unethical or misleading behavior.
           </p>
 
-          <p className="px-2 mx-2 my-2 pt-3 text-s">
+          <p className=" my-2 pt-3 text-s">
             <strong>Contact Us</strong>
           </p>
 
-          <p className="px-2 mx-2 my-2 pb-5 text-xs">
+          <p className=" my-2 pb-5 text-xs">
             If you have any questions about the Terms of Use, do not hesitate to{" "}
             <a href="mailto: tomonari.feehan@protonmail.com">
               <strong className="text-teal-500"> contact us</strong>

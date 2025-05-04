@@ -47,15 +47,18 @@ export default function AnimatedBeamSection() {
   return (
     <div>
       <div
-        className="hidden sm:flex p-32 pt-10 bg-black relative flex-col h-full w-screen items-center justify-center d:shadow-xl"
+        className=" sm:flex py-20 md:pt-24 md:pb-16  bg-black relative flex-col h-full w-screen items-center justify-center "
         ref={containerRef}
       >
-        <div className="mx-auto max-w-[700px] text-center pb-10 opacity-90">
-          <h2 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
+        <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-black to-transparent z-20 pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-black to-transparent z-20 pointer-events-none" />
+        
+        <div className="mx-auto max-w-[700px] text-center pb-10">
+          <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-5xl">
             Podcasts, simplified.
           </h2>
 
-          <p className="mt-6 text-lg sm:text-xl font-light text-white opacity-80 leading-relaxed">
+          <p className="md:mt-6 mt-4  text-[14px] px-4 sm:text-xl font-light text-white leading-relaxed">
             All-in-one platform for podcast transcripts, summaries, and insights.
             Transforming podcasts into an interactive knowledge base.
           </p>
