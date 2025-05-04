@@ -1,21 +1,29 @@
 import { NextResponse } from "next/server";
-import { ChatOpenAI } from "@langchain/openai";
 import { embeddings } from "../../../../lib/openai";
 import { supabaseVector } from "../../../../lib/supabaseClient";
+import { streamText } from "ai";
+import { openai } from "@ai-sdk/openai";
 
 export async function POST(request: Request) {
   try {
     // 1. Parse the request body to extract the query
     const { query } = await request.json();
     if (!query) {
-      return NextResponse.json({ error: "No query provided." }, { status: 400 });
+      return NextResponse.json(
+        { error: "No query provided." },
+        { status: 400 }
+      );
     }
 
     // 2. Parse the query for specific episode or podcast mentions
     const episodeMatch = query.match(/episode (\d+)/i);
-    const specificEpisodeNum = episodeMatch ? parseInt(episodeMatch[1], 10) : null;
+    const specificEpisodeNum = episodeMatch
+      ? parseInt(episodeMatch[1], 10)
+      : null;
     const podcastMatch = query.match(/(?:podcast|show) ([a-zA-Z0-9-]+)/i);
-    const specificPodcastId = podcastMatch ? podcastMatch[1].toLowerCase() : null;
+    const specificPodcastId = podcastMatch
+      ? podcastMatch[1].toLowerCase()
+      : null;
 
     // 3. Generate an embedding for the query
     const queryEmbedding = await embeddings.embedQuery(query);
@@ -43,9 +51,7 @@ export async function POST(request: Request) {
     const groups: Record<string, any[]> = {};
     data.forEach((row: any) => {
       const key = `${row.podcast_id}-${row.episode_number}`;
-      if (!groups[key]) {
-        groups[key] = [];
-      }
+      if (!groups[key]) groups[key] = [];
       groups[key].push(row);
     });
 
@@ -56,8 +62,8 @@ export async function POST(request: Request) {
         .map((c) => c.similarity)
         .sort((a, b) => b - a)
         .slice(0, 3);
-      const score = topSimilarities.reduce((sum, s) => sum + s, 0) / topSimilarities.length;
-      episodeScores[key] = score;
+      episodeScores[key] =
+        topSimilarities.reduce((sum, s) => sum + s, 0) / topSimilarities.length;
     }
 
     // 7. Select the best episode based on the highest score
@@ -89,21 +95,18 @@ Question: ${query}
 `;
     }
 
-    // 10. Call the model **without streaming**
-    const llm = new ChatOpenAI({
-      openAIApiKey: process.env.OPENAI_API_KEY!,
-      modelName: "gpt-4-turbo",
+    /* 10. Call the model — NOW WITH STREAMING */
+    const streamResult = await streamText({
+      model: openai.chat("gpt-4-turbo"), // same model as before
+      messages: [
+        { role: "system", content: prompt },
+        { role: "user", content: query },
+      ],
       temperature: 0.9,
-      streaming: false, // <- streaming turned off
     });
 
-    const result = await llm.call([
-      { role: "system", content: prompt },
-      { role: "user", content: query },
-    ]);
-
-    // 11. Return the full answer as JSON
-    return NextResponse.json({ answer: result.text.trim() });
+    /* 11. Return a streaming Response instead of JSON */
+    return streamResult.toTextStreamResponse(); // <-- keeps the connection open
   } catch (err: any) {
     console.error("API error:", err);
     return NextResponse.json({ error: err.message }, { status: 500 });
