@@ -124,7 +124,7 @@ export default function Page() {
       </Head>
       
       <motion.div
-        className={`mt-36 mx-auto container scroll-smooth relative ${inter.className}`}
+        className={`md:mt-36 mt-20 mx-auto container scroll-smooth relative ${inter.className}`}
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -132,7 +132,7 @@ export default function Page() {
       >
         
         <motion.div
-          className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 px-6 py-10 md:py-16"
+          className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 md:px-6 py-10 md:py-16"
           variants={contentVariants}
           initial="hidden"
           animate="visible"
@@ -162,14 +162,14 @@ export default function Page() {
               Support
             </a> */}
             
-            <div className="flex space-x-1">
+            <div className="flex gap-2 space-x-1">
               <a
                 href="mailto:tomonari.feehan@protonmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-[#d4d4d4] hover:text-white transition-transform transform hover:scale-105 focus:ring-2 focus:ring-white"
               >
-                <i className="bx bx-mail-send"></i>
+                <i className="bx text-2xl md:text-3xl bx-mail-send"></i>
               </a>
               
               <a
@@ -178,7 +178,7 @@ export default function Page() {
                 rel="noopener noreferrer"
                 className="text-sm text-[#d4d4d4] hover:text-white transition-transform transform hover:scale-105 focus:ring-2 focus:ring-white"
               >
-                <i className="bx bxl-linkedin"></i>
+                <i className="bx text-2xl md:text-3xl bxl-linkedin"></i>
               </a>
               
               <a
@@ -187,7 +187,7 @@ export default function Page() {
                 rel="noopener noreferrer"
                 className="text-sm text-[#d4d4d4] hover:text-white transition-transform transform hover:scale-105 focus:ring-2 focus:ring-white"
               >
-                <i className="bx bxl-github"></i>
+                <i className="bx text-2xl md:text-3xl bxl-github"></i>
               </a>
             </div>
           </motion.div>

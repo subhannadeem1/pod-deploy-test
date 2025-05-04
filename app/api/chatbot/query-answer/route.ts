@@ -1,9 +1,7 @@
-// app/api/chatbot/query-answer/route.ts
 import { NextResponse } from "next/server";
 import { ChatOpenAI } from "@langchain/openai";
 import { embeddings } from "../../../../lib/openai";
-import { supabase } from "../../../../lib/supabaseClient";
-import { TextEncoder } from "util";
+import { supabaseVector } from "../../../../lib/supabaseClient";
 
 export async function POST(request: Request) {
   try {
@@ -23,7 +21,7 @@ export async function POST(request: Request) {
     const queryEmbedding = await embeddings.embedQuery(query);
 
     // 4. Perform a similarity search in Supabase with optional filters
-    const { data, error } = await supabase.rpc("match_documents", {
+    const { data, error } = await supabaseVector.rpc("match_documents", {
       query_embedding: queryEmbedding,
       match_threshold: 0.5, // Lower threshold for broader retrieval
       match_count: 20,      // Increased count for better coverage
@@ -91,50 +89,21 @@ Question: ${query}
 `;
     }
 
-    // 10. Prepare a ReadableStream to stream tokens
-    const encoder = new TextEncoder();
-    const stream = new ReadableStream({
-      async start(controller) {
-        const streamingLLM = new ChatOpenAI({
-          openAIApiKey: process.env.OPENAI_API_KEY!,
-          modelName: "gpt-3.5-turbo", // or "gpt-3.5-turbo"
-          temperature: 0.9,
-          streaming: true,
-          callbacks: [
-            {
-              handleLLMNewToken(token: string) {
-                const queue = encoder.encode(token);
-                controller.enqueue(queue);
-              },
-              handleLLMEnd() {
-                controller.close();
-              },
-              handleLLMError(err: Error) {
-                controller.error(err);
-              },
-            },
-          ],
-        });
-
-        await streamingLLM.call([
-          {
-            role: "system",
-            content: prompt,
-          },
-          {
-            role: "user",
-            content: query,
-          },
-        ]);
-      },
+    // 10. Call the model **without streaming**
+    const llm = new ChatOpenAI({
+      openAIApiKey: process.env.OPENAI_API_KEY!,
+      modelName: "gpt-4-turbo",
+      temperature: 0.9,
+      streaming: false, // <- streaming turned off
     });
 
-    // 11. Return the stream as a new Response
-    return new Response(stream, {
-      headers: {
-        "Content-Type": "text/plain; charset=utf-8",
-      },
-    });
+    const result = await llm.call([
+      { role: "system", content: prompt },
+      { role: "user", content: query },
+    ]);
+
+    // 11. Return the full answer as JSON
+    return NextResponse.json({ answer: result.text.trim() });
   } catch (err: any) {
     console.error("API error:", err);
     return NextResponse.json({ error: err.message }, { status: 500 });

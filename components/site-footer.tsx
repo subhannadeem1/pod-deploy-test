@@ -5,11 +5,11 @@ import { TwitterLogoIcon } from "@radix-ui/react-icons"
 
 const footerNavs = [
   {
-    label: "API",
+    label: "Explore",
     items: [
-      { href: "/api", name: "Documentation" },
-      { href: "/api", name: "Pricing" },
-      { href: "/api", name: "FAQ" },
+      { href: "/", name: "Home" },
+      { href: "/chat", name: "Chat" },
+      { href: "/rankings", name: "Trending" },
     ],
   },
   {

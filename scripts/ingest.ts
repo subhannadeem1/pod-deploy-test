@@ -5,7 +5,7 @@ import path from "path";
 import { PDFLoader } from "@langchain/community/document_loaders/fs/pdf";
 import { RecursiveCharacterTextSplitter } from "langchain/text_splitter";
 import { embeddings } from "../lib/openai"; // Your OpenAI embeddings
-import { supabase } from "../lib/supabaseClient"; // Your Supabase client
+import { supabase, supabaseVector } from "../lib/supabaseClient"; // Your Supabase clients
 import * as crypto from "crypto";
 
 const filesDir = path.join(process.cwd(), "public", "files");
@@ -37,7 +37,7 @@ async function main() {
       const baseName = fileName.replace(".pdf", "");
       const [podcastId, episodeNum] = parsePodcastAndEpisode(baseName);
 
-      // 4a. Fetch metadata from the "podcast_episode" table
+      // 4a. Fetch metadata from the "podcast_episode" table in old database
       const { data: metadata, error: metadataError } = await supabase
         .from("podcast_episode")
         .select("title, created_at")
@@ -53,8 +53,8 @@ async function main() {
       const episodeDate = metadata?.created_at || null;
       const podcastImage = `/${podcastId}.jpg`; // Derive image path
 
-      // 4b. Check for existing entry with matching podcast_id, episode_number, and pdf_hash
-      const { data: existingRows, error: existingError } = await supabase
+      // 4b. Check for existing entry in new database with matching podcast_id, episode_number, and pdf_hash
+      const { data: existingRows, error: existingError } = await supabaseVector
         .from("episodes_vector_store")
         .select("*")
         .eq("podcast_id", podcastId)
@@ -80,19 +80,19 @@ async function main() {
       });
       const chunks = await splitter.createDocuments([fullText]);
 
-      // 6. Process each chunk: generate embeddings and upsert into Supabase
+      // 6. Process each chunk: generate embeddings and upsert into new database
       const upsertPromises = chunks.map(async (chunk, index) => {
         const sanitizedText = chunk.pageContent.replace(/\u0000/g, ""); // Remove null characters
 
-        // 6.1 a Generate an embedding for the chunk text.
+        // 6.1 Generate an embedding for the chunk text
         const embeddingResponse = await embeddings.embedQuery(sanitizedText);
 
         // b option Prepend metadata to text for embedding (not stored)
         //const chunkTextWithMetadata = `Episode ${episodeNum}: ${episodeTitle}\n${sanitizedText}`;
         //const embeddingResponse = await embeddings.embedQuery(chunkTextWithMetadata);
 
-        // Upsert the original sanitized text with metadata
-        const { error: upsertError } = await supabase
+        // Upsert into episodes_vector_store in new database
+        const { error: upsertError } = await supabaseVector
           .from("episodes_vector_store")
           .upsert({
             podcast_id: podcastId,
@@ -100,7 +100,7 @@ async function main() {
             episode_title: episodeTitle,
             episode_date: episodeDate,
             podcast_image: podcastImage,
-            transcript: sanitizedText, // Original text without metadata prefix
+            transcript: sanitizedText,
             embedding: embeddingResponse,
             pdf_hash: pdfHash,
           });
@@ -125,7 +125,7 @@ function parsePodcastAndEpisode(baseName: string): [string, number] {
     throw new Error(`Invalid PDF filename format: ${baseName}`);
   }
   const episodeNumStr = parts.pop()!; // Last part is episode number
-  const podcastId = parts.join("-");  // Remaining parts form podcast ID
+  const podcastId = parts.join("-"); // Remaining parts form podcast ID
   const episodeNum = Number(episodeNumStr);
 
   if (isNaN(episodeNum)) {

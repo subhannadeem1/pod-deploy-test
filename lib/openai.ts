@@ -14,7 +14,7 @@ if (!openAIApiKey) {
  */
 export const llm = new ChatOpenAI({
   openAIApiKey,
-  modelName: "gpt-3.5-turbo", // or "gpt-3.5-turbo"
+  modelName: "gpt-4-turbo", // or "gpt-3.5-turbo"
   temperature: 0.9,
 });
 

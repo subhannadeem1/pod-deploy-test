@@ -102,12 +102,12 @@ const TranscriptComponent = (props: any) => {
           {data.map((transcript: any) => (
             <div key={transcript.id} className="flex flex-col mb-4">
               <div
-                className={`font-[${ibmPlexSerif.style.fontFamily}] font-semibold text-gray-900 ${fontSizes[fontSizeIndex]}`}
+                className={`font-[${ibmPlexSerif.style.fontFamily}] font-semibold tracking-wide text-gray-900 ${fontSizes[fontSizeIndex]}`}
               >
                 {transcript.speaker}
               </div>
               <p
-                className={`${fontSizes[fontSizeIndex]} text-gray-800 leading-relaxed mt-1`}
+                className={`${fontSizes[fontSizeIndex]} text-gray-800 tracking-wide leading-relaxed mt-1`}
               >
                 {transcript.text}
               </p>

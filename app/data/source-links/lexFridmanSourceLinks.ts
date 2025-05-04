@@ -1,3 +1,21 @@
+const lex_fridman_466 : string[] = [
+    "https://www.youtube.com/watch?v=3W5FWUN5w2Q",
+    "https://open.spotify.com/episode/2y9SeEILUFWI6rzl8okASZ?si=88zjAlsMQUqNq-ihiBBSzw",
+    "https://podcasts.apple.com/us/podcast/466-jeffrey-wasserstrom-china-xi-jinping-trade-war/id1434243584?i=1000704818504"
+]
+
+const lex_fridman_465 : string[] = [
+    "https://www.youtube.com/watch?v=xJoT3bJyHuA",
+    "https://open.spotify.com/episode/3umqY5k2abfrNmlekFGcq1?si=7ZxKTuPFTnW5O-F0SsrFeA",
+    "https://podcasts.apple.com/us/podcast/465-robert-rodriguez-sin-city-desperado-el-mariachi/id1434243584?i=1000703906479"
+]
+
+const lex_fridman_464 : string[] = [
+    "https://www.youtube.com/watch?v=1V0bJfqEaa4",
+    "https://open.spotify.com/episode/3SyDohHTdX2wwaTLNmPTlY?si=QFb7xzNlTGqlzfefCcoQ2Q",
+    "https://podcasts.apple.com/us/podcast/464-dave-smith-israel-ukraine-epstein-mossad-conspiracies/id1434243584?i=1000702791586"
+]
+
 const lex_fridman_463 : string[] = [
     "https://www.youtube.com/watch?v=HvI42TyE5Ww",
     "https://open.spotify.com/episode/4XqiNJ4MyPBdDBE3eq1SJK",
@@ -2777,6 +2795,9 @@ const lex_fridman_1 : string[] = [
 ]
 
 const lexFridmanSourceLinks = new Map<string, string[]>()
+lexFridmanSourceLinks.set("466", lex_fridman_466)
+lexFridmanSourceLinks.set("465", lex_fridman_465)
+lexFridmanSourceLinks.set("464", lex_fridman_464)
 lexFridmanSourceLinks.set("463", lex_fridman_463)
 lexFridmanSourceLinks.set("462", lex_fridman_462)
 lexFridmanSourceLinks.set("461", lex_fridman_461)

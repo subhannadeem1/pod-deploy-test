@@ -13,6 +13,7 @@ import AdsComponentOne from "@/components/ads/ad-one"
 
 // General
 import { podcastTitles } from "@/app/data/general/pod-data"
+import { IconArrowLeft } from "@tabler/icons-react"
 
 // Fetch All Episodes
 const fetchDetails = async (slug: string) => {
@@ -41,33 +42,26 @@ export default function PodcastDetail(url: EpisodeURL) {
     )
 
   return (
-    <main className={`mt-32 ${Barlow.className} bg-black min-h-screen text-white`} data-nosnippet>
+    <main className={`md:mt-[100px] mt-28  ${Barlow.className} bg-black min-h-screen text-white`} data-nosnippet>
       {/* Container */}
       <div className="container mx-auto px-4 lg:px-20 xl:px-32">
 
         {/* Section - Episode Description */}
-        <section className="mb-6">
+        <section className="mb-4">
           <div className="flex flex-col">
             <div className="mb-4">
               <nav className="flex" aria-label="Breadcrumb">
                 <Link
                   href="/"
-                  className="group flex items-center text-sm font-medium text-white hover:text-gray-300 transition-colors"
+                  className="group flex  items-center text-[#8B949E] hover:text-gray-300 transition-colors"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    aria-hidden="true"
-                    className="mr-2 h-5 w-5 text-white group-hover:text-gray-300"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  Home
+                  <div className="h-10 w-10 border border-[#17212A] flex justify-center items-center rounded-full">
+                  <IconArrowLeft stroke={1} className="w-6 h-6 " />
+                  </div>
+                  <div className="border-y border-r border-[#17212A] -ml-[2px] flex items-center h-9 px-3 rounded-r-full text-[14px] font-medium">
+                  Back to Home
+                  </div>
+                  
                 </Link>
               </nav>
             </div>

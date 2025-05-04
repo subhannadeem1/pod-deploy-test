@@ -1,18 +1,29 @@
-import { ChevronLeftIcon, ChevronRightIcon, DoubleArrowLeftIcon, DoubleArrowRightIcon } from "@radix-ui/react-icons";
+import {
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  DoubleArrowLeftIcon,
+  DoubleArrowRightIcon,
+} from "@radix-ui/react-icons";
 import { Table } from "@tanstack/react-table";
 import { Button } from "@/components/ui/button";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 interface EpisodeGridPaginationProps<TData> {
   table: Table<TData>;
 }
 
-export function EpisodeGridPagination<TData>({ table }: EpisodeGridPaginationProps<TData>) {
+export function EpisodeGridPagination<TData>({
+  table,
+}: EpisodeGridPaginationProps<TData>) {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between p-4 bg-gray-100">
-
+    <div className="flex flex-wrap md:flex-row items-center justify-between p-4 bg-gray-100">
       <div className="flex items-center space-x-2">
-        
         <span className="text-sm text-gray-700">Rows per page:</span>
         <Select
           value={`${table.getState().pagination.pageSize}`}
@@ -21,7 +32,9 @@ export function EpisodeGridPagination<TData>({ table }: EpisodeGridPaginationPro
           }}
         >
           <SelectTrigger className="w-20 bg-white text-gray-800 border border-gray-300">
-            <SelectValue placeholder={`${table.getState().pagination.pageSize}`} />
+            <SelectValue
+              placeholder={`${table.getState().pagination.pageSize}`}
+            />
           </SelectTrigger>
 
           <SelectContent side="top" className="bg-white text-gray-800">
@@ -35,13 +48,13 @@ export function EpisodeGridPagination<TData>({ table }: EpisodeGridPaginationPro
       </div>
 
       {/* Page Indicator */}
-      <div className="mt-2 md:mt-0 text-sm text-gray-700">
+      <div className="text-sm text-gray-700">
         Page {table.getState().pagination.pageIndex + 1} of{" "}
         {table.getPageCount()}
       </div>
 
       {/* Pagination Controls */}
-      <div className="flex items-center space-x-2 mt-2 md:mt-0">
+      <div className="flex items-center mx-auto md:mx-0 space-x-2 mt-4 md:mt-0">
         <Button
           variant="outline"
           className="hidden md:flex h-8 w-8 p-0 border-gray-500"

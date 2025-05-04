@@ -8,20 +8,20 @@ export default function Page() {
   return (
     <div className={`bg-black mt-24 mb-10  mx-auto ${Barlow.className}`}>
       <section className={`flex flex-row mx-auto container ${animation_one}`}>
-        <div className="bg-gradient-to-r from-[#efe9df] to-white w-60 hidden sm:block sm:rounded-l-lg"></div>
+        <div className="bg-gradient-to-r  hidden sm:block sm:rounded-l-lg"></div>
 
-        <div className="bg-white w-full  pt-4 rounded md:rounded-r-lg  text-black !important">
+        <div className="bg-white w-full lg:p-10 p-4 rounded md:rounded-r-lg  text-black !important">
           {/* Affiliate Disclosure */}
-          <p className="px-2 mx-2 my-2 pt-3 text-lg">
+          <p className=" my-2 pt-3 text-lg">
             <strong>Affiliate Disclosure</strong>
           </p>
 
           {/* Affiliate Relationships */}
-          <p className="px-2 mx-2 my-2 pt-2 text-xs">
+          <p className=" my-2 pt-2 text-xs">
             <strong>Affiliate Relationships</strong>
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             The Pod Transcripts (hereafter referred to as “we,” “us,” or “our”)
             is a participant in affiliate marketing programs, which means we may
             earn commissions from qualifying purchases made through our
@@ -31,11 +31,11 @@ export default function Page() {
           </p>
 
           {/* Transparency and Integrity */}
-          <p className="px-2 mx-2 my-2 pt-2 text-xs">
+          <p className=" my-2 pt-2 text-xs">
             <strong>Transparency and Integrity</strong>
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             We believe in transparency and honesty when it comes to our
             affiliate relationships. Rest assured that our reviews,
             recommendations, and opinions are always based on our own
@@ -45,11 +45,11 @@ export default function Page() {
           </p>
 
           {/* Affiliate Links */}
-          <p className="px-2 mx-2 my-2 pt-2 text-xs">
+          <p className=" my-2 pt-2 text-xs">
             <strong>Affiliate Links</strong>
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             When you click on an affiliate link on The Pod Transcripts and make
             a purchase, we may earn a commission from the sale. This commission
             comes at no additional cost to you and helps support our website,
@@ -57,7 +57,7 @@ export default function Page() {
             resources.
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             Please note that not all links on our website are affiliate links.
             We may also include non-affiliate links to products or services that
             we believe are valuable to our readers, regardless of any potential
@@ -65,11 +65,11 @@ export default function Page() {
           </p>
 
           {/* Amazon Associates Program */}
-          <p className="px-2 mx-2 my-2 pt-2 text-xs">
+          <p className=" my-2 pt-2 text-xs">
             <strong>Amazon Associates Program</strong>
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             The Pod Transcripts is a participant in the Amazon Services LLC
             Associates Program, an affiliate advertising program designed to
             provide a means for us to earn fees by linking to Amazon.com and
@@ -77,11 +77,11 @@ export default function Page() {
           </p>
 
           {/* Earnings Disclosure */}
-          <p className="px-2 mx-2 my-2 pt-2 text-xs">
+          <p className=" my-2 pt-2 text-xs">
             <strong>Earnings Disclosure</strong>
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             While we may earn commissions through affiliate links, it is
             important to understand that these earnings do not influence the
             content, reviews, or recommendations we provide. We maintain our
@@ -90,11 +90,11 @@ export default function Page() {
           </p>
 
           {/* Your Support */}
-          <p className="px-2 mx-2 my-2 pt-2 text-xs">
+          <p className=" my-2 pt-2 text-xs">
             <strong>Your Support</strong>
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             By using our affiliate links to make purchases, you are supporting
             The Pod Transcripts and helping us continue to deliver valuable
             content to our audience. We sincerely appreciate your support, and
@@ -103,11 +103,11 @@ export default function Page() {
           </p>
 
           {/* Contact Us */}
-          <p className="px-2 mx-2 my-2 pt-3 text-s">
+          <p className=" my-2 pt-3 text-s">
             <strong>Contact Us</strong>
           </p>
 
-          <p className="px-2 mx-2 my-2 pb-5 text-xs">
+          <p className=" my-2 pb-5 text-xs">
             If you have any questions about the Affiliate Disclosure, do not
             hesitate to{" "}
             <a href="mailto: tomonari.feehan@protonmail.com">

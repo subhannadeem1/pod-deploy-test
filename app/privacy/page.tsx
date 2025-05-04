@@ -8,20 +8,20 @@ export default function Page() {
   return (
     <main className={`bg-black mt-24 mb-10 mx-auto ${Barlow.className}`}>
       <section className={`flex flex-row container mx-auto ${animation_one}`}>
-        <div className="bg-gradient-to-r from-[#efe9df] to-white w-60 hidden sm:block sm:rounded-l-lg"></div>
+        <div className="bg-gradient-to-r hidden sm:block sm:rounded-l-lg"></div>
 
-        <div className="bg-white w-full  pt-4 rounded md:rounded-r-lg  text-black !important">
+        <div className="bg-white w-full lg:p-10 p-4  rounded md:rounded-r-lg  text-black !important">
           {/* Privacy Policy */}
-          <p className="px-2 mx-2 my-2 pt-3 text-lg">
+          <p className=" my-2 pt-3 text-lg">
             <strong>Privacy Policy</strong>
           </p>
 
           {/* Privacy */}
-          <p className="px-2 mx-2 my-2 pt-2 text-xs">
+          <p className=" my-2 pt-2 text-xs">
             <strong>Privacy</strong>
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             This Site uses Google AdSense for the purposes of placing
             advertising on the Site, and Google AdSense will collect and use
             certain data for advertising purposes. To learn more about Google
@@ -29,7 +29,7 @@ export default function Page() {
             https://policies.google.com/technologies/ads.
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             Thank you for visiting https://thepodtranscripts.com. Your privacy
             is important to us. To better protect your privacy, we provide this
             privacy policy (“Privacy Policy”) explaining our online information
@@ -39,18 +39,18 @@ export default function Page() {
           </p>
 
           {/* Introduction */}
-          <p className="px-2 mx-2 my-2 pt-2 text-xs">
+          <p className=" my-2 pt-2 text-xs">
             <strong>Introduction</strong>
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             We are committed to respecting your online privacy, and recognize
             your need for appropriate protection and management of any
             personally identifiable information (“Personal Information”) you
             share with us.
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             Personal Information means any information that may be used to
             identify an individual, including, but not limited to, a first and
             last name, personal profile, a home or other physical address and an
@@ -60,7 +60,7 @@ export default function Page() {
             presentation transcripts available on our Site.
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             If you have subscribed to our Updates, we may use your email address
             to send updates, a newsletter or news regarding our services, and
             those of our advertisers who may have relevant offers. You may
@@ -69,7 +69,7 @@ export default function Page() {
             email from us.
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             The Pod Transcripts strives to comply with all applicable laws
             around the globe that are designed to protect your privacy. Although
             legal requirements may vary from country to country, The Pod
@@ -82,11 +82,11 @@ export default function Page() {
             is collected, transferred, or retained.
           </p>
 
-          <p className="px-2 mx-2 my-2 pt-2 text-xs">
+          <p className=" my-2 pt-2 text-xs">
             <strong>Web Cookies</strong>
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             A “Web Cookie” is a string of information that a website stores on a
             user's computer, and that the user's browser provides to the website
             each time the user submits a query to the site. We use Web Cookies
@@ -100,7 +100,7 @@ export default function Page() {
             Cookies to Personal Information.
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             USERS WHO DO NOT WISH TO HAVE WEB COOKIES PLACED ON THEIR COMPUTERS
             SHOULD SET THEIR BROWSERS TO REFUSE WEB COOKIES BEFORE ACCESSING THE
             SITE, WITH THE UNDERSTANDING THAT CERTAIN FEATURES OF THE SITE MAY
@@ -109,11 +109,11 @@ export default function Page() {
             OF FUNCTIONALITY.
           </p>
 
-          <p className="px-2 mx-2 my-2 pt-2 text-xs">
+          <p className=" my-2 pt-2 text-xs">
             <strong>Web Beacons</strong>
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             A “Web Beacon” is an object that is embedded in a web page that is
             usually invisible to the user and allows website operators to check
             whether a user has viewed a particular web page or an email. We may
@@ -131,11 +131,11 @@ export default function Page() {
             individual basis.
           </p>
 
-          <p className="px-2 mx-2 my-2 pt-2 text-xs">
+          <p className=" my-2 pt-2 text-xs">
             <strong>Third Party Advertisers</strong>
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             We use third-party advertising companies, including Google AdSense,
             to serve ads when you visit the Website as well as Google Analytics
             Advertising features. These companies may use information (not
@@ -155,7 +155,7 @@ export default function Page() {
             advertising companies we are currently using to serve ads.
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             We allow advertisers to choose the characteristics of users who will
             see their advertisements and we may use any of the non-Personal
             Information attributes we have collected (including information you
@@ -165,17 +165,17 @@ export default function Page() {
             identify you to the advertiser.
           </p>
 
-          <p className="px-2 mx-2 my-2 pt-2 text-xs">
+          <p className=" my-2 pt-2 text-xs">
             <strong>Comments</strong>
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             When visitors leave comments on the site we collect the data shown
             in the comments form, and also the visitor's IP address and browser
             user agent string to help spam detection.
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             An anonymized string created from your email address (also called a
             hash) may be provided to the Gravatar service to see if you are
             using it. The Gravatar service privacy policy is available here:
@@ -184,18 +184,18 @@ export default function Page() {
             comment.
           </p>
 
-          <p className="px-2 mx-2 my-2 pt-2 text-xs">
+          <p className=" my-2 pt-2 text-xs">
             <strong>Embedded Content From Other Websites</strong>
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             Articles on this site may include embedded content (e.g. videos,
             images, articles, etc.). Embedded content from other websites
             behaves in the exact same way as if the visitor has visited the
             other website.
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             These websites may collect data about you, use cookies, embed
             additional third -party tracking, and monitor your interaction with
             that embedded content, including tracing your interaction with the
@@ -203,38 +203,38 @@ export default function Page() {
             website.
           </p>
 
-          <p className="px-2 mx-2 my-2 pt-2 text-xs">
+          <p className=" my-2 pt-2 text-xs">
             <strong>Links to Other Sites</strong>
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             Our Site may contain links to other sites. Other sites may also
             reference or link to our site. We are not responsible for the
             privacy practices or the content of such other sites.
           </p>
 
-          <p className="px-2 mx-2 my-2 pt-2 text-xs">
+          <p className=" my-2 pt-2 text-xs">
             <strong>Childrens' Privacy</strong>
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             The Site is not structured to attract children. Accordingly, we do
             not intend to collect Personal Information from anyone we know to be
             under 13 years of age.
           </p>
 
-          <p className="px-2 mx-2 my-2 pt-2 text-xs">
+          <p className=" my-2 pt-2 text-xs">
             <strong>How Long We Retain Your Data</strong>
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             If you leave a comment, the comment and its metadata are retained
             indefinitely. This is so we can recognize and approve any follow-up
             comments automatically instead of holding them in a moderation
             queue.
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             For users that register on our website (if any), we also store the
             personal information they provide in their user profile. All users
             can see, edit, or delete their personal information at any time
@@ -242,11 +242,11 @@ export default function Page() {
             can also see and edit that information.
           </p>
 
-          <p className="px-2 mx-2 my-2 pt-2 text-xs">
+          <p className=" my-2 pt-2 text-xs">
             <strong>What Rights You Have Over Your Data</strong>
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             If you have an account on this site, or have left comments, you can
             request to receive an exported file of the personal data we hold
             about you, including any data you have provided to us. You can also
@@ -255,11 +255,11 @@ export default function Page() {
             legal, or security purposes.
           </p>
 
-          <p className="px-2 mx-2 my-2 pt-2 text-xs">
+          <p className=" my-2 pt-2 text-xs">
             <strong>Commitment</strong>
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             We are committed to protecting your privacy. Protecting your privacy
             online is an evolving area, and The Pod Transcripts is constantly
             evolving to meet these demands. If you have any comments or
@@ -268,11 +268,11 @@ export default function Page() {
             the best of our abilities as soon as possible.
           </p>
 
-          <p className="px-2 mx-2 my-2 pt-2 text-xs">
+          <p className=" my-2 pt-2 text-xs">
             <strong>Your Consent</strong>
           </p>
 
-          <p className="px-2 mx-2 my-2 text-xs">
+          <p className=" my-2 text-xs">
             By using this Site, you consent to the terms of our Privacy Policy
             and to The Pod Transcripts's processing of Personal Information for
             the purposes given above. If you do not agree to this Privacy
@@ -283,11 +283,11 @@ export default function Page() {
             changes.
           </p>
 
-          <p className="px-2 mx-2 my-2 pt-3 text-s">
+          <p className=" my-2 pt-3 text-s">
             <strong>Contact Us</strong>
           </p>
 
-          <p className="px-2 mx-2 my-2 pb-5 text-xs">
+          <p className=" my-2 pb-5 text-xs">
             If you have any questions about the Privacy Policy, do not hesitate
             to{" "}
             <a href="mailto: tomonari.feehan@protonmail.com">

@@ -2,7 +2,7 @@
 import { NextResponse } from "next/server";
 import { ChatOpenAI } from "@langchain/openai";
 import { embeddings } from "../../../../lib/openai";
-import { supabase } from "../../../../lib/supabaseClient";
+import { supabaseVector } from "../../../../lib/supabaseClient";
 
 export async function POST(request: Request) {
   try {
@@ -24,7 +24,7 @@ export async function POST(request: Request) {
     const matchCount = 20; // Increased for better coverage
     const matchThreshold = 0.5; // Lowered for broader retrieval
 
-    const { data, error } = await supabase.rpc("match_documents", {
+    const { data, error } = await supabaseVector.rpc("match_documents", {
       query_embedding: queryEmbedding,
       match_threshold: matchThreshold,
       match_count: matchCount,

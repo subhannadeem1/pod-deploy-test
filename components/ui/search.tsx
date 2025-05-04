@@ -5,6 +5,7 @@ import Link from "next/link"
 
 import { CommandDialog, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from "@/components/ui/command"
 import { useRouter } from "next/navigation"
+import { IconSearch } from "@tabler/icons-react"
 
 type Option = {
   value: string
@@ -56,13 +57,14 @@ export function Search() {
   return (
     <>
       <button
-        className="lg:ml-48 mt-1 inline-flex items-center whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input hover:opacity-90 hover:text-black px-2 py-2 relative h-12 lg:h-8 w-full justify-start rounded-[0.5rem] bg-background text-sm font-normal text-muted-foreground shadow-none sm:pr-12  lg:w-64 opacity-70"
+        className="mt-1 inline-flex items-center whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input hover:opacity-90 hover:text-black px-2 py-2 relative h-10 lg:h-8 w-full justify-start rounded-[0.5rem] bg-background text-sm font-normal text-muted-foreground shadow-none sm:pr-12  lg:w-64"
         onClick={(e) => {
           e.preventDefault()
           setOpen((open) => !open)
         }}
       >
-        <p className="text-sm text-muted-foreground">
+        <IconSearch className="w-5 h-5 transition-transform duration-200 group-hover:scale-110" />
+        <p className="text-sm ml-2 text-muted-foreground">
           Search podcasts...{" "}
           <kbd className="pointer-events-none absolute right-[0.3rem] top-[0.3rem] hidden h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 lg:flex">
             <span className="text-xs">⌘</span>J

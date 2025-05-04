@@ -91,7 +91,7 @@ export default function EpisodeDetail(url: TranscriptURL) {
           <div className="mt-24 mx-auto grid grid-cols-1 grid-rows-1 items-start gap-x-6 gap-y-0 md:gap-y-6 lg:gap-x-8 lg:gap-y-8 md:mx-0 md:max-w-none md:grid-cols-4">
             <TranscriptSidebarComponent slug={url.params.slug} />
 
-            <div className="md:col-span-3 md:row-span-2 md:row-end-2 pr-4 pt-4">
+            <div className="md:col-span-3 md:row-span-2 md:row-end-2">
               <div className="space-y-4">
 
                 {/* Title and additional header information */}
