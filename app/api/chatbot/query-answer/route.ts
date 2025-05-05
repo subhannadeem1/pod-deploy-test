@@ -1,3 +1,4 @@
+// app/api/chatbot/query-answer/route.ts
 import { NextResponse } from "next/server";
 import { embeddings } from "../../../../lib/openai";
 import { supabaseVector } from "../../../../lib/supabaseClient";
@@ -97,7 +98,7 @@ Question: ${query}
 
     /* 10. Call the model — NOW WITH STREAMING */
     const streamResult = await streamText({
-      model: openai.chat("gpt-4-turbo"), // same model as before
+      model: openai.chat("gpt-4-turbo"), // or "gpt-3.5-turbo"
       messages: [
         { role: "system", content: prompt },
         { role: "user", content: query },
@@ -105,7 +106,7 @@ Question: ${query}
       temperature: 0.9,
     });
 
-    /* 11. Return a streaming Response instead of JSON */
+    /* 11. Return a streaming Response */
     return streamResult.toTextStreamResponse(); // <-- keeps the connection open
   } catch (err: any) {
     console.error("API error:", err);
