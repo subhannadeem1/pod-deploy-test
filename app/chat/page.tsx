@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type FormEvent, useEffect } from "react";
+import { useState, type FormEvent, useEffect, useRef } from "react";
 import ReactMarkdown from "react-markdown";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -87,12 +87,15 @@ export default function TestChatbot() {
   const [currentQuery, setCurrentQuery] = useState("");
   const suggestedQuestions = [
     "What has Donald Trump said about tariffs?",
-    "How does fine-tuning improve AI models?",
-    "Give me a summary of episode 457 of the Lex Fridman Podcast",
+    "What are some protocols for improving sleep?",
+    "Please summarize episode 457 of the Lex Fridman Podcast.",
   ];
 
+  const hasAutoSubmitted = useRef(false);
+
   useEffect(() => {
-    if (initialQuery) {
+    if (initialQuery && !hasAutoSubmitted.current) {
+      hasAutoSubmitted.current = true;
       setCurrentQuery(initialQuery); // Display the initial query immediately
       handleSubmit({
         preventDefault: () => {},
@@ -149,7 +152,6 @@ export default function TestChatbot() {
     setIsSearchBarVisible(false); // Hide the search bar immediately after submission
 
     try {
-      /* 1️⃣ ─── STREAM THE ANSWER ─────────────────────────────── */
       const answerRes = await fetchWithRetry("/api/chatbot/query-answer", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -163,7 +165,7 @@ export default function TestChatbot() {
 
       const reader = answerRes.body.getReader();
       const decoder = new TextDecoder();
-      let fullAns = ""; // keep local copy
+      let fullAns = "";
 
       while (true) {
         const { value, done } = await reader.read();
@@ -196,7 +198,7 @@ export default function TestChatbot() {
         query: queryToUse,
         episodes: episodesData.episodes || [],
         //answer: answerData.answer.trim(),
-        answer  : fullAns.trim(), 
+        answer: fullAns.trim(),
         date: new Date().toLocaleString(),
       };
       setHistory([newHistoryItem, ...history]);
